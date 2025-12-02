@@ -3,10 +3,64 @@ import json
 import subprocess
 import math
 import time
+import sys
 
 suspicious_sections = ['.textbss', '.dataenc', '.upx0', '.upx1', '.aspack', '.petite', '.themida', '.vmp0', '.vmp1', 'upx', '.xyz', '.packed', '.ab', '.secret', '.evil', '.payload']
-suspicious_api_calls = ['VirtualAlloc', 'VirtualAllocEx', 'VirtualProtect', 'WriteProcessMemory', 'CreateRemoteThread', 'LoadLibrary', 'GetProcAddress', 'HeapAlloc', 'HeapFree', 'NtAllocateVirtualMemory', 'NtProtectVirtualMemory', 'RegSetValueEx', 'CreateServiceW', 'WinExec', 'WinHttpOpen', 'InternetConnect', 'ShellExecuteA', 'system', 'LoadLibraryA']
+suspicious_api_calls = [
+    # Process Injection / Memory Manipulation
+    'VirtualAlloc', 'VirtualAllocEx', 'VirtualProtect', 'WriteProcessMemory',
+    'CreateRemoteThread', 'LoadLibrary', 'GetProcAddress', 'HeapAlloc',
+    'HeapFree', 'NtAllocateVirtualMemory', 'NtProtectVirtualMemory',
+    'RegSetValueEx', 'CreateServiceW', 'WinExec', 'WinHttpOpen',
+    'InternetConnect', 'ShellExecuteA', 'system', 'LoadLibraryA',
+    'NtWriteVirtualMemory', 'NtCreateThreadEx', 'NtQueueApcThread',
+    'QueueUserAPC', 'RtlMoveMemory', 'CreateProcessA', 'CreateProcessW',
+    'CreateProcessInternalW', 'OpenProcess', 'SuspendThread', 'ResumeThread',
+    'SetThreadContext', 'GetThreadContext', 'MapViewOfFile',
+    'UnmapViewOfFile', 'CreateFileMapping', 'VirtualQuery', 'VirtualQueryEx',
+    'GetModuleHandle', 'GetModuleHandleA', 'GetModuleHandleW',
+    # Privilege Escalation / Token Manipulation
+    'OpenProcessToken', 'LookupPrivilegeValue', 'AdjustTokenPrivileges',
+    'ImpersonateLoggedOnUser', 'DuplicateToken', 'DuplicateTokenEx',
+    'SetThreadToken', 'RevertToSelf',
+    # Persistence
+    'RegCreateKeyEx', 'RegOpenKeyEx', 'RegDeleteKey', 'RegSetValue',
+    'RegQueryValueEx', 'CoCreateInstance', 'StartServiceA', 'StartServiceW',
+    'ChangeServiceConfig', 'WriteProfileString', 'SHSetValue',
+    # Networking / C2
+    'WinHttpConnect', 'WinHttpSendRequest', 'WinHttpReceiveResponse',
+    'InternetOpenA', 'InternetOpenW', 'InternetOpenUrl', 'InternetReadFile',
+    'WSAStartup', 'socket', 'connect', 'send', 'recv', 'gethostbyname',
+    'DnsQuery', 'URLDownloadToFile',
+    # Anti-Debugging / Anti-Analysis
+    'IsDebuggerPresent', 'CheckRemoteDebuggerPresent',
+    'NtQueryInformationProcess', 'NtQuerySystemInformation',
+    'GetTickCount', 'QueryPerformanceCounter', 'OutputDebugString',
+    'CreateToolhelp32Snapshot', 'Process32First', 'Process32Next',
+    'Thread32First', 'Thread32Next',
+    # File System Manipulation
+    'CreateFileA', 'CreateFileW', 'WriteFile', 'DeleteFile', 'CopyFile',
+    'MoveFileEx', 'SetFileAttributes', 'GetTempPath', 'GetTempFileName',
+    # Crypto / Obfuscation
+    'CryptAcquireContext', 'CryptImportKey', 'CryptDecrypt', 'CryptEncrypt',
+    'BCryptEncrypt', 'BCryptDecrypt', 'BCryptGenRandom',
+    # Direct NT Syscalls / Low-level
+    'NtOpenProcess', 'NtOpenThread', 'NtOpenFile', 'NtCreateFile', 'NtClose',
+    'NtDelayExecution', 'NtUnmapViewOfSection'
+]
 output_data = {}
+
+subsystem_map = {
+        1: "IMAGE_SUBSYSTEM_NATIVE",
+        2: "IMAGE_SUBSYSTEM_WINDOWS_GUI",
+        3: "IMAGE_SUBSYSTEM_WINDOWS_CUI",
+        5: "IMAGE_SUBSYSTEM_OS2_CUI",
+        7: "IMAGE_SUBSYSTEM_POSIX_CUI",
+        9: "IMAGE_SUBSYSTEM_WINDOWS_CE_GUI",
+        10: "IMAGE_SUBSYSTEM_EFI_APPLICATION"
+}
+
+suspicious_strings = ['powershell.exe', 'cmd.exe', 'wscript', 'csript', 'vmware', 'vbox', 'virtualbox', 'qemu', 'schtasks', 'reg add', 'reg create']
 
 def signtool_verify(path):
     result = subprocess.run(
@@ -59,8 +113,11 @@ def external_strings(path):
     return result.stdout.splitlines()
 
 def main():
-    path = 'C:\\Users\\byL0r3t\\source\\repos\\sweetCatMeme\\x64\\Debug\\sweetCatMeme.exe'
+    path = sys.argv[1]
     pe = pefile.PE(path)
+
+    # Name
+    output_data['Name'] = path
 
     # File timestamp
     timestamp = pe.FILE_HEADER.TimeDateStamp
@@ -78,6 +135,14 @@ def main():
     print(f"File Signature: {hex(signature)}")
     output_data['Signature'] = signature
 
+    # Subsystem type
+    subsystem = pe.OPTIONAL_HEADER.Subsystem
+    subsystem_str = subsystem_map.get(subsystem, "UNKNOWN")
+    print(f"Subsystem: {subsystem_str} ({subsystem})")
+    output_data['Subsystem'] = {'Type': subsystem_str, 'Value': subsystem}
+    if subsystem == 1:
+        heuristic_subsytem_is_native = {'type':'native_subsystem', 'Reason':'File uses NATIVE subsystem which is uncommon for regular applications', 'Severity':'Medium'}
+
     # Signature verification
     verification_result = signtool_verify(path)
     print(f"Signature Verification: {verification_result}")
@@ -87,6 +152,13 @@ def main():
     strings = external_strings(path)
     print(f"Extracted {strings} strings from the file.")
     output_data['Strings'] = [s.decode(errors='ignore') for s in strings]
+
+    # Suspicious strings heuristic
+    heuristic_suspicious_strings = []
+    for s in output_data['Strings']:
+        for suspicious in suspicious_strings:
+            if suspicious.lower() in s.lower():
+                heuristic_suspicious_strings.append({'type':'suspicious_string', 'String': s, 'Reason':'Suspicious string detected', 'Severity':'Low'})
 
     isEntryPointInTextSection = False
 
@@ -119,6 +191,11 @@ def main():
 
 
     output_data['Functions'] = functions_info
+
+    heuristic_suspicious_api_calls = []
+    for func in functions_info:
+        if func['Name'] in suspicious_api_calls:
+            heuristic_suspicious_api_calls.append({'type':'suspicious_api_call', 'Function name': func['Name'], 'Reason':'Suspicious API call detected', 'Severity':'High'})
 
     # Sections
     heuristic_unusual_sections = []
@@ -193,7 +270,9 @@ def main():
     output_data['heuristics'] = {
         'timestamp': heuristic_timestamp_info,
         'unusual_sections': heuristic_unusual_sections,
-        'entropy': heuristic_entropy
+        'entropy': heuristic_entropy,
+        'suspicious_api_calls': heuristic_suspicious_api_calls,
+        'native_subsystem': heuristic_subsytem_is_native if 'heuristic_subsytem_is_native' in locals() else None
     }
     with open("data.json", "w") as file:
         json.dump(output_data, file, indent=4)
