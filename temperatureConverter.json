@@ -1,0 +1,559 @@
+[
+    {
+        "Name": "C:\\Users\\byL0r3t\\Desktop\\pythonProjects\\windows-file-analyzer\\testingBenignFiles\\temperatureConverter.exe",
+        "Timestamp": 1764582057,
+        "EntryPoint": "0x13f0",
+        "Signature": 23117,
+        "Subsystem": {
+            "Type": "IMAGE_SUBSYSTEM_WINDOWS_CUI",
+            "Value": 3
+        },
+        "SignatureVerification": "SignTool Error: No signature found.",
+        "Functions": [
+            {
+                "Name": "DeleteCriticalSection",
+                "Address": "0x1400082e0"
+            },
+            {
+                "Name": "EnterCriticalSection",
+                "Address": "0x1400082e8"
+            },
+            {
+                "Name": "GetLastError",
+                "Address": "0x1400082f0"
+            },
+            {
+                "Name": "InitializeCriticalSection",
+                "Address": "0x1400082f8"
+            },
+            {
+                "Name": "LeaveCriticalSection",
+                "Address": "0x140008300"
+            },
+            {
+                "Name": "SetUnhandledExceptionFilter",
+                "Address": "0x140008308"
+            },
+            {
+                "Name": "Sleep",
+                "Address": "0x140008310"
+            },
+            {
+                "Name": "TlsGetValue",
+                "Address": "0x140008318"
+            },
+            {
+                "Name": "VirtualProtect",
+                "Address": "0x140008320"
+            },
+            {
+                "Name": "VirtualQuery",
+                "Address": "0x140008328"
+            },
+            {
+                "Name": "__p__environ",
+                "Address": "0x140008338"
+            },
+            {
+                "Name": "__p__wenviron",
+                "Address": "0x140008340"
+            },
+            {
+                "Name": "_set_new_mode",
+                "Address": "0x140008350"
+            },
+            {
+                "Name": "calloc",
+                "Address": "0x140008358"
+            },
+            {
+                "Name": "free",
+                "Address": "0x140008360"
+            },
+            {
+                "Name": "malloc",
+                "Address": "0x140008368"
+            },
+            {
+                "Name": "__setusermatherr",
+                "Address": "0x140008378"
+            },
+            {
+                "Name": "__C_specific_handler",
+                "Address": "0x140008388"
+            },
+            {
+                "Name": "memcpy",
+                "Address": "0x140008390"
+            },
+            {
+                "Name": "__p___argc",
+                "Address": "0x1400083a0"
+            },
+            {
+                "Name": "__p___argv",
+                "Address": "0x1400083a8"
+            },
+            {
+                "Name": "__p___wargv",
+                "Address": "0x1400083b0"
+            },
+            {
+                "Name": "_cexit",
+                "Address": "0x1400083b8"
+            },
+            {
+                "Name": "_configure_narrow_argv",
+                "Address": "0x1400083c0"
+            },
+            {
+                "Name": "_configure_wide_argv",
+                "Address": "0x1400083c8"
+            },
+            {
+                "Name": "_crt_at_quick_exit",
+                "Address": "0x1400083d0"
+            },
+            {
+                "Name": "_crt_atexit",
+                "Address": "0x1400083d8"
+            },
+            {
+                "Name": "_exit",
+                "Address": "0x1400083e0"
+            },
+            {
+                "Name": "_initialize_narrow_environment",
+                "Address": "0x1400083e8"
+            },
+            {
+                "Name": "_initialize_wide_environment",
+                "Address": "0x1400083f0"
+            },
+            {
+                "Name": "_initterm",
+                "Address": "0x1400083f8"
+            },
+            {
+                "Name": "_set_app_type",
+                "Address": "0x140008400"
+            },
+            {
+                "Name": "_set_invalid_parameter_handler",
+                "Address": "0x140008408"
+            },
+            {
+                "Name": "abort",
+                "Address": "0x140008410"
+            },
+            {
+                "Name": "exit",
+                "Address": "0x140008418"
+            },
+            {
+                "Name": "signal",
+                "Address": "0x140008420"
+            },
+            {
+                "Name": "__acrt_iob_func",
+                "Address": "0x140008430"
+            },
+            {
+                "Name": "__p__commode",
+                "Address": "0x140008438"
+            },
+            {
+                "Name": "__p__fmode",
+                "Address": "0x140008440"
+            },
+            {
+                "Name": "__stdio_common_vfprintf",
+                "Address": "0x140008448"
+            },
+            {
+                "Name": "__stdio_common_vfwprintf",
+                "Address": "0x140008450"
+            },
+            {
+                "Name": "fwrite",
+                "Address": "0x140008458"
+            },
+            {
+                "Name": "strlen",
+                "Address": "0x140008468"
+            },
+            {
+                "Name": "strncmp",
+                "Address": "0x140008470"
+            },
+            {
+                "Name": "__daylight",
+                "Address": "0x140008480"
+            },
+            {
+                "Name": "__timezone",
+                "Address": "0x140008488"
+            },
+            {
+                "Name": "__tzname",
+                "Address": "0x140008490"
+            },
+            {
+                "Name": "_tzset",
+                "Address": "0x140008498"
+            },
+            {
+                "Name": "_ZNSirsERd",
+                "Address": "0x1400084a8"
+            },
+            {
+                "Name": "_ZNSirsERi",
+                "Address": "0x1400084b0"
+            },
+            {
+                "Name": "_ZNSolsEd",
+                "Address": "0x1400084b8"
+            },
+            {
+                "Name": "_ZSt3cin",
+                "Address": "0x1400084c0"
+            },
+            {
+                "Name": "_ZSt4cout",
+                "Address": "0x1400084c8"
+            },
+            {
+                "Name": "_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc",
+                "Address": "0x1400084d0"
+            }
+        ],
+        "Sections": [
+            {
+                "Name": ".text",
+                "VirtualAddress": "0x1000",
+                "SizeOfRawData": "0x2000",
+                "PointerToRawData": "0x600",
+                "Characteristics": "0x60000060",
+                "Entropy": 5.8251
+            },
+            {
+                "Name": ".data",
+                "VirtualAddress": "0x3000",
+                "SizeOfRawData": "0x200",
+                "PointerToRawData": "0x2600",
+                "Characteristics": "0xc0000040",
+                "Entropy": 1.4141
+            },
+            {
+                "Name": ".rdata",
+                "VirtualAddress": "0x4000",
+                "SizeOfRawData": "0xe00",
+                "PointerToRawData": "0x2800",
+                "Characteristics": "0x40000040",
+                "Entropy": 4.5569
+            },
+            {
+                "Name": ".pdata",
+                "VirtualAddress": "0x5000",
+                "SizeOfRawData": "0x400",
+                "PointerToRawData": "0x3600",
+                "Characteristics": "0x40000040",
+                "Entropy": 2.8089
+            },
+            {
+                "Name": ".xdata",
+                "VirtualAddress": "0x6000",
+                "SizeOfRawData": "0x400",
+                "PointerToRawData": "0x3a00",
+                "Characteristics": "0x40000040",
+                "Entropy": 2.4478
+            },
+            {
+                "Name": ".bss",
+                "VirtualAddress": "0x7000",
+                "SizeOfRawData": "0x0",
+                "PointerToRawData": "0x0",
+                "Characteristics": "0xc0000080",
+                "Entropy": 0.0
+            },
+            {
+                "Name": ".idata",
+                "VirtualAddress": "0x8000",
+                "SizeOfRawData": "0xc00",
+                "PointerToRawData": "0x3e00",
+                "Characteristics": "0xc0000040",
+                "Entropy": 3.7561
+            },
+            {
+                "Name": ".CRT",
+                "VirtualAddress": "0x9000",
+                "SizeOfRawData": "0x200",
+                "PointerToRawData": "0x4a00",
+                "Characteristics": "0xc0000040",
+                "Entropy": 0.2866
+            },
+            {
+                "Name": ".tls",
+                "VirtualAddress": "0xa000",
+                "SizeOfRawData": "0x200",
+                "PointerToRawData": "0x4c00",
+                "Characteristics": "0xc0000040",
+                "Entropy": 0.0
+            },
+            {
+                "Name": ".rsrc",
+                "VirtualAddress": "0xb000",
+                "SizeOfRawData": "0x600",
+                "PointerToRawData": "0x4e00",
+                "Characteristics": "0x40000040",
+                "Entropy": 4.7785
+            },
+            {
+                "Name": ".reloc",
+                "VirtualAddress": "0xc000",
+                "SizeOfRawData": "0x200",
+                "PointerToRawData": "0x5400",
+                "Characteristics": "0x42000040",
+                "Entropy": 1.7731
+            },
+            {
+                "Name": "/4",
+                "VirtualAddress": "0xd000",
+                "SizeOfRawData": "0x400",
+                "PointerToRawData": "0x5600",
+                "Characteristics": "0x42000040",
+                "Entropy": 1.6449
+            },
+            {
+                "Name": "/19",
+                "VirtualAddress": "0xe000",
+                "SizeOfRawData": "0xb000",
+                "PointerToRawData": "0x5a00",
+                "Characteristics": "0x42000040",
+                "Entropy": 5.8446
+            },
+            {
+                "Name": "/31",
+                "VirtualAddress": "0x19000",
+                "SizeOfRawData": "0x2000",
+                "PointerToRawData": "0x10a00",
+                "Characteristics": "0x42000040",
+                "Entropy": 4.7915
+            },
+            {
+                "Name": "/45",
+                "VirtualAddress": "0x1b000",
+                "SizeOfRawData": "0x1e00",
+                "PointerToRawData": "0x12a00",
+                "Characteristics": "0x42000040",
+                "Entropy": 4.9222
+            },
+            {
+                "Name": "/57",
+                "VirtualAddress": "0x1d000",
+                "SizeOfRawData": "0xa00",
+                "PointerToRawData": "0x14800",
+                "Characteristics": "0x42000040",
+                "Entropy": 3.8719
+            },
+            {
+                "Name": "/70",
+                "VirtualAddress": "0x1e000",
+                "SizeOfRawData": "0x400",
+                "PointerToRawData": "0x15200",
+                "Characteristics": "0x42000040",
+                "Entropy": 4.0774
+            },
+            {
+                "Name": "/81",
+                "VirtualAddress": "0x1f000",
+                "SizeOfRawData": "0x1600",
+                "PointerToRawData": "0x15600",
+                "Characteristics": "0x42000040",
+                "Entropy": 4.8737
+            },
+            {
+                "Name": "/97",
+                "VirtualAddress": "0x21000",
+                "SizeOfRawData": "0x1400",
+                "PointerToRawData": "0x16c00",
+                "Characteristics": "0x42000040",
+                "Entropy": 5.0461
+            },
+            {
+                "Name": "/113",
+                "VirtualAddress": "0x23000",
+                "SizeOfRawData": "0x200",
+                "PointerToRawData": "0x18000",
+                "Characteristics": "0x42000040",
+                "Entropy": 4.1227
+            }
+        ],
+        "isEntryPointInTextSection": 1,
+        "heuristics": {
+            "timestamp": null,
+            "unusual_sections": [
+                {
+                    "type": "size_ratio_anomaly",
+                    "Name": ".bss",
+                    "VirtualSize": 384,
+                    "SizeOfRawData": 0,
+                    "Reason": "High virtual size to raw size ratio",
+                    "severity": "Critical"
+                },
+                {
+                    "type": "size_ratio_warning",
+                    "Name": ".bss",
+                    "VirtualSize": 384,
+                    "SizeOfRawData": 0,
+                    "Reason": "Moderate virtual size to raw size ratio",
+                    "severity": "Medium"
+                },
+                {
+                    "type": "many_sections",
+                    "Number of sections": 20,
+                    "Reason": "Unusually high number of sections in the PE file",
+                    "severity": "Medium"
+                }
+            ],
+            "entropy": [
+                {
+                    "type": "high_entropy",
+                    "Section name": ".text",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".data",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".rdata",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".pdata",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".xdata",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "low_entropy",
+                    "Section name": ".bss",
+                    "Reason": "Low entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".idata",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "low_entropy",
+                    "Section name": ".CRT",
+                    "Reason": "Low entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "low_entropy",
+                    "Section name": ".tls",
+                    "Reason": "Low entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".rsrc",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".reloc",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": "/4",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": "/19",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": "/31",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": "/45",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": "/57",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": "/70",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": "/81",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": "/97",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": "/113",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                }
+            ],
+            "suspicious_api_calls": [
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "VirtualProtect",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "VirtualQuery",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                }
+            ],
+            "native_subsystem": null,
+            "suspicious_strings": []
+        }
+    }
+]

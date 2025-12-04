@@ -1,0 +1,149 @@
+[
+    {
+        "Name": "/home/kali/Downloads/malwares/Endermanch@Birele.exe",
+        "Timestamp": 1199807017,
+        "EntryPoint": "0x36490",
+        "Signature": 23117,
+        "Subsystem": {
+            "Type": "IMAGE_SUBSYSTEM_WINDOWS_GUI",
+            "Value": 2
+        },
+        "Functions": [
+            {
+                "Name": "LoadLibraryA",
+                "Address": "0x43743c"
+            },
+            {
+                "Name": "GetProcAddress",
+                "Address": "0x437440"
+            },
+            {
+                "Name": "VirtualProtect",
+                "Address": "0x437444"
+            },
+            {
+                "Name": "VirtualAlloc",
+                "Address": "0x437448"
+            },
+            {
+                "Name": "VirtualFree",
+                "Address": "0x43744c"
+            },
+            {
+                "Name": "ExitProcess",
+                "Address": "0x437450"
+            },
+            {
+                "Name": "GetFocus",
+                "Address": "0x437458"
+            }
+        ],
+        "Sections": [
+            {
+                "Name": "UPX0",
+                "VirtualAddress": "0x1000",
+                "SizeOfRawData": "0x0",
+                "PointerToRawData": "0x400",
+                "Characteristics": "0xe0000080",
+                "Entropy": 0.0
+            },
+            {
+                "Name": "UPX1",
+                "VirtualAddress": "0x1a000",
+                "SizeOfRawData": "0x1c800",
+                "PointerToRawData": "0x400",
+                "Characteristics": "0xe0000040",
+                "Entropy": 7.9487
+            },
+            {
+                "Name": ".rsrc",
+                "VirtualAddress": "0x37000",
+                "SizeOfRawData": "0x600",
+                "PointerToRawData": "0x1cc00",
+                "Characteristics": "0xc0000040",
+                "Entropy": 2.9325
+            }
+        ],
+        "isEntryPointInTextSection": false,
+        "heuristics": {
+            "timestamp": {
+                "type": "old_timestamp",
+                "Timestamp": 1199807017,
+                "Reason": "File timestamp is older than 10 years",
+                "Severity": "Low"
+            },
+            "unusual_sections": [
+                {
+                    "type": "size_ratio_anomaly",
+                    "Name": "UPX0",
+                    "VirtualSize": 102400,
+                    "SizeOfRawData": 0,
+                    "Reason": "High virtual size to raw size ratio",
+                    "severity": "Critical"
+                },
+                {
+                    "type": "size_ratio_warning",
+                    "Name": "UPX0",
+                    "VirtualSize": 102400,
+                    "SizeOfRawData": 0,
+                    "Reason": "Moderate virtual size to raw size ratio",
+                    "severity": "Medium"
+                },
+                {
+                    "type": "entry_point_anomaly",
+                    "Reason": "Entry point is not located in the .text section",
+                    "severity": "High"
+                }
+            ],
+            "entropy": [
+                {
+                    "type": "low_entropy",
+                    "Section name": "UPX0",
+                    "Reason": "Low entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "very_high_entropy",
+                    "Section name": "UPX1",
+                    "Reason": "Very high entropy detected",
+                    "Severity": "Critical"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".rsrc",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                }
+            ],
+            "suspicious_api_calls": [
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "LoadLibraryA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetProcAddress",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "VirtualProtect",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "VirtualAlloc",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                }
+            ],
+            "native_subsystem": null,
+            "suspicious_strings": []
+        },
+        "label": 1
+    }
+]

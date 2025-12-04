@@ -3,6 +3,7 @@ import json
 import subprocess
 import math
 import time
+import os
 import sys
 
 suspicious_sections = ['.textbss', '.dataenc', '.upx0', '.upx1', '.aspack', '.petite', '.themida', '.vmp0', '.vmp1', 'upx', '.xyz', '.packed', '.ab', '.secret', '.evil', '.payload']
@@ -150,17 +151,17 @@ def main():
 
     # Get strings
     strings = external_strings(path)
-    print(f"Extracted {strings} strings from the file.")
-    output_data['Strings'] = [s.decode(errors='ignore') for s in strings]
-
+    # print(f"Extracted {strings} strings from the file.")
+    #output_data['Strings'] = [s.decode(errors='ignore') for s in strings]
+    new_strings = [s.decode(errors='ignore') for s in strings]
     # Suspicious strings heuristic
     heuristic_suspicious_strings = []
-    for s in output_data['Strings']:
+    for s in new_strings:
         for suspicious in suspicious_strings:
             if suspicious.lower() in s.lower():
                 heuristic_suspicious_strings.append({'type':'suspicious_string', 'String': s, 'Reason':'Suspicious string detected', 'Severity':'Low'})
 
-    isEntryPointInTextSection = False
+    isEntryPointInTextSection = 0
 
     # File functions
     functions_info = []
@@ -240,7 +241,7 @@ def main():
         end = start + section.Misc_VirtualSize
         if section.Name.decode().rstrip(chr(0)) == '.text':
             if start <= entry_point < end:
-                isEntryPointInTextSection = True
+                isEntryPointInTextSection = 1
         
         # Virtual size vs raw size of a section
         ratio = section.Misc_VirtualSize / max(section.SizeOfRawData, 1)
@@ -263,7 +264,7 @@ def main():
     elif sections_counter < 3 and sections_counter > 0:
         heuristic_unusual_sections.append({'type': 'few_sections', 'Number of sections': sections_counter, 'Reason': 'Unusually low number of sections in the PE file', 'severity': 'Low'})
 
-    if isEntryPointInTextSection == False:
+    if isEntryPointInTextSection == 0:
         heuristic_unusual_sections.append({'type': 'entry_point_anomaly', 'Reason': 'Entry point is not located in the .text section', 'severity': 'High'})
 
     output_data['isEntryPointInTextSection'] = isEntryPointInTextSection
@@ -272,9 +273,21 @@ def main():
         'unusual_sections': heuristic_unusual_sections,
         'entropy': heuristic_entropy,
         'suspicious_api_calls': heuristic_suspicious_api_calls,
-        'native_subsystem': heuristic_subsytem_is_native if 'heuristic_subsytem_is_native' in locals() else None
+        'native_subsystem': heuristic_subsytem_is_native if 'heuristic_subsytem_is_native' in locals() else None,
+        'suspicious_strings': heuristic_suspicious_strings
     }
-    with open("data.json", "w") as file:
-        json.dump(output_data, file, indent=4)
+
+    if os.path.exists("new_data.json"):
+        with open("new_data.json", "r") as f:
+            try:
+                existing_data = json.load(f)
+            except json.JSONDecodeError:    
+                existing_data = []   # File existed but was empty/broken
+    else:
+        existing_data = []
+    existing_data.append(output_data)
+    with open("new_data.json", "w") as file:
+        json.dump(existing_data, file, indent=4)
+
 if __name__ == "__main__":
     main()

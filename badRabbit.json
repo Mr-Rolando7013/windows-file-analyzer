@@ -1,0 +1,234 @@
+[
+    {
+        "Name": "/home/kali/Downloads/malwares/Endermanch@BadRabbit.exe",
+        "Timestamp": 1508639638,
+        "EntryPoint": "0x12c0",
+        "Signature": 23117,
+        "Subsystem": {
+            "Type": "IMAGE_SUBSYSTEM_WINDOWS_CUI",
+            "Value": 3
+        },
+        "Functions": [
+            {
+                "Name": "ExitProcess",
+                "Address": "0x404000"
+            },
+            {
+                "Name": "GetCommandLineW",
+                "Address": "0x404004"
+            },
+            {
+                "Name": "GetFileSize",
+                "Address": "0x404008"
+            },
+            {
+                "Name": "CreateProcessW",
+                "Address": "0x40400c"
+            },
+            {
+                "Name": "HeapAlloc",
+                "Address": "0x404010"
+            },
+            {
+                "Name": "HeapFree",
+                "Address": "0x404014"
+            },
+            {
+                "Name": "GetModuleHandleW",
+                "Address": "0x404018"
+            },
+            {
+                "Name": "GetProcessHeap",
+                "Address": "0x40401c"
+            },
+            {
+                "Name": "WriteFile",
+                "Address": "0x404020"
+            },
+            {
+                "Name": "GetSystemDirectoryW",
+                "Address": "0x404024"
+            },
+            {
+                "Name": "ReadFile",
+                "Address": "0x404028"
+            },
+            {
+                "Name": "GetModuleFileNameW",
+                "Address": "0x40402c"
+            },
+            {
+                "Name": "CreateFileW",
+                "Address": "0x404030"
+            },
+            {
+                "Name": "lstrcatW",
+                "Address": "0x404034"
+            },
+            {
+                "Name": "CloseHandle",
+                "Address": "0x404038"
+            },
+            {
+                "Name": "UnhandledExceptionFilter",
+                "Address": "0x40403c"
+            },
+            {
+                "Name": "GetCurrentProcess",
+                "Address": "0x404040"
+            },
+            {
+                "Name": "TerminateProcess",
+                "Address": "0x404044"
+            },
+            {
+                "Name": "SetUnhandledExceptionFilter",
+                "Address": "0x404048"
+            },
+            {
+                "Name": "wsprintfW",
+                "Address": "0x404058"
+            },
+            {
+                "Name": "CommandLineToArgvW",
+                "Address": "0x404050"
+            },
+            {
+                "Name": "wcsstr",
+                "Address": "0x404060"
+            },
+            {
+                "Name": "memcpy",
+                "Address": "0x404064"
+            },
+            {
+                "Name": "free",
+                "Address": "0x404068"
+            },
+            {
+                "Name": "malloc",
+                "Address": "0x40406c"
+            }
+        ],
+        "Sections": [
+            {
+                "Name": ".text",
+                "VirtualAddress": "0x1000",
+                "SizeOfRawData": "0x3000",
+                "PointerToRawData": "0x400",
+                "Characteristics": "0x60000020",
+                "Entropy": 6.5841
+            },
+            {
+                "Name": ".rdata",
+                "VirtualAddress": "0x4000",
+                "SizeOfRawData": "0x3200",
+                "PointerToRawData": "0x3400",
+                "Characteristics": "0x40000040",
+                "Entropy": 7.1773
+            },
+            {
+                "Name": ".data",
+                "VirtualAddress": "0x8000",
+                "SizeOfRawData": "0x200",
+                "PointerToRawData": "0x6600",
+                "Characteristics": "0xc0000040",
+                "Entropy": 0.1833
+            },
+            {
+                "Name": ".rsrc",
+                "VirtualAddress": "0x9000",
+                "SizeOfRawData": "0x7200",
+                "PointerToRawData": "0x6800",
+                "Characteristics": "0x40000040",
+                "Entropy": 4.2041
+            },
+            {
+                "Name": ".reloc",
+                "VirtualAddress": "0x11000",
+                "SizeOfRawData": "0x400",
+                "PointerToRawData": "0xda00",
+                "Characteristics": "0x42000040",
+                "Entropy": 3.2931
+            }
+        ],
+        "isEntryPointInTextSection": true,
+        "heuristics": {
+            "timestamp": null,
+            "unusual_sections": [],
+            "entropy": [
+                {
+                    "type": "high_entropy",
+                    "Section name": ".text",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "very_high_entropy",
+                    "Section name": ".rdata",
+                    "Reason": "Very high entropy detected",
+                    "Severity": "Critical"
+                },
+                {
+                    "type": "low_entropy",
+                    "Section name": ".data",
+                    "Reason": "Low entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".rsrc",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".reloc",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                }
+            ],
+            "suspicious_api_calls": [
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "CreateProcessW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "HeapAlloc",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "HeapFree",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetModuleHandleW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "WriteFile",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "CreateFileW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                }
+            ],
+            "native_subsystem": null,
+            "suspicious_strings": []
+        },
+        "label":1
+    }
+]

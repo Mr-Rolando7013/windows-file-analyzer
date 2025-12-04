@@ -1,0 +1,948 @@
+[
+    {
+        "Name": "C:\\Users\\byL0r3t\\Documents\\KaliSharedFolders\\benignFiles\\Timber.exe",
+        "Timestamp": 1761686663,
+        "EntryPoint": "0x11046",
+        "Signature": 23117,
+        "Subsystem": {
+            "Type": "IMAGE_SUBSYSTEM_WINDOWS_CUI",
+            "Value": 3
+        },
+        "SignatureVerification": "SignTool Error: No signature found.",
+        "Functions": [
+            {
+                "Name": "?draw@RenderTarget@sf@@QAEXABVDrawable@2@ABVRenderStates@2@@Z",
+                "Address": "0x42b260"
+            },
+            {
+                "Name": "?White@Color@sf@@2V12@B",
+                "Address": "0x42b264"
+            },
+            {
+                "Name": "?Default@RenderStates@sf@@2V12@B",
+                "Address": "0x42b268"
+            },
+            {
+                "Name": "??1Text@sf@@UAE@XZ",
+                "Address": "0x42b26c"
+            },
+            {
+                "Name": "?getLocalBounds@Text@sf@@QBE?AV?$Rect@M@2@XZ",
+                "Address": "0x42b270"
+            },
+            {
+                "Name": "?setFillColor@Text@sf@@QAEXABVColor@2@@Z",
+                "Address": "0x42b274"
+            },
+            {
+                "Name": "?setCharacterSize@Text@sf@@QAEXI@Z",
+                "Address": "0x42b278"
+            },
+            {
+                "Name": "?setFont@Text@sf@@QAEXABVFont@2@@Z",
+                "Address": "0x42b27c"
+            },
+            {
+                "Name": "?clear@RenderTarget@sf@@QAEXABVColor@2@@Z",
+                "Address": "0x42b280"
+            },
+            {
+                "Name": "??1RectangleShape@sf@@UAE@XZ",
+                "Address": "0x42b284"
+            },
+            {
+                "Name": "?setSize@RectangleShape@sf@@QAEXABV?$Vector2@M@2@@Z",
+                "Address": "0x42b288"
+            },
+            {
+                "Name": "??0RectangleShape@sf@@QAE@ABV?$Vector2@M@1@@Z",
+                "Address": "0x42b28c"
+            },
+            {
+                "Name": "?loadFromFile@Font@sf@@QAE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+                "Address": "0x42b290"
+            },
+            {
+                "Name": "??1Font@sf@@QAE@XZ",
+                "Address": "0x42b294"
+            },
+            {
+                "Name": "??0Font@sf@@QAE@XZ",
+                "Address": "0x42b298"
+            },
+            {
+                "Name": "?loadFromFile@Texture@sf@@QAE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV?$Rect@H@2@@Z",
+                "Address": "0x42b29c"
+            },
+            {
+                "Name": "??1Texture@sf@@QAE@XZ",
+                "Address": "0x42b2a0"
+            },
+            {
+                "Name": "??0Texture@sf@@QAE@XZ",
+                "Address": "0x42b2a4"
+            },
+            {
+                "Name": "?setFillColor@Shape@sf@@QAEXABVColor@2@@Z",
+                "Address": "0x42b2a8"
+            },
+            {
+                "Name": "??0Color@sf@@QAE@EEEE@Z",
+                "Address": "0x42b2ac"
+            },
+            {
+                "Name": "?getPosition@Transformable@sf@@QBEABV?$Vector2@M@2@XZ",
+                "Address": "0x42b2b0"
+            },
+            {
+                "Name": "?setOrigin@Transformable@sf@@QAEXMM@Z",
+                "Address": "0x42b2b4"
+            },
+            {
+                "Name": "?setRotation@Transformable@sf@@QAEXM@Z",
+                "Address": "0x42b2b8"
+            },
+            {
+                "Name": "?Red@Color@sf@@2V12@B",
+                "Address": "0x42b2bc"
+            },
+            {
+                "Name": "??0RenderWindow@sf@@QAE@VVideoMode@1@ABVString@1@IABUContextSettings@1@@Z",
+                "Address": "0x42b2c0"
+            },
+            {
+                "Name": "??1RenderWindow@sf@@UAE@XZ",
+                "Address": "0x42b2c4"
+            },
+            {
+                "Name": "??0Sprite@sf@@QAE@XZ",
+                "Address": "0x42b2c8"
+            },
+            {
+                "Name": "?setTexture@Sprite@sf@@QAEXABVTexture@2@_N@Z",
+                "Address": "0x42b2cc"
+            },
+            {
+                "Name": "??1Sprite@sf@@UAE@XZ",
+                "Address": "0x42b2d0"
+            },
+            {
+                "Name": "??0Text@sf@@QAE@XZ",
+                "Address": "0x42b2d4"
+            },
+            {
+                "Name": "?setString@Text@sf@@QAEXABVString@2@@Z",
+                "Address": "0x42b2d8"
+            },
+            {
+                "Name": "?setPosition@Transformable@sf@@QAEXMM@Z",
+                "Address": "0x42b2dc"
+            },
+            {
+                "Name": "?pollEvent@WindowBase@sf@@QAE_NAAVEvent@2@@Z",
+                "Address": "0x42b370"
+            },
+            {
+                "Name": "?isOpen@WindowBase@sf@@QBE_NXZ",
+                "Address": "0x42b374"
+            },
+            {
+                "Name": "??0VideoMode@sf@@QAE@III@Z",
+                "Address": "0x42b378"
+            },
+            {
+                "Name": "?isKeyPressed@Keyboard@sf@@SA_NW4Key@12@@Z",
+                "Address": "0x42b37c"
+            },
+            {
+                "Name": "?close@Window@sf@@UAEXXZ",
+                "Address": "0x42b380"
+            },
+            {
+                "Name": "?display@Window@sf@@QAEXXZ",
+                "Address": "0x42b384"
+            },
+            {
+                "Name": "?restart@Clock@sf@@QAE?AVTime@2@XZ",
+                "Address": "0x42b324"
+            },
+            {
+                "Name": "??0Clock@sf@@QAE@XZ",
+                "Address": "0x42b328"
+            },
+            {
+                "Name": "?asSeconds@Time@sf@@QBEMXZ",
+                "Address": "0x42b32c"
+            },
+            {
+                "Name": "??0Time@sf@@QAE@XZ",
+                "Address": "0x42b330"
+            },
+            {
+                "Name": "??0String@sf@@QAE@PBDABVlocale@std@@@Z",
+                "Address": "0x42b334"
+            },
+            {
+                "Name": "??1String@sf@@QAE@XZ",
+                "Address": "0x42b338"
+            },
+            {
+                "Name": "??0String@sf@@QAE@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABVlocale@3@@Z",
+                "Address": "0x42b33c"
+            },
+            {
+                "Name": "?play@Sound@sf@@UAEXXZ",
+                "Address": "0x42b214"
+            },
+            {
+                "Name": "?setBuffer@Sound@sf@@QAEXABVSoundBuffer@2@@Z",
+                "Address": "0x42b218"
+            },
+            {
+                "Name": "??0SoundBuffer@sf@@QAE@XZ",
+                "Address": "0x42b21c"
+            },
+            {
+                "Name": "??1SoundBuffer@sf@@QAE@XZ",
+                "Address": "0x42b220"
+            },
+            {
+                "Name": "?loadFromFile@SoundBuffer@sf@@QAE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z",
+                "Address": "0x42b224"
+            },
+            {
+                "Name": "??1Sound@sf@@UAE@XZ",
+                "Address": "0x42b228"
+            },
+            {
+                "Name": "??0Sound@sf@@QAE@XZ",
+                "Address": "0x42b22c"
+            },
+            {
+                "Name": "?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAEXXZ",
+                "Address": "0x42b098"
+            },
+            {
+                "Name": "?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAEXXZ",
+                "Address": "0x42b09c"
+            },
+            {
+                "Name": "?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JXZ",
+                "Address": "0x42b0a0"
+            },
+            {
+                "Name": "?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEHXZ",
+                "Address": "0x42b0a4"
+            },
+            {
+                "Name": "?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPAD_J@Z",
+                "Address": "0x42b0a8"
+            },
+            {
+                "Name": "?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPBD_J@Z",
+                "Address": "0x42b0ac"
+            },
+            {
+                "Name": "?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEPAV12@PAD_J@Z",
+                "Address": "0x42b0b0"
+            },
+            {
+                "Name": "?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEHXZ",
+                "Address": "0x42b0b4"
+            },
+            {
+                "Name": "?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEXABVlocale@2@@Z",
+                "Address": "0x42b0b8"
+            },
+            {
+                "Name": "??1?$basic_iostream@DU?$char_traits@D@std@@@std@@UAE@XZ",
+                "Address": "0x42b0bc"
+            },
+            {
+                "Name": "??0?$basic_iostream@DU?$char_traits@D@std@@@std@@QAE@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@@Z",
+                "Address": "0x42b0c0"
+            },
+            {
+                "Name": "?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ",
+                "Address": "0x42b0c4"
+            },
+            {
+                "Name": "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z",
+                "Address": "0x42b0c8"
+            },
+            {
+                "Name": "?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ",
+                "Address": "0x42b0cc"
+            },
+            {
+                "Name": "??0?$basic_ios@DU?$char_traits@D@std@@@std@@IAE@XZ",
+                "Address": "0x42b0d0"
+            },
+            {
+                "Name": "?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDXZ",
+                "Address": "0x42b0d4"
+            },
+            {
+                "Name": "?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ",
+                "Address": "0x42b0d8"
+            },
+            {
+                "Name": "?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ",
+                "Address": "0x42b0dc"
+            },
+            {
+                "Name": "?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z",
+                "Address": "0x42b0e0"
+            },
+            {
+                "Name": "??1?$basic_ios@DU?$char_traits@D@std@@@std@@UAE@XZ",
+                "Address": "0x42b0e4"
+            },
+            {
+                "Name": "?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ",
+                "Address": "0x42b0e8"
+            },
+            {
+                "Name": "?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z",
+                "Address": "0x42b0ec"
+            },
+            {
+                "Name": "?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD0@Z",
+                "Address": "0x42b0f0"
+            },
+            {
+                "Name": "?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ",
+                "Address": "0x42b0f4"
+            },
+            {
+                "Name": "?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z",
+                "Address": "0x42b0f8"
+            },
+            {
+                "Name": "?gbump@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXH@Z",
+                "Address": "0x42b0fc"
+            },
+            {
+                "Name": "?egptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ",
+                "Address": "0x42b100"
+            },
+            {
+                "Name": "?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ",
+                "Address": "0x42b104"
+            },
+            {
+                "Name": "?pbase@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ",
+                "Address": "0x42b108"
+            },
+            {
+                "Name": "?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ",
+                "Address": "0x42b10c"
+            },
+            {
+                "Name": "?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ",
+                "Address": "0x42b110"
+            },
+            {
+                "Name": "?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAE_JPBD_J@Z",
+                "Address": "0x42b114"
+            },
+            {
+                "Name": "??0_Lockit@std@@QAE@H@Z",
+                "Address": "0x42b118"
+            },
+            {
+                "Name": "??1_Lockit@std@@QAE@XZ",
+                "Address": "0x42b11c"
+            },
+            {
+                "Name": "?_Xbad_alloc@std@@YAXXZ",
+                "Address": "0x42b120"
+            },
+            {
+                "Name": "?_Xlength_error@std@@YAXPBD@Z",
+                "Address": "0x42b124"
+            },
+            {
+                "Name": "?uncaught_exception@std@@YA_NXZ",
+                "Address": "0x42b128"
+            },
+            {
+                "Name": "?_Getcvt@_Locinfo@std@@QBE?AU_Cvtvec@@XZ",
+                "Address": "0x42b12c"
+            },
+            {
+                "Name": "?_W_Getdays@_Locinfo@std@@QBEPBGXZ",
+                "Address": "0x42b130"
+            },
+            {
+                "Name": "?_W_Getmonths@_Locinfo@std@@QBEPBGXZ",
+                "Address": "0x42b134"
+            },
+            {
+                "Name": "?_Init@locale@std@@CAPAV_Locimp@12@_N@Z",
+                "Address": "0x42b138"
+            },
+            {
+                "Name": "?good@ios_base@std@@QBE_NXZ",
+                "Address": "0x42b13c"
+            },
+            {
+                "Name": "?flags@ios_base@std@@QBEHXZ",
+                "Address": "0x42b140"
+            },
+            {
+                "Name": "?width@ios_base@std@@QBE_JXZ",
+                "Address": "0x42b144"
+            },
+            {
+                "Name": "?width@ios_base@std@@QAE_J_J@Z",
+                "Address": "0x42b148"
+            },
+            {
+                "Name": "??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAE@XZ",
+                "Address": "0x42b14c"
+            },
+            {
+                "Name": "??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAE@XZ",
+                "Address": "0x42b150"
+            },
+            {
+                "Name": "?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z",
+                "Address": "0x42b154"
+            },
+            {
+                "Name": "memcpy",
+                "Address": "0x42b1a8"
+            },
+            {
+                "Name": "memmove",
+                "Address": "0x42b1ac"
+            },
+            {
+                "Name": "__std_exception_copy",
+                "Address": "0x42b1b0"
+            },
+            {
+                "Name": "__std_exception_destroy",
+                "Address": "0x42b1b4"
+            },
+            {
+                "Name": "_CxxThrowException",
+                "Address": "0x42b1b8"
+            },
+            {
+                "Name": "__CxxFrameHandler3",
+                "Address": "0x42b1bc"
+            },
+            {
+                "Name": "memset",
+                "Address": "0x42b1c0"
+            },
+            {
+                "Name": "__vcrt_LoadLibraryExW",
+                "Address": "0x42b1c4"
+            },
+            {
+                "Name": "__vcrt_GetModuleHandleW",
+                "Address": "0x42b1c8"
+            },
+            {
+                "Name": "__vcrt_GetModuleFileNameW",
+                "Address": "0x42b1cc"
+            },
+            {
+                "Name": "__std_type_info_destroy_list",
+                "Address": "0x42b1d0"
+            },
+            {
+                "Name": "_except_handler4_common",
+                "Address": "0x42b1d4"
+            },
+            {
+                "Name": "__current_exception_context",
+                "Address": "0x42b1d8"
+            },
+            {
+                "Name": "__current_exception",
+                "Address": "0x42b1dc"
+            },
+            {
+                "Name": "_get_initial_narrow_environment",
+                "Address": "0x42b3b8"
+            },
+            {
+                "Name": "_initterm",
+                "Address": "0x42b3bc"
+            },
+            {
+                "Name": "_initterm_e",
+                "Address": "0x42b3c0"
+            },
+            {
+                "Name": "exit",
+                "Address": "0x42b3c4"
+            },
+            {
+                "Name": "_exit",
+                "Address": "0x42b3c8"
+            },
+            {
+                "Name": "_set_fmode",
+                "Address": "0x42b3cc"
+            },
+            {
+                "Name": "__p___argc",
+                "Address": "0x42b3d0"
+            },
+            {
+                "Name": "__p___argv",
+                "Address": "0x42b3d4"
+            },
+            {
+                "Name": "_c_exit",
+                "Address": "0x42b3d8"
+            },
+            {
+                "Name": "_register_thread_local_exe_atexit_callback",
+                "Address": "0x42b3dc"
+            },
+            {
+                "Name": "_configthreadlocale",
+                "Address": "0x42b3e0"
+            },
+            {
+                "Name": "_set_new_mode",
+                "Address": "0x42b3e4"
+            },
+            {
+                "Name": "__p__commode",
+                "Address": "0x42b3e8"
+            },
+            {
+                "Name": "_register_onexit_function",
+                "Address": "0x42b3ec"
+            },
+            {
+                "Name": "__setusermatherr",
+                "Address": "0x42b3f0"
+            },
+            {
+                "Name": "strcat_s",
+                "Address": "0x42b3f4"
+            },
+            {
+                "Name": "__stdio_common_vsprintf_s",
+                "Address": "0x42b3f8"
+            },
+            {
+                "Name": "_controlfp_s",
+                "Address": "0x42b3fc"
+            },
+            {
+                "Name": "_wmakepath_s",
+                "Address": "0x42b400"
+            },
+            {
+                "Name": "_wsplitpath_s",
+                "Address": "0x42b404"
+            },
+            {
+                "Name": "wcscpy_s",
+                "Address": "0x42b408"
+            },
+            {
+                "Name": "_set_app_type",
+                "Address": "0x42b40c"
+            },
+            {
+                "Name": "strlen",
+                "Address": "0x42b410"
+            },
+            {
+                "Name": "wcslen",
+                "Address": "0x42b414"
+            },
+            {
+                "Name": "rand",
+                "Address": "0x42b418"
+            },
+            {
+                "Name": "srand",
+                "Address": "0x42b41c"
+            },
+            {
+                "Name": "_CrtDbgReport",
+                "Address": "0x42b420"
+            },
+            {
+                "Name": "_calloc_dbg",
+                "Address": "0x42b424"
+            },
+            {
+                "Name": "_invoke_watson",
+                "Address": "0x42b428"
+            },
+            {
+                "Name": "_initialize_onexit_table",
+                "Address": "0x42b42c"
+            },
+            {
+                "Name": "_seh_filter_exe",
+                "Address": "0x42b430"
+            },
+            {
+                "Name": "_CrtDbgReportW",
+                "Address": "0x42b434"
+            },
+            {
+                "Name": "_cexit",
+                "Address": "0x42b438"
+            },
+            {
+                "Name": "_crt_at_quick_exit",
+                "Address": "0x42b43c"
+            },
+            {
+                "Name": "_crt_atexit",
+                "Address": "0x42b440"
+            },
+            {
+                "Name": "strcpy_s",
+                "Address": "0x42b444"
+            },
+            {
+                "Name": "_execute_onexit_table",
+                "Address": "0x42b448"
+            },
+            {
+                "Name": "_initialize_narrow_environment",
+                "Address": "0x42b44c"
+            },
+            {
+                "Name": "_configure_narrow_argv",
+                "Address": "0x42b450"
+            },
+            {
+                "Name": "_time64",
+                "Address": "0x42b454"
+            },
+            {
+                "Name": "malloc",
+                "Address": "0x42b458"
+            },
+            {
+                "Name": "_callnewh",
+                "Address": "0x42b45c"
+            },
+            {
+                "Name": "_free_dbg",
+                "Address": "0x42b460"
+            },
+            {
+                "Name": "terminate",
+                "Address": "0x42b464"
+            },
+            {
+                "Name": "_seh_filter_dll",
+                "Address": "0x42b468"
+            },
+            {
+                "Name": "TerminateProcess",
+                "Address": "0x42b000"
+            },
+            {
+                "Name": "GetProcAddress",
+                "Address": "0x42b004"
+            },
+            {
+                "Name": "FreeLibrary",
+                "Address": "0x42b008"
+            },
+            {
+                "Name": "VirtualQuery",
+                "Address": "0x42b00c"
+            },
+            {
+                "Name": "GetProcessHeap",
+                "Address": "0x42b010"
+            },
+            {
+                "Name": "HeapFree",
+                "Address": "0x42b014"
+            },
+            {
+                "Name": "HeapAlloc",
+                "Address": "0x42b018"
+            },
+            {
+                "Name": "GetLastError",
+                "Address": "0x42b01c"
+            },
+            {
+                "Name": "InitializeSListHead",
+                "Address": "0x42b020"
+            },
+            {
+                "Name": "GetSystemTimeAsFileTime",
+                "Address": "0x42b024"
+            },
+            {
+                "Name": "GetCurrentProcessId",
+                "Address": "0x42b028"
+            },
+            {
+                "Name": "QueryPerformanceCounter",
+                "Address": "0x42b02c"
+            },
+            {
+                "Name": "GetCurrentThreadId",
+                "Address": "0x42b030"
+            },
+            {
+                "Name": "GetCurrentProcess",
+                "Address": "0x42b034"
+            },
+            {
+                "Name": "WideCharToMultiByte",
+                "Address": "0x42b038"
+            },
+            {
+                "Name": "MultiByteToWideChar",
+                "Address": "0x42b03c"
+            },
+            {
+                "Name": "RaiseException",
+                "Address": "0x42b040"
+            },
+            {
+                "Name": "GetModuleHandleW",
+                "Address": "0x42b044"
+            },
+            {
+                "Name": "GetStartupInfoW",
+                "Address": "0x42b048"
+            },
+            {
+                "Name": "SetUnhandledExceptionFilter",
+                "Address": "0x42b04c"
+            },
+            {
+                "Name": "UnhandledExceptionFilter",
+                "Address": "0x42b050"
+            },
+            {
+                "Name": "IsDebuggerPresent",
+                "Address": "0x42b054"
+            },
+            {
+                "Name": "IsProcessorFeaturePresent",
+                "Address": "0x42b058"
+            }
+        ],
+        "Sections": [
+            {
+                "Name": ".textbss",
+                "VirtualAddress": "0x1000",
+                "SizeOfRawData": "0x0",
+                "PointerToRawData": "0x0",
+                "Characteristics": "0xe00000a0",
+                "Entropy": 0.0
+            },
+            {
+                "Name": ".text",
+                "VirtualAddress": "0x11000",
+                "SizeOfRawData": "0x14000",
+                "PointerToRawData": "0x400",
+                "Characteristics": "0x60000020",
+                "Entropy": 4.5636
+            },
+            {
+                "Name": ".rdata",
+                "VirtualAddress": "0x25000",
+                "SizeOfRawData": "0x3600",
+                "PointerToRawData": "0x14400",
+                "Characteristics": "0x40000040",
+                "Entropy": 2.4252
+            },
+            {
+                "Name": ".data",
+                "VirtualAddress": "0x29000",
+                "SizeOfRawData": "0x800",
+                "PointerToRawData": "0x17a00",
+                "Characteristics": "0xc0000040",
+                "Entropy": 2.177
+            },
+            {
+                "Name": ".idata",
+                "VirtualAddress": "0x2b000",
+                "SizeOfRawData": "0x2800",
+                "PointerToRawData": "0x18200",
+                "Characteristics": "0x40000040",
+                "Entropy": 5.0315
+            },
+            {
+                "Name": ".msvcjmc",
+                "VirtualAddress": "0x2e000",
+                "SizeOfRawData": "0x400",
+                "PointerToRawData": "0x1aa00",
+                "Characteristics": "0xc0000040",
+                "Entropy": 0.7667
+            },
+            {
+                "Name": ".00cfg",
+                "VirtualAddress": "0x2f000",
+                "SizeOfRawData": "0x200",
+                "PointerToRawData": "0x1ae00",
+                "Characteristics": "0x40000040",
+                "Entropy": 0.1106
+            },
+            {
+                "Name": ".rsrc",
+                "VirtualAddress": "0x30000",
+                "SizeOfRawData": "0x600",
+                "PointerToRawData": "0x1b000",
+                "Characteristics": "0x40000040",
+                "Entropy": 2.1404
+            },
+            {
+                "Name": ".reloc",
+                "VirtualAddress": "0x31000",
+                "SizeOfRawData": "0x1200",
+                "PointerToRawData": "0x1b600",
+                "Characteristics": "0x42000040",
+                "Entropy": 5.6217
+            }
+        ],
+        "isEntryPointInTextSection": true,
+        "heuristics": {
+            "timestamp": null,
+            "unusual_sections": [
+                {
+                    "type": "size_ratio_anomaly",
+                    "Name": ".textbss",
+                    "VirtualSize": 65536,
+                    "SizeOfRawData": 0,
+                    "Reason": "High virtual size to raw size ratio",
+                    "severity": "Critical"
+                },
+                {
+                    "type": "size_ratio_warning",
+                    "Name": ".textbss",
+                    "VirtualSize": 65536,
+                    "SizeOfRawData": 0,
+                    "Reason": "Moderate virtual size to raw size ratio",
+                    "severity": "Medium"
+                },
+                {
+                    "type": "suspicious_section",
+                    "Name": ".textbss",
+                    "Reason": "Suspicious section name",
+                    "severity": "High"
+                }
+            ],
+            "entropy": [
+                {
+                    "type": "low_entropy",
+                    "Section name": ".textbss",
+                    "Reason": "Low entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".text",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".rdata",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".data",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".idata",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "low_entropy",
+                    "Section name": ".msvcjmc",
+                    "Reason": "Low entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "low_entropy",
+                    "Section name": ".00cfg",
+                    "Reason": "Low entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".rsrc",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".reloc",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                }
+            ],
+            "suspicious_api_calls": [
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetProcAddress",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "VirtualQuery",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "HeapFree",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "HeapAlloc",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "QueryPerformanceCounter",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetModuleHandleW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "IsDebuggerPresent",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                }
+            ],
+            "native_subsystem": null,
+            "suspicious_strings": []
+        },
+        "label": 0
+    }
+]

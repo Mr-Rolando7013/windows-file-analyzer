@@ -1,0 +1,87 @@
+[
+    {
+        "Name": "/home/kali/Downloads/malwares/Endermanch@DeriaLock.exe",
+        "Timestamp": 1482742691,
+        "EntryPoint": "0x5057e",
+        "Signature": 23117,
+        "Subsystem": {
+            "Type": "IMAGE_SUBSYSTEM_WINDOWS_GUI",
+            "Value": 2
+        },
+        "Functions": [
+            {
+                "Name": "_CorExeMain",
+                "Address": "0x402000"
+            }
+        ],
+        "Sections": [
+            {
+                "Name": ".text",
+                "VirtualAddress": "0x2000",
+                "SizeOfRawData": "0x4e600",
+                "PointerToRawData": "0x400",
+                "Characteristics": "0x60000020",
+                "Entropy": 6.5288
+            },
+            {
+                "Name": ".sdata",
+                "VirtualAddress": "0x52000",
+                "SizeOfRawData": "0x200",
+                "PointerToRawData": "0x4ea00",
+                "Characteristics": "0xc0000040",
+                "Entropy": 2.3259
+            },
+            {
+                "Name": ".rsrc",
+                "VirtualAddress": "0x54000",
+                "SizeOfRawData": "0x2a200",
+                "PointerToRawData": "0x4ec00",
+                "Characteristics": "0x40000040",
+                "Entropy": 4.6543
+            },
+            {
+                "Name": ".reloc",
+                "VirtualAddress": "0x80000",
+                "SizeOfRawData": "0x200",
+                "PointerToRawData": "0x78e00",
+                "Characteristics": "0x42000040",
+                "Entropy": 0.0815
+            }
+        ],
+        "isEntryPointInTextSection": true,
+        "heuristics": {
+            "timestamp": null,
+            "unusual_sections": [],
+            "entropy": [
+                {
+                    "type": "high_entropy",
+                    "Section name": ".text",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".sdata",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".rsrc",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "low_entropy",
+                    "Section name": ".reloc",
+                    "Reason": "Low entropy detected",
+                    "Severity": "Info"
+                }
+            ],
+            "suspicious_api_calls": [],
+            "native_subsystem": null,
+            "suspicious_strings": []
+        },
+        "label": 1
+    }
+]
