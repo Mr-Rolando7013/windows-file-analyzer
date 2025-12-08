@@ -1,475 +1,5 @@
 [
     {
-        "Name": "maliciousFiles/reverse.exe",
-        "Timestamp": 1271282813,
-        "EntryPoint": "0x4000",
-        "Signature": 23117,
-        "Subsystem": {
-            "Type": "IMAGE_SUBSYSTEM_WINDOWS_GUI",
-            "Value": 2
-        },
-        "Functions": [
-            {
-                "Name": "VirtualAlloc",
-                "Address": "0x140003000"
-            },
-            {
-                "Name": "ExitProcess",
-                "Address": "0x140003008"
-            }
-        ],
-        "Sections": [
-            {
-                "Name": ".text",
-                "VirtualAddress": "0x1000",
-                "SizeOfRawData": "0x1200",
-                "PointerToRawData": "0x400",
-                "Characteristics": "0x60000020",
-                "Entropy": 0.1681
-            },
-            {
-                "Name": ".rdata",
-                "VirtualAddress": "0x3000",
-                "SizeOfRawData": "0x200",
-                "PointerToRawData": "0x1600",
-                "Characteristics": "0x40000040",
-                "Entropy": 0.9631
-            },
-            {
-                "Name": ".pcxh",
-                "VirtualAddress": "0x4000",
-                "SizeOfRawData": "0x400",
-                "PointerToRawData": "0x1800",
-                "Characteristics": "0xe0000020",
-                "Entropy": 4.0409
-            }
-        ],
-        "isEntryPointInTextSection": false,
-        "heuristics": {
-            "timestamp": {
-                "type": "old_timestamp",
-                "Timestamp": 1271282813,
-                "Reason": "File timestamp is older than 10 years",
-                "Severity": "Low"
-            },
-            "unusual_sections": [
-                {
-                    "type": "entry_point_anomaly",
-                    "Reason": "Entry point is not located in the .text section",
-                    "severity": "High"
-                }
-            ],
-            "entropy": [
-                {
-                    "type": "low_entropy",
-                    "Section name": ".text",
-                    "Reason": "Low entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "low_entropy",
-                    "Section name": ".rdata",
-                    "Reason": "Low entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "high_entropy",
-                    "Section name": ".pcxh",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                }
-            ],
-            "suspicious_api_calls": [
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "VirtualAlloc",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                }
-            ],
-            "native_subsystem": null,
-            "suspicious_strings": []
-        },
-        "label": 1
-    },
-    {
-        "Name": "maliciousFiles/discovery.exe",
-        "Timestamp": 0,
-        "EntryPoint": "0x67400",
-        "Signature": 23117,
-        "Subsystem": {
-            "Type": "IMAGE_SUBSYSTEM_WINDOWS_CUI",
-            "Value": 3
-        },
-        "Functions": [
-            {
-                "Name": "WriteFile",
-                "Address": "0xa7c040"
-            },
-            {
-                "Name": "WriteConsoleW",
-                "Address": "0xa7c048"
-            },
-            {
-                "Name": "WerSetFlags",
-                "Address": "0xa7c050"
-            },
-            {
-                "Name": "WerGetFlags",
-                "Address": "0xa7c058"
-            },
-            {
-                "Name": "WaitForMultipleObjects",
-                "Address": "0xa7c060"
-            },
-            {
-                "Name": "WaitForSingleObject",
-                "Address": "0xa7c068"
-            },
-            {
-                "Name": "VirtualQuery",
-                "Address": "0xa7c070"
-            },
-            {
-                "Name": "VirtualFree",
-                "Address": "0xa7c078"
-            },
-            {
-                "Name": "VirtualAlloc",
-                "Address": "0xa7c080"
-            },
-            {
-                "Name": "TlsAlloc",
-                "Address": "0xa7c088"
-            },
-            {
-                "Name": "SwitchToThread",
-                "Address": "0xa7c090"
-            },
-            {
-                "Name": "SuspendThread",
-                "Address": "0xa7c098"
-            },
-            {
-                "Name": "SetWaitableTimer",
-                "Address": "0xa7c0a0"
-            },
-            {
-                "Name": "SetUnhandledExceptionFilter",
-                "Address": "0xa7c0a8"
-            },
-            {
-                "Name": "SetProcessPriorityBoost",
-                "Address": "0xa7c0b0"
-            },
-            {
-                "Name": "SetEvent",
-                "Address": "0xa7c0b8"
-            },
-            {
-                "Name": "SetErrorMode",
-                "Address": "0xa7c0c0"
-            },
-            {
-                "Name": "SetConsoleCtrlHandler",
-                "Address": "0xa7c0c8"
-            },
-            {
-                "Name": "ResumeThread",
-                "Address": "0xa7c0d0"
-            },
-            {
-                "Name": "RaiseFailFastException",
-                "Address": "0xa7c0d8"
-            },
-            {
-                "Name": "PostQueuedCompletionStatus",
-                "Address": "0xa7c0e0"
-            },
-            {
-                "Name": "LoadLibraryW",
-                "Address": "0xa7c0e8"
-            },
-            {
-                "Name": "LoadLibraryExW",
-                "Address": "0xa7c0f0"
-            },
-            {
-                "Name": "SetThreadContext",
-                "Address": "0xa7c0f8"
-            },
-            {
-                "Name": "GetThreadContext",
-                "Address": "0xa7c100"
-            },
-            {
-                "Name": "GetSystemInfo",
-                "Address": "0xa7c108"
-            },
-            {
-                "Name": "GetSystemDirectoryA",
-                "Address": "0xa7c110"
-            },
-            {
-                "Name": "GetStdHandle",
-                "Address": "0xa7c118"
-            },
-            {
-                "Name": "GetQueuedCompletionStatusEx",
-                "Address": "0xa7c120"
-            },
-            {
-                "Name": "GetProcessAffinityMask",
-                "Address": "0xa7c128"
-            },
-            {
-                "Name": "GetProcAddress",
-                "Address": "0xa7c130"
-            },
-            {
-                "Name": "GetErrorMode",
-                "Address": "0xa7c138"
-            },
-            {
-                "Name": "GetEnvironmentStringsW",
-                "Address": "0xa7c140"
-            },
-            {
-                "Name": "GetCurrentThreadId",
-                "Address": "0xa7c148"
-            },
-            {
-                "Name": "GetConsoleMode",
-                "Address": "0xa7c150"
-            },
-            {
-                "Name": "FreeEnvironmentStringsW",
-                "Address": "0xa7c158"
-            },
-            {
-                "Name": "ExitProcess",
-                "Address": "0xa7c160"
-            },
-            {
-                "Name": "DuplicateHandle",
-                "Address": "0xa7c168"
-            },
-            {
-                "Name": "CreateWaitableTimerExW",
-                "Address": "0xa7c170"
-            },
-            {
-                "Name": "CreateThread",
-                "Address": "0xa7c178"
-            },
-            {
-                "Name": "CreateIoCompletionPort",
-                "Address": "0xa7c180"
-            },
-            {
-                "Name": "CreateFileA",
-                "Address": "0xa7c188"
-            },
-            {
-                "Name": "CreateEventA",
-                "Address": "0xa7c190"
-            },
-            {
-                "Name": "CloseHandle",
-                "Address": "0xa7c198"
-            },
-            {
-                "Name": "AddVectoredExceptionHandler",
-                "Address": "0xa7c1a0"
-            }
-        ],
-        "Sections": [
-            {
-                "Name": ".text",
-                "VirtualAddress": "0x1000",
-                "SizeOfRawData": "0x3a9800",
-                "PointerToRawData": "0x600",
-                "Characteristics": "0x60000020",
-                "Entropy": 6.3077
-            },
-            {
-                "Name": ".rdata",
-                "VirtualAddress": "0x3ab000",
-                "SizeOfRawData": "0x2d0400",
-                "PointerToRawData": "0x3a9e00",
-                "Characteristics": "0x40000040",
-                "Entropy": 5.6924
-            },
-            {
-                "Name": ".data",
-                "VirtualAddress": "0x67c000",
-                "SizeOfRawData": "0x2ee00",
-                "PointerToRawData": "0x67a200",
-                "Characteristics": "0xc0000040",
-                "Entropy": 4.8534
-            },
-            {
-                "Name": ".pdata",
-                "VirtualAddress": "0x70d000",
-                "SizeOfRawData": "0x11800",
-                "PointerToRawData": "0x6a9000",
-                "Characteristics": "0x40000040",
-                "Entropy": 5.5507
-            },
-            {
-                "Name": ".xdata",
-                "VirtualAddress": "0x71f000",
-                "SizeOfRawData": "0x200",
-                "PointerToRawData": "0x6ba800",
-                "Characteristics": "0x40000040",
-                "Entropy": 1.6345
-            },
-            {
-                "Name": ".idata",
-                "VirtualAddress": "0x720000",
-                "SizeOfRawData": "0x600",
-                "PointerToRawData": "0x6baa00",
-                "Characteristics": "0xc0000040",
-                "Entropy": 3.7875
-            },
-            {
-                "Name": ".reloc",
-                "VirtualAddress": "0x721000",
-                "SizeOfRawData": "0xd800",
-                "PointerToRawData": "0x6bb000",
-                "Characteristics": "0x42000040",
-                "Entropy": 5.4429
-            },
-            {
-                "Name": ".symtab",
-                "VirtualAddress": "0x72f000",
-                "SizeOfRawData": "0x200",
-                "PointerToRawData": "0x6c8800",
-                "Characteristics": "0x42000000",
-                "Entropy": 0.0204
-            }
-        ],
-        "isEntryPointInTextSection": true,
-        "heuristics": {
-            "timestamp": {
-                "type": "old_timestamp",
-                "Timestamp": 0,
-                "Reason": "File timestamp is older than 10 years",
-                "Severity": "Low"
-            },
-            "unusual_sections": [],
-            "entropy": [
-                {
-                    "type": "high_entropy",
-                    "Section name": ".text",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                },
-                {
-                    "type": "high_entropy",
-                    "Section name": ".rdata",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                },
-                {
-                    "type": "high_entropy",
-                    "Section name": ".data",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                },
-                {
-                    "type": "high_entropy",
-                    "Section name": ".pdata",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                },
-                {
-                    "type": "moderate_entropy",
-                    "Section name": ".xdata",
-                    "Reason": "Moderate entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "moderate_entropy",
-                    "Section name": ".idata",
-                    "Reason": "Moderate entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "high_entropy",
-                    "Section name": ".reloc",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                },
-                {
-                    "type": "low_entropy",
-                    "Section name": ".symtab",
-                    "Reason": "Low entropy detected",
-                    "Severity": "Info"
-                }
-            ],
-            "suspicious_api_calls": [
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "WriteFile",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "VirtualQuery",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "VirtualAlloc",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "SuspendThread",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "ResumeThread",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "SetThreadContext",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "GetThreadContext",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "GetProcAddress",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "CreateFileA",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                }
-            ],
-            "native_subsystem": null,
-            "suspicious_strings": []
-        },
-        "label": 1
-    },
-    {
         "Name": "maliciousFiles/Endermanch@NoMoreRansom.exe",
         "Timestamp": 1495875683,
         "EntryPoint": "0x1120",
@@ -2702,6 +2232,1413 @@
         "label": 1
     },
     {
+        "Name": "maliciousFiles/Endermanch@Petya.A.exe",
+        "Timestamp": 1452341519,
+        "EntryPoint": "0x1716f",
+        "Signature": 23117,
+        "Subsystem": {
+            "Type": "IMAGE_SUBSYSTEM_WINDOWS_GUI",
+            "Value": 2
+        },
+        "Functions": [
+            {
+                "Name": "GetCurrentThreadId",
+                "Address": "0x4280c8"
+            },
+            {
+                "Name": "GetStdHandle",
+                "Address": "0x4280cc"
+            },
+            {
+                "Name": "GetFileType",
+                "Address": "0x4280d0"
+            },
+            {
+                "Name": "GetStartupInfoW",
+                "Address": "0x4280d4"
+            },
+            {
+                "Name": "GetModuleFileNameW",
+                "Address": "0x4280d8"
+            },
+            {
+                "Name": "WriteFile",
+                "Address": "0x4280dc"
+            },
+            {
+                "Name": "QueryPerformanceCounter",
+                "Address": "0x4280e0"
+            },
+            {
+                "Name": "GetCurrentProcessId",
+                "Address": "0x4280e4"
+            },
+            {
+                "Name": "GetSystemTimeAsFileTime",
+                "Address": "0x4280e8"
+            },
+            {
+                "Name": "GetEnvironmentStringsW",
+                "Address": "0x4280ec"
+            },
+            {
+                "Name": "FreeEnvironmentStringsW",
+                "Address": "0x4280f0"
+            },
+            {
+                "Name": "UnhandledExceptionFilter",
+                "Address": "0x4280f4"
+            },
+            {
+                "Name": "SetUnhandledExceptionFilter",
+                "Address": "0x4280f8"
+            },
+            {
+                "Name": "CreateEventW",
+                "Address": "0x4280fc"
+            },
+            {
+                "Name": "Sleep",
+                "Address": "0x428100"
+            },
+            {
+                "Name": "GetCurrentProcess",
+                "Address": "0x428104"
+            },
+            {
+                "Name": "TerminateProcess",
+                "Address": "0x428108"
+            },
+            {
+                "Name": "TlsAlloc",
+                "Address": "0x42810c"
+            },
+            {
+                "Name": "TlsGetValue",
+                "Address": "0x428110"
+            },
+            {
+                "Name": "TlsSetValue",
+                "Address": "0x428114"
+            },
+            {
+                "Name": "TlsFree",
+                "Address": "0x428118"
+            },
+            {
+                "Name": "GetTickCount",
+                "Address": "0x42811c"
+            },
+            {
+                "Name": "CreateSemaphoreW",
+                "Address": "0x428120"
+            },
+            {
+                "Name": "FreeLibrary",
+                "Address": "0x428124"
+            },
+            {
+                "Name": "LoadLibraryExW",
+                "Address": "0x428128"
+            },
+            {
+                "Name": "IsValidCodePage",
+                "Address": "0x42812c"
+            },
+            {
+                "Name": "GetACP",
+                "Address": "0x428130"
+            },
+            {
+                "Name": "GetOEMCP",
+                "Address": "0x428134"
+            },
+            {
+                "Name": "GetCPInfo",
+                "Address": "0x428138"
+            },
+            {
+                "Name": "RtlUnwind",
+                "Address": "0x42813c"
+            },
+            {
+                "Name": "LCMapStringW",
+                "Address": "0x428140"
+            },
+            {
+                "Name": "GetStringTypeW",
+                "Address": "0x428144"
+            },
+            {
+                "Name": "FlushFileBuffers",
+                "Address": "0x428148"
+            },
+            {
+                "Name": "GetConsoleCP",
+                "Address": "0x42814c"
+            },
+            {
+                "Name": "GetConsoleMode",
+                "Address": "0x428150"
+            },
+            {
+                "Name": "SetStdHandle",
+                "Address": "0x428154"
+            },
+            {
+                "Name": "SetFilePointerEx",
+                "Address": "0x428158"
+            },
+            {
+                "Name": "WriteConsoleW",
+                "Address": "0x42815c"
+            },
+            {
+                "Name": "CloseHandle",
+                "Address": "0x428160"
+            },
+            {
+                "Name": "CreateFileW",
+                "Address": "0x428164"
+            },
+            {
+                "Name": "SizeofResource",
+                "Address": "0x428168"
+            },
+            {
+                "Name": "LockResource",
+                "Address": "0x42816c"
+            },
+            {
+                "Name": "LoadResource",
+                "Address": "0x428170"
+            },
+            {
+                "Name": "FindResourceW",
+                "Address": "0x428174"
+            },
+            {
+                "Name": "FindResourceExW",
+                "Address": "0x428178"
+            },
+            {
+                "Name": "LocalFree",
+                "Address": "0x42817c"
+            },
+            {
+                "Name": "CreateDirectoryW",
+                "Address": "0x428180"
+            },
+            {
+                "Name": "DeleteFileW",
+                "Address": "0x428184"
+            },
+            {
+                "Name": "GetCurrentThread",
+                "Address": "0x428188"
+            },
+            {
+                "Name": "WaitForMultipleObjects",
+                "Address": "0x42818c"
+            },
+            {
+                "Name": "LoadLibraryW",
+                "Address": "0x428190"
+            },
+            {
+                "Name": "WaitForSingleObject",
+                "Address": "0x428194"
+            },
+            {
+                "Name": "GetExitCodeProcess",
+                "Address": "0x428198"
+            },
+            {
+                "Name": "DuplicateHandle",
+                "Address": "0x42819c"
+            },
+            {
+                "Name": "ReleaseMutex",
+                "Address": "0x4281a0"
+            },
+            {
+                "Name": "GetEnvironmentVariableW",
+                "Address": "0x4281a4"
+            },
+            {
+                "Name": "lstrcmpiW",
+                "Address": "0x4281a8"
+            },
+            {
+                "Name": "VirtualQuery",
+                "Address": "0x4281ac"
+            },
+            {
+                "Name": "GetTempPathW",
+                "Address": "0x4281b0"
+            },
+            {
+                "Name": "GetLocalTime",
+                "Address": "0x4281b4"
+            },
+            {
+                "Name": "OutputDebugStringA",
+                "Address": "0x4281b8"
+            },
+            {
+                "Name": "GetPrivateProfileIntW",
+                "Address": "0x4281bc"
+            },
+            {
+                "Name": "GetPrivateProfileStringW",
+                "Address": "0x4281c0"
+            },
+            {
+                "Name": "lstrcmpW",
+                "Address": "0x4281c4"
+            },
+            {
+                "Name": "lstrlenW",
+                "Address": "0x4281c8"
+            },
+            {
+                "Name": "SetFilePointer",
+                "Address": "0x4281cc"
+            },
+            {
+                "Name": "CreateMutexW",
+                "Address": "0x4281d0"
+            },
+            {
+                "Name": "InitializeCriticalSection",
+                "Address": "0x4281d4"
+            },
+            {
+                "Name": "TryEnterCriticalSection",
+                "Address": "0x4281d8"
+            },
+            {
+                "Name": "SetEvent",
+                "Address": "0x4281dc"
+            },
+            {
+                "Name": "ResetEvent",
+                "Address": "0x4281e0"
+            },
+            {
+                "Name": "GetFileAttributesExW",
+                "Address": "0x4281e4"
+            },
+            {
+                "Name": "SetLastError",
+                "Address": "0x4281e8"
+            },
+            {
+                "Name": "VerifyVersionInfoW",
+                "Address": "0x4281ec"
+            },
+            {
+                "Name": "VerSetConditionMask",
+                "Address": "0x4281f0"
+            },
+            {
+                "Name": "MoveFileExW",
+                "Address": "0x4281f4"
+            },
+            {
+                "Name": "GetFileTime",
+                "Address": "0x4281f8"
+            },
+            {
+                "Name": "ReadFile",
+                "Address": "0x4281fc"
+            },
+            {
+                "Name": "DeviceIoControl",
+                "Address": "0x428200"
+            },
+            {
+                "Name": "SetProcessWorkingSetSize",
+                "Address": "0x428204"
+            },
+            {
+                "Name": "OpenProcess",
+                "Address": "0x428208"
+            },
+            {
+                "Name": "CreateProcessW",
+                "Address": "0x42820c"
+            },
+            {
+                "Name": "ReadProcessMemory",
+                "Address": "0x428210"
+            },
+            {
+                "Name": "lstrcpynW",
+                "Address": "0x428214"
+            },
+            {
+                "Name": "GlobalAlloc",
+                "Address": "0x428218"
+            },
+            {
+                "Name": "GlobalLock",
+                "Address": "0x42821c"
+            },
+            {
+                "Name": "GlobalUnlock",
+                "Address": "0x428220"
+            },
+            {
+                "Name": "GlobalFree",
+                "Address": "0x428224"
+            },
+            {
+                "Name": "CreateThread",
+                "Address": "0x428228"
+            },
+            {
+                "Name": "DebugActiveProcess",
+                "Address": "0x42822c"
+            },
+            {
+                "Name": "GetThreadContext",
+                "Address": "0x428230"
+            },
+            {
+                "Name": "DebugActiveProcessStop",
+                "Address": "0x428234"
+            },
+            {
+                "Name": "VirtualQueryEx",
+                "Address": "0x428238"
+            },
+            {
+                "Name": "GetProcessId",
+                "Address": "0x42823c"
+            },
+            {
+                "Name": "GetSystemInfo",
+                "Address": "0x428240"
+            },
+            {
+                "Name": "ContinueDebugEvent",
+                "Address": "0x428244"
+            },
+            {
+                "Name": "WaitForDebugEvent",
+                "Address": "0x428248"
+            },
+            {
+                "Name": "WideCharToMultiByte",
+                "Address": "0x42824c"
+            },
+            {
+                "Name": "MultiByteToWideChar",
+                "Address": "0x428250"
+            },
+            {
+                "Name": "GetModuleHandleExW",
+                "Address": "0x428254"
+            },
+            {
+                "Name": "ExitProcess",
+                "Address": "0x428258"
+            },
+            {
+                "Name": "IsProcessorFeaturePresent",
+                "Address": "0x42825c"
+            },
+            {
+                "Name": "GetCommandLineW",
+                "Address": "0x428260"
+            },
+            {
+                "Name": "EncodePointer",
+                "Address": "0x428264"
+            },
+            {
+                "Name": "LeaveCriticalSection",
+                "Address": "0x428268"
+            },
+            {
+                "Name": "WaitNamedPipeW",
+                "Address": "0x42826c"
+            },
+            {
+                "Name": "TransactNamedPipe",
+                "Address": "0x428270"
+            },
+            {
+                "Name": "SetNamedPipeHandleState",
+                "Address": "0x428274"
+            },
+            {
+                "Name": "RtlCaptureContext",
+                "Address": "0x428278"
+            },
+            {
+                "Name": "ReleaseSemaphore",
+                "Address": "0x42827c"
+            },
+            {
+                "Name": "EnterCriticalSection",
+                "Address": "0x428280"
+            },
+            {
+                "Name": "OutputDebugStringW",
+                "Address": "0x428284"
+            },
+            {
+                "Name": "DeleteCriticalSection",
+                "Address": "0x428288"
+            },
+            {
+                "Name": "DecodePointer",
+                "Address": "0x42828c"
+            },
+            {
+                "Name": "HeapSize",
+                "Address": "0x428290"
+            },
+            {
+                "Name": "GetProcAddress",
+                "Address": "0x428294"
+            },
+            {
+                "Name": "GetLastError",
+                "Address": "0x428298"
+            },
+            {
+                "Name": "RaiseException",
+                "Address": "0x42829c"
+            },
+            {
+                "Name": "HeapDestroy",
+                "Address": "0x4282a0"
+            },
+            {
+                "Name": "InitializeCriticalSectionAndSpinCount",
+                "Address": "0x4282a4"
+            },
+            {
+                "Name": "GetProcessHeap",
+                "Address": "0x4282a8"
+            },
+            {
+                "Name": "GetModuleHandleW",
+                "Address": "0x4282ac"
+            },
+            {
+                "Name": "HeapFree",
+                "Address": "0x4282b0"
+            },
+            {
+                "Name": "IsDebuggerPresent",
+                "Address": "0x4282b4"
+            },
+            {
+                "Name": "GetUserDefaultLangID",
+                "Address": "0x4282b8"
+            },
+            {
+                "Name": "GetSystemDefaultLangID",
+                "Address": "0x4282bc"
+            },
+            {
+                "Name": "GetComputerNameExW",
+                "Address": "0x4282c0"
+            },
+            {
+                "Name": "GetOverlappedResult",
+                "Address": "0x4282c4"
+            },
+            {
+                "Name": "ConnectNamedPipe",
+                "Address": "0x4282c8"
+            },
+            {
+                "Name": "CreateNamedPipeW",
+                "Address": "0x4282cc"
+            },
+            {
+                "Name": "DisconnectNamedPipe",
+                "Address": "0x4282d0"
+            },
+            {
+                "Name": "UnregisterWait",
+                "Address": "0x4282d4"
+            },
+            {
+                "Name": "GetProcessTimes",
+                "Address": "0x4282d8"
+            },
+            {
+                "Name": "UnregisterWaitEx",
+                "Address": "0x4282dc"
+            },
+            {
+                "Name": "RegisterWaitForSingleObject",
+                "Address": "0x4282e0"
+            },
+            {
+                "Name": "VirtualProtect",
+                "Address": "0x4282e4"
+            },
+            {
+                "Name": "VirtualAlloc",
+                "Address": "0x4282e8"
+            },
+            {
+                "Name": "HeapAlloc",
+                "Address": "0x4282ec"
+            },
+            {
+                "Name": "RemoveDirectoryW",
+                "Address": "0x4282f0"
+            },
+            {
+                "Name": "HeapReAlloc",
+                "Address": "0x4282f4"
+            },
+            {
+                "Name": "SetClipboardData",
+                "Address": "0x428338"
+            },
+            {
+                "Name": "EmptyClipboard",
+                "Address": "0x42833c"
+            },
+            {
+                "Name": "OpenClipboard",
+                "Address": "0x428340"
+            },
+            {
+                "Name": "GetProcessWindowStation",
+                "Address": "0x428344"
+            },
+            {
+                "Name": "CloseDesktop",
+                "Address": "0x428348"
+            },
+            {
+                "Name": "CloseClipboard",
+                "Address": "0x42834c"
+            },
+            {
+                "Name": "CharUpperW",
+                "Address": "0x428350"
+            },
+            {
+                "Name": "CharLowerW",
+                "Address": "0x428354"
+            },
+            {
+                "Name": "PostThreadMessageW",
+                "Address": "0x428358"
+            },
+            {
+                "Name": "DispatchMessageW",
+                "Address": "0x42835c"
+            },
+            {
+                "Name": "GetMessageW",
+                "Address": "0x428360"
+            },
+            {
+                "Name": "PeekMessageW",
+                "Address": "0x428364"
+            },
+            {
+                "Name": "EnumWindows",
+                "Address": "0x428368"
+            },
+            {
+                "Name": "IsWindowVisible",
+                "Address": "0x42836c"
+            },
+            {
+                "Name": "GetWindowThreadProcessId",
+                "Address": "0x428370"
+            },
+            {
+                "Name": "SetThreadDesktop",
+                "Address": "0x428374"
+            },
+            {
+                "Name": "CreateWindowStationW",
+                "Address": "0x428378"
+            },
+            {
+                "Name": "CloseWindowStation",
+                "Address": "0x42837c"
+            },
+            {
+                "Name": "GetThreadDesktop",
+                "Address": "0x428380"
+            },
+            {
+                "Name": "SetProcessWindowStation",
+                "Address": "0x428384"
+            },
+            {
+                "Name": "CreateDesktopW",
+                "Address": "0x428388"
+            },
+            {
+                "Name": "wvsprintfW",
+                "Address": "0x42838c"
+            },
+            {
+                "Name": "wsprintfW",
+                "Address": "0x428390"
+            },
+            {
+                "Name": "MessageBoxW",
+                "Address": "0x428394"
+            },
+            {
+                "Name": "GetSecurityDescriptorSacl",
+                "Address": "0x428000"
+            },
+            {
+                "Name": "GetSecurityDescriptorDacl",
+                "Address": "0x428004"
+            },
+            {
+                "Name": "GetSecurityDescriptorGroup",
+                "Address": "0x428008"
+            },
+            {
+                "Name": "GetSecurityDescriptorOwner",
+                "Address": "0x42800c"
+            },
+            {
+                "Name": "GetSecurityDescriptorControl",
+                "Address": "0x428010"
+            },
+            {
+                "Name": "GetLengthSid",
+                "Address": "0x428014"
+            },
+            {
+                "Name": "CopySid",
+                "Address": "0x428018"
+            },
+            {
+                "Name": "IsValidSid",
+                "Address": "0x42801c"
+            },
+            {
+                "Name": "GetSidSubAuthority",
+                "Address": "0x428020"
+            },
+            {
+                "Name": "InitializeSid",
+                "Address": "0x428024"
+            },
+            {
+                "Name": "GetSidLengthRequired",
+                "Address": "0x428028"
+            },
+            {
+                "Name": "SetSecurityDescriptorDacl",
+                "Address": "0x42802c"
+            },
+            {
+                "Name": "AddAce",
+                "Address": "0x428030"
+            },
+            {
+                "Name": "InitializeAcl",
+                "Address": "0x428034"
+            },
+            {
+                "Name": "GetAclInformation",
+                "Address": "0x428038"
+            },
+            {
+                "Name": "InitializeSecurityDescriptor",
+                "Address": "0x42803c"
+            },
+            {
+                "Name": "MakeAbsoluteSD",
+                "Address": "0x428040"
+            },
+            {
+                "Name": "OpenProcessToken",
+                "Address": "0x428044"
+            },
+            {
+                "Name": "GetTokenInformation",
+                "Address": "0x428048"
+            },
+            {
+                "Name": "SetSecurityDescriptorOwner",
+                "Address": "0x42804c"
+            },
+            {
+                "Name": "SetSecurityDescriptorGroup",
+                "Address": "0x428050"
+            },
+            {
+                "Name": "GetAce",
+                "Address": "0x428054"
+            },
+            {
+                "Name": "MakeSelfRelativeSD",
+                "Address": "0x428058"
+            },
+            {
+                "Name": "GetSecurityDescriptorLength",
+                "Address": "0x42805c"
+            },
+            {
+                "Name": "EqualSid",
+                "Address": "0x428060"
+            },
+            {
+                "Name": "SetNamedSecurityInfoW",
+                "Address": "0x428064"
+            },
+            {
+                "Name": "ConvertStringSidToSidW",
+                "Address": "0x428068"
+            },
+            {
+                "Name": "OpenThreadToken",
+                "Address": "0x42806c"
+            },
+            {
+                "Name": "RegQueryValueExW",
+                "Address": "0x428070"
+            },
+            {
+                "Name": "RegOpenKeyExW",
+                "Address": "0x428074"
+            },
+            {
+                "Name": "RegDeleteKeyW",
+                "Address": "0x428078"
+            },
+            {
+                "Name": "RegDeleteValueW",
+                "Address": "0x42807c"
+            },
+            {
+                "Name": "RegCloseKey",
+                "Address": "0x428080"
+            },
+            {
+                "Name": "RegCreateKeyExW",
+                "Address": "0x428084"
+            },
+            {
+                "Name": "RegSetValueExW",
+                "Address": "0x428088"
+            },
+            {
+                "Name": "RegEnumKeyExW",
+                "Address": "0x42808c"
+            },
+            {
+                "Name": "RegQueryInfoKeyW",
+                "Address": "0x428090"
+            },
+            {
+                "Name": "ConvertSidToStringSidW",
+                "Address": "0x428094"
+            },
+            {
+                "Name": "AllocateAndInitializeSid",
+                "Address": "0x428098"
+            },
+            {
+                "Name": "CheckTokenMembership",
+                "Address": "0x42809c"
+            },
+            {
+                "Name": "FreeSid",
+                "Address": "0x4280a0"
+            },
+            {
+                "Name": "SetSecurityDescriptorSacl",
+                "Address": "0x4280a4"
+            },
+            {
+                "Name": "GetTraceLoggerHandle",
+                "Address": "0x4280a8"
+            },
+            {
+                "Name": "GetTraceEnableFlags",
+                "Address": "0x4280ac"
+            },
+            {
+                "Name": "GetTraceEnableLevel",
+                "Address": "0x4280b0"
+            },
+            {
+                "Name": "RegisterTraceGuidsW",
+                "Address": "0x4280b4"
+            },
+            {
+                "Name": "UnregisterTraceGuids",
+                "Address": "0x4280b8"
+            },
+            {
+                "Name": "TraceEvent",
+                "Address": "0x4280bc"
+            },
+            {
+                "Name": "SetTokenInformation",
+                "Address": "0x4280c0"
+            },
+            {
+                "Name": "CoCreateGuid",
+                "Address": "0x4283b4"
+            },
+            {
+                "Name": "StringFromGUID2",
+                "Address": "0x4283b8"
+            },
+            {
+                "Name": "SHGetFolderPathW",
+                "Address": "0x428310"
+            },
+            {
+                "Name": "NetApiBufferFree",
+                "Address": "0x4282fc"
+            },
+            {
+                "Name": "NetWkstaGetInfo",
+                "Address": "0x428300"
+            },
+            {
+                "Name": "UuidCreate",
+                "Address": "0x428308"
+            },
+            {
+                "Name": "PathRemoveExtensionW",
+                "Address": "0x428318"
+            },
+            {
+                "Name": "PathRemoveFileSpecW",
+                "Address": "0x42831c"
+            },
+            {
+                "Name": "PathStripPathW",
+                "Address": "0x428320"
+            },
+            {
+                "Name": "PathCanonicalizeW",
+                "Address": "0x428324"
+            },
+            {
+                "Name": "PathIsRelativeW",
+                "Address": "0x428328"
+            },
+            {
+                "Name": "SHQueryValueExW",
+                "Address": "0x42832c"
+            },
+            {
+                "Name": "PathAppendW",
+                "Address": "0x428330"
+            },
+            {
+                "Name": "UnloadUserProfile",
+                "Address": "0x42839c"
+            },
+            {
+                "Name": "GetFileVersionInfoW",
+                "Address": "0x4283a4"
+            },
+            {
+                "Name": "VerQueryValueW",
+                "Address": "0x4283a8"
+            },
+            {
+                "Name": "GetFileVersionInfoSizeW",
+                "Address": "0x4283ac"
+            }
+        ],
+        "Sections": [
+            {
+                "Name": ".text",
+                "VirtualAddress": "0x1000",
+                "SizeOfRawData": "0x27000",
+                "PointerToRawData": "0x400",
+                "Characteristics": "0x60000020",
+                "Entropy": 7.1936
+            },
+            {
+                "Name": ".rdata",
+                "VirtualAddress": "0x28000",
+                "SizeOfRawData": "0xc200",
+                "PointerToRawData": "0x27400",
+                "Characteristics": "0x40000040",
+                "Entropy": 4.7421
+            },
+            {
+                "Name": ".data",
+                "VirtualAddress": "0x35000",
+                "SizeOfRawData": "0x1a00",
+                "PointerToRawData": "0x33600",
+                "Characteristics": "0xc0000040",
+                "Entropy": 3.9732
+            },
+            {
+                "Name": ".rsrc",
+                "VirtualAddress": "0x3a000",
+                "SizeOfRawData": "0x1200",
+                "PointerToRawData": "0x35000",
+                "Characteristics": "0x40000040",
+                "Entropy": 5.5324
+            },
+            {
+                "Name": ".reloc",
+                "VirtualAddress": "0x3c000",
+                "SizeOfRawData": "0x2400",
+                "PointerToRawData": "0x36200",
+                "Characteristics": "0x42000040",
+                "Entropy": 6.5867
+            }
+        ],
+        "isEntryPointInTextSection": true,
+        "heuristics": {
+            "timestamp": null,
+            "unusual_sections": [],
+            "entropy": [
+                {
+                    "type": "very_high_entropy",
+                    "Section name": ".text",
+                    "Reason": "Very high entropy detected",
+                    "Severity": "Critical"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".rdata",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".data",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".rsrc",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".reloc",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                }
+            ],
+            "suspicious_api_calls": [
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "WriteFile",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "QueryPerformanceCounter",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetTickCount",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "CreateFileW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "VirtualQuery",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "OpenProcess",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "CreateProcessW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetThreadContext",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "VirtualQueryEx",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetProcAddress",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetModuleHandleW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "HeapFree",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "IsDebuggerPresent",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "VirtualProtect",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "VirtualAlloc",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "HeapAlloc",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "OpenProcessToken",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                }
+            ],
+            "native_subsystem": null,
+            "suspicious_strings": []
+        },
+        "label": 1
+    },
+    {
+        "Name": "maliciousFiles/Endermanch@PolyRansom.exe",
+        "Timestamp": 123,
+        "EntryPoint": "0x328d9",
+        "Signature": 23117,
+        "Subsystem": {
+            "Type": "IMAGE_SUBSYSTEM_WINDOWS_GUI",
+            "Value": 2
+        },
+        "Functions": [],
+        "Sections": [
+            {
+                "Name": ".text",
+                "VirtualAddress": "0x1000",
+                "SizeOfRawData": "0x35c00",
+                "PointerToRawData": "0x200",
+                "Characteristics": "0xc0040020",
+                "Entropy": 7.6671
+            },
+            {
+                "Name": ".rsrc",
+                "VirtualAddress": "0x37000",
+                "SizeOfRawData": "0x1200",
+                "PointerToRawData": "0x35e00",
+                "Characteristics": "0xc0040020",
+                "Entropy": 5.5177
+            }
+        ],
+        "isEntryPointInTextSection": true,
+        "heuristics": {
+            "timestamp": {
+                "type": "old_timestamp",
+                "Timestamp": 123,
+                "Reason": "File timestamp is older than 10 years",
+                "Severity": "Low"
+            },
+            "unusual_sections": [
+                {
+                    "type": "few_sections",
+                    "Number of sections": 2,
+                    "Reason": "Unusually low number of sections in the PE file",
+                    "severity": "Low"
+                }
+            ],
+            "entropy": [
+                {
+                    "type": "very_high_entropy",
+                    "Section name": ".text",
+                    "Reason": "Very high entropy detected",
+                    "Severity": "Critical"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".rsrc",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                }
+            ],
+            "suspicious_api_calls": [],
+            "native_subsystem": null,
+            "suspicious_strings": []
+        },
+        "label": 1
+    },
+    {
+        "Name": "maliciousFiles/Endermanch@PowerPoint.exe",
+        "Timestamp": 1306148167,
+        "EntryPoint": "0x1671",
+        "Signature": 23117,
+        "Subsystem": {
+            "Type": "IMAGE_SUBSYSTEM_WINDOWS_GUI",
+            "Value": 2
+        },
+        "Functions": [
+            {
+                "Name": "AdjustTokenPrivileges",
+                "Address": "0x2aa01000"
+            },
+            {
+                "Name": "LookupPrivilegeValueA",
+                "Address": "0x2aa01004"
+            },
+            {
+                "Name": "OpenProcessToken",
+                "Address": "0x2aa01008"
+            },
+            {
+                "Name": "sprintf",
+                "Address": "0x2aa01010"
+            },
+            {
+                "Name": "CreateProcessA",
+                "Address": "0x2aa01018"
+            },
+            {
+                "Name": "GlobalAddAtomA",
+                "Address": "0x2aa0101c"
+            },
+            {
+                "Name": "GlobalFindAtomA",
+                "Address": "0x2aa01020"
+            },
+            {
+                "Name": "GetVersion",
+                "Address": "0x2aa01024"
+            },
+            {
+                "Name": "GetTempPathA",
+                "Address": "0x2aa01028"
+            },
+            {
+                "Name": "GetTickCount",
+                "Address": "0x2aa0102c"
+            },
+            {
+                "Name": "ExitProcess",
+                "Address": "0x2aa01030"
+            },
+            {
+                "Name": "GetModuleFileNameA",
+                "Address": "0x2aa01034"
+            },
+            {
+                "Name": "CopyFileA",
+                "Address": "0x2aa01038"
+            },
+            {
+                "Name": "Sleep",
+                "Address": "0x2aa0103c"
+            },
+            {
+                "Name": "CloseHandle",
+                "Address": "0x2aa01040"
+            },
+            {
+                "Name": "GetModuleHandleA",
+                "Address": "0x2aa01044"
+            },
+            {
+                "Name": "GetCurrentProcess",
+                "Address": "0x2aa01048"
+            },
+            {
+                "Name": "CreateFileA",
+                "Address": "0x2aa0104c"
+            },
+            {
+                "Name": "ReadFile",
+                "Address": "0x2aa01050"
+            },
+            {
+                "Name": "SetFilePointer",
+                "Address": "0x2aa01054"
+            },
+            {
+                "Name": "WriteFile",
+                "Address": "0x2aa01058"
+            },
+            {
+                "Name": "GetFileSize",
+                "Address": "0x2aa0105c"
+            },
+            {
+                "Name": "GlobalAlloc",
+                "Address": "0x2aa01060"
+            },
+            {
+                "Name": "DeleteFileA",
+                "Address": "0x2aa01064"
+            },
+            {
+                "Name": "ExitWindowsEx",
+                "Address": "0x2aa01074"
+            },
+            {
+                "Name": "ShellExecuteA",
+                "Address": "0x2aa0106c"
+            }
+        ],
+        "Sections": [
+            {
+                "Name": ".text",
+                "VirtualAddress": "0x1000",
+                "SizeOfRawData": "0xc00",
+                "PointerToRawData": "0x400",
+                "Characteristics": "0xc0040020",
+                "Entropy": 5.706
+            },
+            {
+                "Name": ".data",
+                "VirtualAddress": "0x2000",
+                "SizeOfRawData": "0x1400",
+                "PointerToRawData": "0x1000",
+                "Characteristics": "0xc0000040",
+                "Entropy": 3.5646
+            },
+            {
+                "Name": ".rsrc",
+                "VirtualAddress": "0x4000",
+                "SizeOfRawData": "0x1fc00",
+                "PointerToRawData": "0x2400",
+                "Characteristics": "0x40000040",
+                "Entropy": 6.1908
+            }
+        ],
+        "isEntryPointInTextSection": true,
+        "heuristics": {
+            "timestamp": {
+                "type": "old_timestamp",
+                "Timestamp": 1306148167,
+                "Reason": "File timestamp is older than 10 years",
+                "Severity": "Low"
+            },
+            "unusual_sections": [],
+            "entropy": [
+                {
+                    "type": "high_entropy",
+                    "Section name": ".text",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".data",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".rsrc",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                }
+            ],
+            "suspicious_api_calls": [
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "AdjustTokenPrivileges",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "OpenProcessToken",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "CreateProcessA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetTickCount",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetModuleHandleA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "CreateFileA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "WriteFile",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "ShellExecuteA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                }
+            ],
+            "native_subsystem": null,
+            "suspicious_strings": []
+        },
+        "label": 1
+    },
+    {
         "Name": "maliciousFiles/Endermanch@WannaCrypt0r.exe",
         "Timestamp": 1290243905,
         "EntryPoint": "0x77ba",
@@ -3318,6 +4255,728 @@
         "label": 1
     },
     {
+        "Name": "maliciousFiles/Endermanch@Xyeta.exe",
+        "Timestamp": 1217621087,
+        "EntryPoint": "0x4a930",
+        "Signature": 23117,
+        "Subsystem": {
+            "Type": "IMAGE_SUBSYSTEM_WINDOWS_GUI",
+            "Value": 2
+        },
+        "Functions": [
+            {
+                "Name": "LoadLibraryA",
+                "Address": "0x44edc8"
+            },
+            {
+                "Name": "GetProcAddress",
+                "Address": "0x44edcc"
+            },
+            {
+                "Name": "VirtualProtect",
+                "Address": "0x44edd0"
+            },
+            {
+                "Name": "VirtualAlloc",
+                "Address": "0x44edd4"
+            },
+            {
+                "Name": "VirtualFree",
+                "Address": "0x44edd8"
+            },
+            {
+                "Name": "ExitProcess",
+                "Address": "0x44eddc"
+            },
+            {
+                "Name": "RegFlushKey",
+                "Address": "0x44ede4"
+            },
+            {
+                "Name": "ImageList_Add",
+                "Address": "0x44edec"
+            },
+            {
+                "Name": "SaveDC",
+                "Address": "0x44edf4"
+            },
+            {
+                "Name": "CoInitialize",
+                "Address": "0x44edfc"
+            },
+            {
+                "Name": "VariantCopy",
+                "Address": "0x44ee04"
+            },
+            {
+                "Name": "ShellExecuteA",
+                "Address": "0x44ee0c"
+            },
+            {
+                "Name": "GetDC",
+                "Address": "0x44ee14"
+            },
+            {
+                "Name": "VerQueryValueA",
+                "Address": "0x44ee1c"
+            }
+        ],
+        "Sections": [
+            {
+                "Name": "UPX0",
+                "VirtualAddress": "0x1000",
+                "SizeOfRawData": "0x0",
+                "PointerToRawData": "0x400",
+                "Characteristics": "0xe0000080",
+                "Entropy": 0.0
+            },
+            {
+                "Name": "UPX1",
+                "VirtualAddress": "0x3a000",
+                "SizeOfRawData": "0x10c00",
+                "PointerToRawData": "0x400",
+                "Characteristics": "0xe0000040",
+                "Entropy": 7.9593
+            },
+            {
+                "Name": ".rsrc",
+                "VirtualAddress": "0x4b000",
+                "SizeOfRawData": "0x4000",
+                "PointerToRawData": "0x11000",
+                "Characteristics": "0xc0000040",
+                "Entropy": 4.9124
+            }
+        ],
+        "isEntryPointInTextSection": false,
+        "heuristics": {
+            "timestamp": {
+                "type": "old_timestamp",
+                "Timestamp": 1217621087,
+                "Reason": "File timestamp is older than 10 years",
+                "Severity": "Low"
+            },
+            "unusual_sections": [
+                {
+                    "type": "size_ratio_anomaly",
+                    "Name": "UPX0",
+                    "VirtualSize": 233472,
+                    "SizeOfRawData": 0,
+                    "Reason": "High virtual size to raw size ratio",
+                    "severity": "Critical"
+                },
+                {
+                    "type": "size_ratio_warning",
+                    "Name": "UPX0",
+                    "VirtualSize": 233472,
+                    "SizeOfRawData": 0,
+                    "Reason": "Moderate virtual size to raw size ratio",
+                    "severity": "Medium"
+                },
+                {
+                    "type": "entry_point_anomaly",
+                    "Reason": "Entry point is not located in the .text section",
+                    "severity": "High"
+                }
+            ],
+            "entropy": [
+                {
+                    "type": "low_entropy",
+                    "Section name": "UPX0",
+                    "Reason": "Low entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "very_high_entropy",
+                    "Section name": "UPX1",
+                    "Reason": "Very high entropy detected",
+                    "Severity": "Critical"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".rsrc",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                }
+            ],
+            "suspicious_api_calls": [
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "LoadLibraryA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetProcAddress",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "VirtualProtect",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "VirtualAlloc",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "ShellExecuteA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                }
+            ],
+            "native_subsystem": null,
+            "suspicious_strings": []
+        },
+        "label": 1
+    },
+    {
+        "Name": "maliciousFiles/Fantom.exe",
+        "Timestamp": 1342219636,
+        "EntryPoint": "0xcd2f",
+        "Signature": 23117,
+        "Subsystem": {
+            "Type": "IMAGE_SUBSYSTEM_WINDOWS_GUI",
+            "Value": 2
+        },
+        "Functions": [
+            {
+                "Name": "RaiseException",
+                "Address": "0x41b000"
+            },
+            {
+                "Name": "GetLastError",
+                "Address": "0x41b004"
+            },
+            {
+                "Name": "MultiByteToWideChar",
+                "Address": "0x41b008"
+            },
+            {
+                "Name": "lstrlenA",
+                "Address": "0x41b00c"
+            },
+            {
+                "Name": "InterlockedDecrement",
+                "Address": "0x41b010"
+            },
+            {
+                "Name": "GetProcAddress",
+                "Address": "0x41b014"
+            },
+            {
+                "Name": "LoadLibraryA",
+                "Address": "0x41b018"
+            },
+            {
+                "Name": "FreeResource",
+                "Address": "0x41b01c"
+            },
+            {
+                "Name": "SizeofResource",
+                "Address": "0x41b020"
+            },
+            {
+                "Name": "LockResource",
+                "Address": "0x41b024"
+            },
+            {
+                "Name": "LoadResource",
+                "Address": "0x41b028"
+            },
+            {
+                "Name": "FindResourceA",
+                "Address": "0x41b02c"
+            },
+            {
+                "Name": "GetModuleHandleA",
+                "Address": "0x41b030"
+            },
+            {
+                "Name": "Module32Next",
+                "Address": "0x41b034"
+            },
+            {
+                "Name": "CloseHandle",
+                "Address": "0x41b038"
+            },
+            {
+                "Name": "Module32First",
+                "Address": "0x41b03c"
+            },
+            {
+                "Name": "CreateToolhelp32Snapshot",
+                "Address": "0x41b040"
+            },
+            {
+                "Name": "GetCurrentProcessId",
+                "Address": "0x41b044"
+            },
+            {
+                "Name": "SetEndOfFile",
+                "Address": "0x41b048"
+            },
+            {
+                "Name": "GetStringTypeW",
+                "Address": "0x41b04c"
+            },
+            {
+                "Name": "GetStringTypeA",
+                "Address": "0x41b050"
+            },
+            {
+                "Name": "LCMapStringW",
+                "Address": "0x41b054"
+            },
+            {
+                "Name": "LCMapStringA",
+                "Address": "0x41b058"
+            },
+            {
+                "Name": "GetLocaleInfoA",
+                "Address": "0x41b05c"
+            },
+            {
+                "Name": "HeapFree",
+                "Address": "0x41b060"
+            },
+            {
+                "Name": "GetProcessHeap",
+                "Address": "0x41b064"
+            },
+            {
+                "Name": "HeapAlloc",
+                "Address": "0x41b068"
+            },
+            {
+                "Name": "GetCommandLineA",
+                "Address": "0x41b06c"
+            },
+            {
+                "Name": "HeapCreate",
+                "Address": "0x41b070"
+            },
+            {
+                "Name": "VirtualFree",
+                "Address": "0x41b074"
+            },
+            {
+                "Name": "DeleteCriticalSection",
+                "Address": "0x41b078"
+            },
+            {
+                "Name": "LeaveCriticalSection",
+                "Address": "0x41b07c"
+            },
+            {
+                "Name": "EnterCriticalSection",
+                "Address": "0x41b080"
+            },
+            {
+                "Name": "VirtualAlloc",
+                "Address": "0x41b084"
+            },
+            {
+                "Name": "HeapReAlloc",
+                "Address": "0x41b088"
+            },
+            {
+                "Name": "HeapSize",
+                "Address": "0x41b08c"
+            },
+            {
+                "Name": "TerminateProcess",
+                "Address": "0x41b090"
+            },
+            {
+                "Name": "GetCurrentProcess",
+                "Address": "0x41b094"
+            },
+            {
+                "Name": "UnhandledExceptionFilter",
+                "Address": "0x41b098"
+            },
+            {
+                "Name": "SetUnhandledExceptionFilter",
+                "Address": "0x41b09c"
+            },
+            {
+                "Name": "IsDebuggerPresent",
+                "Address": "0x41b0a0"
+            },
+            {
+                "Name": "GetModuleHandleW",
+                "Address": "0x41b0a4"
+            },
+            {
+                "Name": "Sleep",
+                "Address": "0x41b0a8"
+            },
+            {
+                "Name": "ExitProcess",
+                "Address": "0x41b0ac"
+            },
+            {
+                "Name": "WriteFile",
+                "Address": "0x41b0b0"
+            },
+            {
+                "Name": "GetStdHandle",
+                "Address": "0x41b0b4"
+            },
+            {
+                "Name": "GetModuleFileNameA",
+                "Address": "0x41b0b8"
+            },
+            {
+                "Name": "WideCharToMultiByte",
+                "Address": "0x41b0bc"
+            },
+            {
+                "Name": "GetConsoleCP",
+                "Address": "0x41b0c0"
+            },
+            {
+                "Name": "GetConsoleMode",
+                "Address": "0x41b0c4"
+            },
+            {
+                "Name": "ReadFile",
+                "Address": "0x41b0c8"
+            },
+            {
+                "Name": "TlsGetValue",
+                "Address": "0x41b0cc"
+            },
+            {
+                "Name": "TlsAlloc",
+                "Address": "0x41b0d0"
+            },
+            {
+                "Name": "TlsSetValue",
+                "Address": "0x41b0d4"
+            },
+            {
+                "Name": "TlsFree",
+                "Address": "0x41b0d8"
+            },
+            {
+                "Name": "InterlockedIncrement",
+                "Address": "0x41b0dc"
+            },
+            {
+                "Name": "SetLastError",
+                "Address": "0x41b0e0"
+            },
+            {
+                "Name": "GetCurrentThreadId",
+                "Address": "0x41b0e4"
+            },
+            {
+                "Name": "FlushFileBuffers",
+                "Address": "0x41b0e8"
+            },
+            {
+                "Name": "SetFilePointer",
+                "Address": "0x41b0ec"
+            },
+            {
+                "Name": "SetHandleCount",
+                "Address": "0x41b0f0"
+            },
+            {
+                "Name": "GetFileType",
+                "Address": "0x41b0f4"
+            },
+            {
+                "Name": "GetStartupInfoA",
+                "Address": "0x41b0f8"
+            },
+            {
+                "Name": "RtlUnwind",
+                "Address": "0x41b0fc"
+            },
+            {
+                "Name": "FreeEnvironmentStringsA",
+                "Address": "0x41b100"
+            },
+            {
+                "Name": "GetEnvironmentStrings",
+                "Address": "0x41b104"
+            },
+            {
+                "Name": "FreeEnvironmentStringsW",
+                "Address": "0x41b108"
+            },
+            {
+                "Name": "GetEnvironmentStringsW",
+                "Address": "0x41b10c"
+            },
+            {
+                "Name": "QueryPerformanceCounter",
+                "Address": "0x41b110"
+            },
+            {
+                "Name": "GetTickCount",
+                "Address": "0x41b114"
+            },
+            {
+                "Name": "GetSystemTimeAsFileTime",
+                "Address": "0x41b118"
+            },
+            {
+                "Name": "InitializeCriticalSectionAndSpinCount",
+                "Address": "0x41b11c"
+            },
+            {
+                "Name": "GetCPInfo",
+                "Address": "0x41b120"
+            },
+            {
+                "Name": "GetACP",
+                "Address": "0x41b124"
+            },
+            {
+                "Name": "GetOEMCP",
+                "Address": "0x41b128"
+            },
+            {
+                "Name": "IsValidCodePage",
+                "Address": "0x41b12c"
+            },
+            {
+                "Name": "CompareStringA",
+                "Address": "0x41b130"
+            },
+            {
+                "Name": "CompareStringW",
+                "Address": "0x41b134"
+            },
+            {
+                "Name": "SetEnvironmentVariableA",
+                "Address": "0x41b138"
+            },
+            {
+                "Name": "WriteConsoleA",
+                "Address": "0x41b13c"
+            },
+            {
+                "Name": "GetConsoleOutputCP",
+                "Address": "0x41b140"
+            },
+            {
+                "Name": "WriteConsoleW",
+                "Address": "0x41b144"
+            },
+            {
+                "Name": "SetStdHandle",
+                "Address": "0x41b148"
+            },
+            {
+                "Name": "CreateFileA",
+                "Address": "0x41b14c"
+            },
+            {
+                "Name": "OleInitialize",
+                "Address": "0x41b17c"
+            },
+            {
+                "Name": "SafeArrayCreate",
+                "Address": "0x41b154"
+            },
+            {
+                "Name": "SafeArrayAccessData",
+                "Address": "0x41b158"
+            },
+            {
+                "Name": "SafeArrayUnaccessData",
+                "Address": "0x41b15c"
+            },
+            {
+                "Name": "SafeArrayDestroy",
+                "Address": "0x41b160"
+            },
+            {
+                "Name": "SafeArrayCreateVector",
+                "Address": "0x41b164"
+            },
+            {
+                "Name": "VariantClear",
+                "Address": "0x41b168"
+            },
+            {
+                "Name": "VariantInit",
+                "Address": "0x41b16c"
+            },
+            {
+                "Name": "SysFreeString",
+                "Address": "0x41b170"
+            },
+            {
+                "Name": "SysAllocString",
+                "Address": "0x41b174"
+            }
+        ],
+        "Sections": [
+            {
+                "Name": ".text",
+                "VirtualAddress": "0x1000",
+                "SizeOfRawData": "0x19800",
+                "PointerToRawData": "0x400",
+                "Characteristics": "0x60000020",
+                "Entropy": 6.7486
+            },
+            {
+                "Name": ".rdata",
+                "VirtualAddress": "0x1b000",
+                "SizeOfRawData": "0x6e00",
+                "PointerToRawData": "0x19c00",
+                "Characteristics": "0x40000040",
+                "Entropy": 6.443
+            },
+            {
+                "Name": ".data",
+                "VirtualAddress": "0x22000",
+                "SizeOfRawData": "0x1600",
+                "PointerToRawData": "0x20a00",
+                "Characteristics": "0xc0000040",
+                "Entropy": 3.2626
+            },
+            {
+                "Name": ".rsrc",
+                "VirtualAddress": "0x26000",
+                "SizeOfRawData": "0x1f600",
+                "PointerToRawData": "0x22000",
+                "Characteristics": "0x40000040",
+                "Entropy": 7.9929
+            }
+        ],
+        "isEntryPointInTextSection": true,
+        "heuristics": {
+            "timestamp": {
+                "type": "old_timestamp",
+                "Timestamp": 1342219636,
+                "Reason": "File timestamp is older than 10 years",
+                "Severity": "Low"
+            },
+            "unusual_sections": [],
+            "entropy": [
+                {
+                    "type": "high_entropy",
+                    "Section name": ".text",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".rdata",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".data",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "very_high_entropy",
+                    "Section name": ".rsrc",
+                    "Reason": "Very high entropy detected",
+                    "Severity": "Critical"
+                }
+            ],
+            "suspicious_api_calls": [
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetProcAddress",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "LoadLibraryA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetModuleHandleA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "CreateToolhelp32Snapshot",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "HeapFree",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "HeapAlloc",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "VirtualAlloc",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "IsDebuggerPresent",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetModuleHandleW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "WriteFile",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "QueryPerformanceCounter",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetTickCount",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "CreateFileA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                }
+            ],
+            "native_subsystem": null,
+            "suspicious_strings": []
+        },
+        "label": 1
+    },
+    {
         "Name": "maliciousFiles/mockransomware.exe",
         "Timestamp": 0,
         "EntryPoint": "0x67000",
@@ -3685,1256 +5344,6 @@
                 {
                     "type": "suspicious_api_call",
                     "Function name": "CreateFileA",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                }
-            ],
-            "native_subsystem": null,
-            "suspicious_strings": []
-        },
-        "label": 1
-    },
-    {
-        "Name": "maliciousFiles/packedSweetCatMeme.exe",
-        "Timestamp": 1763053086,
-        "EntryPoint": "0x2e2f0",
-        "Signature": 23117,
-        "Subsystem": {
-            "Type": "IMAGE_SUBSYSTEM_WINDOWS_CUI",
-            "Value": 3
-        },
-        "Functions": [
-            {
-                "Name": "OpenProcessToken",
-                "Address": "0x14002f268"
-            },
-            {
-                "Name": "LoadLibraryA",
-                "Address": "0x14002f278"
-            },
-            {
-                "Name": "ExitProcess",
-                "Address": "0x14002f280"
-            },
-            {
-                "Name": "GetProcAddress",
-                "Address": "0x14002f288"
-            },
-            {
-                "Name": "VirtualProtect",
-                "Address": "0x14002f290"
-            },
-            {
-                "Name": "??1_Lockit@std@@QEAA@XZ",
-                "Address": "0x14002f2a0"
-            },
-            {
-                "Name": "exit",
-                "Address": "0x14002f2b0"
-            },
-            {
-                "Name": "__CxxFrameHandler4",
-                "Address": "0x14002f2c0"
-            },
-            {
-                "Name": "memcmp",
-                "Address": "0x14002f2d0"
-            }
-        ],
-        "Sections": [
-            {
-                "Name": "UPX0",
-                "VirtualAddress": "0x1000",
-                "SizeOfRawData": "0x0",
-                "PointerToRawData": "0x400",
-                "Characteristics": "0xe0000080",
-                "Entropy": 0.0
-            },
-            {
-                "Name": "UPX1",
-                "VirtualAddress": "0x29000",
-                "SizeOfRawData": "0x5800",
-                "PointerToRawData": "0x400",
-                "Characteristics": "0xe0000040",
-                "Entropy": 7.7465
-            },
-            {
-                "Name": ".rsrc",
-                "VirtualAddress": "0x2f000",
-                "SizeOfRawData": "0x400",
-                "PointerToRawData": "0x5c00",
-                "Characteristics": "0xc0000040",
-                "Entropy": 4.7952
-            }
-        ],
-        "isEntryPointInTextSection": false,
-        "heuristics": {
-            "timestamp": null,
-            "unusual_sections": [
-                {
-                    "type": "size_ratio_anomaly",
-                    "Name": "UPX0",
-                    "VirtualSize": 163840,
-                    "SizeOfRawData": 0,
-                    "Reason": "High virtual size to raw size ratio",
-                    "severity": "Critical"
-                },
-                {
-                    "type": "size_ratio_warning",
-                    "Name": "UPX0",
-                    "VirtualSize": 163840,
-                    "SizeOfRawData": 0,
-                    "Reason": "Moderate virtual size to raw size ratio",
-                    "severity": "Medium"
-                },
-                {
-                    "type": "entry_point_anomaly",
-                    "Reason": "Entry point is not located in the .text section",
-                    "severity": "High"
-                }
-            ],
-            "entropy": [
-                {
-                    "type": "low_entropy",
-                    "Section name": "UPX0",
-                    "Reason": "Low entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "very_high_entropy",
-                    "Section name": "UPX1",
-                    "Reason": "Very high entropy detected",
-                    "Severity": "Critical"
-                },
-                {
-                    "type": "high_entropy",
-                    "Section name": ".rsrc",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                }
-            ],
-            "suspicious_api_calls": [
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "OpenProcessToken",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "LoadLibraryA",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "GetProcAddress",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "VirtualProtect",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                }
-            ],
-            "native_subsystem": null,
-            "suspicious_strings": []
-        },
-        "label": 1
-    },
-    {
-        "Name": "maliciousFiles/registryrunkey.exe",
-        "Timestamp": 0,
-        "EntryPoint": "0x67340",
-        "Signature": 23117,
-        "Subsystem": {
-            "Type": "IMAGE_SUBSYSTEM_WINDOWS_CUI",
-            "Value": 3
-        },
-        "Functions": [
-            {
-                "Name": "WriteFile",
-                "Address": "0x98a040"
-            },
-            {
-                "Name": "WriteConsoleW",
-                "Address": "0x98a048"
-            },
-            {
-                "Name": "WerSetFlags",
-                "Address": "0x98a050"
-            },
-            {
-                "Name": "WerGetFlags",
-                "Address": "0x98a058"
-            },
-            {
-                "Name": "WaitForMultipleObjects",
-                "Address": "0x98a060"
-            },
-            {
-                "Name": "WaitForSingleObject",
-                "Address": "0x98a068"
-            },
-            {
-                "Name": "VirtualQuery",
-                "Address": "0x98a070"
-            },
-            {
-                "Name": "VirtualFree",
-                "Address": "0x98a078"
-            },
-            {
-                "Name": "VirtualAlloc",
-                "Address": "0x98a080"
-            },
-            {
-                "Name": "TlsAlloc",
-                "Address": "0x98a088"
-            },
-            {
-                "Name": "SwitchToThread",
-                "Address": "0x98a090"
-            },
-            {
-                "Name": "SuspendThread",
-                "Address": "0x98a098"
-            },
-            {
-                "Name": "SetWaitableTimer",
-                "Address": "0x98a0a0"
-            },
-            {
-                "Name": "SetUnhandledExceptionFilter",
-                "Address": "0x98a0a8"
-            },
-            {
-                "Name": "SetProcessPriorityBoost",
-                "Address": "0x98a0b0"
-            },
-            {
-                "Name": "SetEvent",
-                "Address": "0x98a0b8"
-            },
-            {
-                "Name": "SetErrorMode",
-                "Address": "0x98a0c0"
-            },
-            {
-                "Name": "SetConsoleCtrlHandler",
-                "Address": "0x98a0c8"
-            },
-            {
-                "Name": "ResumeThread",
-                "Address": "0x98a0d0"
-            },
-            {
-                "Name": "RaiseFailFastException",
-                "Address": "0x98a0d8"
-            },
-            {
-                "Name": "PostQueuedCompletionStatus",
-                "Address": "0x98a0e0"
-            },
-            {
-                "Name": "LoadLibraryW",
-                "Address": "0x98a0e8"
-            },
-            {
-                "Name": "LoadLibraryExW",
-                "Address": "0x98a0f0"
-            },
-            {
-                "Name": "SetThreadContext",
-                "Address": "0x98a0f8"
-            },
-            {
-                "Name": "GetThreadContext",
-                "Address": "0x98a100"
-            },
-            {
-                "Name": "GetSystemInfo",
-                "Address": "0x98a108"
-            },
-            {
-                "Name": "GetSystemDirectoryA",
-                "Address": "0x98a110"
-            },
-            {
-                "Name": "GetStdHandle",
-                "Address": "0x98a118"
-            },
-            {
-                "Name": "GetQueuedCompletionStatusEx",
-                "Address": "0x98a120"
-            },
-            {
-                "Name": "GetProcessAffinityMask",
-                "Address": "0x98a128"
-            },
-            {
-                "Name": "GetProcAddress",
-                "Address": "0x98a130"
-            },
-            {
-                "Name": "GetErrorMode",
-                "Address": "0x98a138"
-            },
-            {
-                "Name": "GetEnvironmentStringsW",
-                "Address": "0x98a140"
-            },
-            {
-                "Name": "GetCurrentThreadId",
-                "Address": "0x98a148"
-            },
-            {
-                "Name": "GetConsoleMode",
-                "Address": "0x98a150"
-            },
-            {
-                "Name": "FreeEnvironmentStringsW",
-                "Address": "0x98a158"
-            },
-            {
-                "Name": "ExitProcess",
-                "Address": "0x98a160"
-            },
-            {
-                "Name": "DuplicateHandle",
-                "Address": "0x98a168"
-            },
-            {
-                "Name": "CreateWaitableTimerExW",
-                "Address": "0x98a170"
-            },
-            {
-                "Name": "CreateThread",
-                "Address": "0x98a178"
-            },
-            {
-                "Name": "CreateIoCompletionPort",
-                "Address": "0x98a180"
-            },
-            {
-                "Name": "CreateFileA",
-                "Address": "0x98a188"
-            },
-            {
-                "Name": "CreateEventA",
-                "Address": "0x98a190"
-            },
-            {
-                "Name": "CloseHandle",
-                "Address": "0x98a198"
-            },
-            {
-                "Name": "AddVectoredExceptionHandler",
-                "Address": "0x98a1a0"
-            }
-        ],
-        "Sections": [
-            {
-                "Name": ".text",
-                "VirtualAddress": "0x1000",
-                "SizeOfRawData": "0x30f400",
-                "PointerToRawData": "0x600",
-                "Characteristics": "0x60000020",
-                "Entropy": 6.306
-            },
-            {
-                "Name": ".rdata",
-                "VirtualAddress": "0x311000",
-                "SizeOfRawData": "0x279000",
-                "PointerToRawData": "0x30fa00",
-                "Characteristics": "0x40000040",
-                "Entropy": 5.7721
-            },
-            {
-                "Name": ".data",
-                "VirtualAddress": "0x58a000",
-                "SizeOfRawData": "0x32400",
-                "PointerToRawData": "0x588a00",
-                "Characteristics": "0xc0000040",
-                "Entropy": 4.91
-            },
-            {
-                "Name": ".pdata",
-                "VirtualAddress": "0x61d000",
-                "SizeOfRawData": "0xee00",
-                "PointerToRawData": "0x5bae00",
-                "Characteristics": "0x40000040",
-                "Entropy": 5.4702
-            },
-            {
-                "Name": ".xdata",
-                "VirtualAddress": "0x62c000",
-                "SizeOfRawData": "0x200",
-                "PointerToRawData": "0x5c9c00",
-                "Characteristics": "0x40000040",
-                "Entropy": 1.6345
-            },
-            {
-                "Name": ".idata",
-                "VirtualAddress": "0x62d000",
-                "SizeOfRawData": "0x600",
-                "PointerToRawData": "0x5c9e00",
-                "Characteristics": "0xc0000040",
-                "Entropy": 3.899
-            },
-            {
-                "Name": ".reloc",
-                "VirtualAddress": "0x62e000",
-                "SizeOfRawData": "0xb800",
-                "PointerToRawData": "0x5ca400",
-                "Characteristics": "0x42000040",
-                "Entropy": 5.4332
-            },
-            {
-                "Name": ".symtab",
-                "VirtualAddress": "0x63a000",
-                "SizeOfRawData": "0x200",
-                "PointerToRawData": "0x5d5c00",
-                "Characteristics": "0x42000000",
-                "Entropy": 0.0204
-            }
-        ],
-        "isEntryPointInTextSection": true,
-        "heuristics": {
-            "timestamp": {
-                "type": "old_timestamp",
-                "Timestamp": 0,
-                "Reason": "File timestamp is older than 10 years",
-                "Severity": "Low"
-            },
-            "unusual_sections": [],
-            "entropy": [
-                {
-                    "type": "high_entropy",
-                    "Section name": ".text",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                },
-                {
-                    "type": "high_entropy",
-                    "Section name": ".rdata",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                },
-                {
-                    "type": "high_entropy",
-                    "Section name": ".data",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                },
-                {
-                    "type": "high_entropy",
-                    "Section name": ".pdata",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                },
-                {
-                    "type": "moderate_entropy",
-                    "Section name": ".xdata",
-                    "Reason": "Moderate entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "moderate_entropy",
-                    "Section name": ".idata",
-                    "Reason": "Moderate entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "high_entropy",
-                    "Section name": ".reloc",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                },
-                {
-                    "type": "low_entropy",
-                    "Section name": ".symtab",
-                    "Reason": "Low entropy detected",
-                    "Severity": "Info"
-                }
-            ],
-            "suspicious_api_calls": [
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "WriteFile",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "VirtualQuery",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "VirtualAlloc",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "SuspendThread",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "ResumeThread",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "SetThreadContext",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "GetThreadContext",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "GetProcAddress",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "CreateFileA",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                }
-            ],
-            "native_subsystem": null,
-            "suspicious_strings": []
-        },
-        "label": 1
-    },
-    {
-        "Name": "maliciousFiles/sweetCatMeme.exe",
-        "Timestamp": 1763053086,
-        "EntryPoint": "0x1146f",
-        "Signature": 23117,
-        "Subsystem": {
-            "Type": "IMAGE_SUBSYSTEM_WINDOWS_CUI",
-            "Value": 3
-        },
-        "Functions": [
-            {
-                "Name": "VirtualAllocEx",
-                "Address": "0x140027070"
-            },
-            {
-                "Name": "WriteProcessMemory",
-                "Address": "0x140027078"
-            },
-            {
-                "Name": "LocalFree",
-                "Address": "0x140027080"
-            },
-            {
-                "Name": "OpenProcess",
-                "Address": "0x140027088"
-            },
-            {
-                "Name": "Process32FirstW",
-                "Address": "0x140027090"
-            },
-            {
-                "Name": "Process32NextW",
-                "Address": "0x140027098"
-            },
-            {
-                "Name": "FreeLibrary",
-                "Address": "0x1400270a0"
-            },
-            {
-                "Name": "CreateRemoteThread",
-                "Address": "0x1400270a8"
-            },
-            {
-                "Name": "GetCurrentProcess",
-                "Address": "0x1400270b0"
-            },
-            {
-                "Name": "CreateToolhelp32Snapshot",
-                "Address": "0x1400270b8"
-            },
-            {
-                "Name": "CloseHandle",
-                "Address": "0x1400270c0"
-            },
-            {
-                "Name": "VirtualQuery",
-                "Address": "0x1400270c8"
-            },
-            {
-                "Name": "GetProcessHeap",
-                "Address": "0x1400270d0"
-            },
-            {
-                "Name": "HeapFree",
-                "Address": "0x1400270d8"
-            },
-            {
-                "Name": "HeapAlloc",
-                "Address": "0x1400270e0"
-            },
-            {
-                "Name": "GetLastError",
-                "Address": "0x1400270e8"
-            },
-            {
-                "Name": "GetModuleHandleW",
-                "Address": "0x1400270f0"
-            },
-            {
-                "Name": "GetStartupInfoW",
-                "Address": "0x1400270f8"
-            },
-            {
-                "Name": "InitializeSListHead",
-                "Address": "0x140027100"
-            },
-            {
-                "Name": "GetSystemTimeAsFileTime",
-                "Address": "0x140027108"
-            },
-            {
-                "Name": "GetCurrentProcessId",
-                "Address": "0x140027110"
-            },
-            {
-                "Name": "QueryPerformanceCounter",
-                "Address": "0x140027118"
-            },
-            {
-                "Name": "IsProcessorFeaturePresent",
-                "Address": "0x140027120"
-            },
-            {
-                "Name": "TerminateProcess",
-                "Address": "0x140027128"
-            },
-            {
-                "Name": "SetUnhandledExceptionFilter",
-                "Address": "0x140027130"
-            },
-            {
-                "Name": "UnhandledExceptionFilter",
-                "Address": "0x140027138"
-            },
-            {
-                "Name": "RtlVirtualUnwind",
-                "Address": "0x140027140"
-            },
-            {
-                "Name": "RtlLookupFunctionEntry",
-                "Address": "0x140027148"
-            },
-            {
-                "Name": "RtlCaptureContext",
-                "Address": "0x140027150"
-            },
-            {
-                "Name": "WideCharToMultiByte",
-                "Address": "0x140027158"
-            },
-            {
-                "Name": "MultiByteToWideChar",
-                "Address": "0x140027160"
-            },
-            {
-                "Name": "RaiseException",
-                "Address": "0x140027168"
-            },
-            {
-                "Name": "IsDebuggerPresent",
-                "Address": "0x140027170"
-            },
-            {
-                "Name": "GetCurrentThreadId",
-                "Address": "0x140027178"
-            },
-            {
-                "Name": "GetProcAddress",
-                "Address": "0x140027180"
-            },
-            {
-                "Name": "GetTokenInformation",
-                "Address": "0x140027000"
-            },
-            {
-                "Name": "OpenProcessToken",
-                "Address": "0x140027008"
-            },
-            {
-                "Name": "ConvertSidToStringSidA",
-                "Address": "0x140027010"
-            },
-            {
-                "Name": "?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A",
-                "Address": "0x140027218"
-            },
-            {
-                "Name": "?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ",
-                "Address": "0x140027220"
-            },
-            {
-                "Name": "?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@D@Z",
-                "Address": "0x140027228"
-            },
-            {
-                "Name": "??1_Lockit@std@@QEAA@XZ",
-                "Address": "0x140027230"
-            },
-            {
-                "Name": "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@K@Z",
-                "Address": "0x140027238"
-            },
-            {
-                "Name": "??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z",
-                "Address": "0x140027240"
-            },
-            {
-                "Name": "?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAXXZ",
-                "Address": "0x140027248"
-            },
-            {
-                "Name": "?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADD@Z",
-                "Address": "0x140027250"
-            },
-            {
-                "Name": "?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADXZ",
-                "Address": "0x140027258"
-            },
-            {
-                "Name": "?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ",
-                "Address": "0x140027260"
-            },
-            {
-                "Name": "?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ",
-                "Address": "0x140027268"
-            },
-            {
-                "Name": "?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z",
-                "Address": "0x140027270"
-            },
-            {
-                "Name": "?_Xlength_error@std@@YAXPEBD@Z",
-                "Address": "0x140027278"
-            },
-            {
-                "Name": "?uncaught_exception@std@@YA_NXZ",
-                "Address": "0x140027280"
-            },
-            {
-                "Name": "?good@ios_base@std@@QEBA_NXZ",
-                "Address": "0x140027288"
-            },
-            {
-                "Name": "?flags@ios_base@std@@QEBAHXZ",
-                "Address": "0x140027290"
-            },
-            {
-                "Name": "?width@ios_base@std@@QEBA_JXZ",
-                "Address": "0x140027298"
-            },
-            {
-                "Name": "?width@ios_base@std@@QEAA_J_J@Z",
-                "Address": "0x1400272a0"
-            },
-            {
-                "Name": "?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHD@Z",
-                "Address": "0x1400272a8"
-            },
-            {
-                "Name": "?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAA_JPEBD_J@Z",
-                "Address": "0x1400272b0"
-            },
-            {
-                "Name": "??0_Lockit@std@@QEAA@H@Z",
-                "Address": "0x1400272b8"
-            },
-            {
-                "Name": "__vcrt_GetModuleHandleW",
-                "Address": "0x140027338"
-            },
-            {
-                "Name": "__vcrt_GetModuleFileNameW",
-                "Address": "0x140027340"
-            },
-            {
-                "Name": "__current_exception_context",
-                "Address": "0x140027348"
-            },
-            {
-                "Name": "__current_exception",
-                "Address": "0x140027350"
-            },
-            {
-                "Name": "__vcrt_LoadLibraryExW",
-                "Address": "0x140027358"
-            },
-            {
-                "Name": "__C_specific_handler_noexcept",
-                "Address": "0x140027360"
-            },
-            {
-                "Name": "__C_specific_handler",
-                "Address": "0x140027368"
-            },
-            {
-                "Name": "_CxxThrowException",
-                "Address": "0x140027370"
-            },
-            {
-                "Name": "__std_exception_destroy",
-                "Address": "0x140027378"
-            },
-            {
-                "Name": "__std_exception_copy",
-                "Address": "0x140027380"
-            },
-            {
-                "Name": "__std_type_info_destroy_list",
-                "Address": "0x140027388"
-            },
-            {
-                "Name": "memcmp",
-                "Address": "0x140027390"
-            },
-            {
-                "Name": "memcpy",
-                "Address": "0x140027398"
-            },
-            {
-                "Name": "memmove",
-                "Address": "0x1400273a0"
-            },
-            {
-                "Name": "__CxxFrameHandler4",
-                "Address": "0x140027410"
-            },
-            {
-                "Name": "__p__commode",
-                "Address": "0x140027470"
-            },
-            {
-                "Name": "_free_dbg",
-                "Address": "0x140027478"
-            },
-            {
-                "Name": "strcpy_s",
-                "Address": "0x140027480"
-            },
-            {
-                "Name": "strcat_s",
-                "Address": "0x140027488"
-            },
-            {
-                "Name": "__stdio_common_vsprintf_s",
-                "Address": "0x140027490"
-            },
-            {
-                "Name": "_seh_filter_dll",
-                "Address": "0x140027498"
-            },
-            {
-                "Name": "_initialize_onexit_table",
-                "Address": "0x1400274a0"
-            },
-            {
-                "Name": "_register_onexit_function",
-                "Address": "0x1400274a8"
-            },
-            {
-                "Name": "_execute_onexit_table",
-                "Address": "0x1400274b0"
-            },
-            {
-                "Name": "_crt_atexit",
-                "Address": "0x1400274b8"
-            },
-            {
-                "Name": "_crt_at_quick_exit",
-                "Address": "0x1400274c0"
-            },
-            {
-                "Name": "terminate",
-                "Address": "0x1400274c8"
-            },
-            {
-                "Name": "_wmakepath_s",
-                "Address": "0x1400274d0"
-            },
-            {
-                "Name": "_wsplitpath_s",
-                "Address": "0x1400274d8"
-            },
-            {
-                "Name": "wcscpy_s",
-                "Address": "0x1400274e0"
-            },
-            {
-                "Name": "_cexit",
-                "Address": "0x1400274e8"
-            },
-            {
-                "Name": "__p___argv",
-                "Address": "0x1400274f0"
-            },
-            {
-                "Name": "_configthreadlocale",
-                "Address": "0x1400274f8"
-            },
-            {
-                "Name": "_set_fmode",
-                "Address": "0x140027500"
-            },
-            {
-                "Name": "_exit",
-                "Address": "0x140027508"
-            },
-            {
-                "Name": "exit",
-                "Address": "0x140027510"
-            },
-            {
-                "Name": "_initterm_e",
-                "Address": "0x140027518"
-            },
-            {
-                "Name": "_initterm",
-                "Address": "0x140027520"
-            },
-            {
-                "Name": "_get_initial_narrow_environment",
-                "Address": "0x140027528"
-            },
-            {
-                "Name": "_initialize_narrow_environment",
-                "Address": "0x140027530"
-            },
-            {
-                "Name": "_configure_narrow_argv",
-                "Address": "0x140027538"
-            },
-            {
-                "Name": "__setusermatherr",
-                "Address": "0x140027540"
-            },
-            {
-                "Name": "_set_app_type",
-                "Address": "0x140027548"
-            },
-            {
-                "Name": "_seh_filter_exe",
-                "Address": "0x140027550"
-            },
-            {
-                "Name": "malloc",
-                "Address": "0x140027558"
-            },
-            {
-                "Name": "_callnewh",
-                "Address": "0x140027560"
-            },
-            {
-                "Name": "strlen",
-                "Address": "0x140027568"
-            },
-            {
-                "Name": "_wcsicmp",
-                "Address": "0x140027570"
-            },
-            {
-                "Name": "_CrtDbgReport",
-                "Address": "0x140027578"
-            },
-            {
-                "Name": "_invoke_watson",
-                "Address": "0x140027580"
-            },
-            {
-                "Name": "_c_exit",
-                "Address": "0x140027588"
-            },
-            {
-                "Name": "__p___argc",
-                "Address": "0x140027590"
-            },
-            {
-                "Name": "_register_thread_local_exe_atexit_callback",
-                "Address": "0x140027598"
-            },
-            {
-                "Name": "_set_new_mode",
-                "Address": "0x1400275a0"
-            },
-            {
-                "Name": "_CrtDbgReportW",
-                "Address": "0x1400275a8"
-            }
-        ],
-        "Sections": [
-            {
-                "Name": ".textbss",
-                "VirtualAddress": "0x1000",
-                "SizeOfRawData": "0x0",
-                "PointerToRawData": "0x0",
-                "Characteristics": "0xe00000a0",
-                "Entropy": 0.0
-            },
-            {
-                "Name": ".text",
-                "VirtualAddress": "0x11000",
-                "SizeOfRawData": "0xd000",
-                "PointerToRawData": "0x400",
-                "Characteristics": "0x60000020",
-                "Entropy": 4.1299
-            },
-            {
-                "Name": ".rdata",
-                "VirtualAddress": "0x1e000",
-                "SizeOfRawData": "0x4800",
-                "PointerToRawData": "0xd400",
-                "Characteristics": "0x40000040",
-                "Entropy": 2.7401
-            },
-            {
-                "Name": ".data",
-                "VirtualAddress": "0x23000",
-                "SizeOfRawData": "0x600",
-                "PointerToRawData": "0x11c00",
-                "Characteristics": "0xc0000040",
-                "Entropy": 0.8868
-            },
-            {
-                "Name": ".pdata",
-                "VirtualAddress": "0x24000",
-                "SizeOfRawData": "0x2800",
-                "PointerToRawData": "0x12200",
-                "Characteristics": "0x40000040",
-                "Entropy": 1.9337
-            },
-            {
-                "Name": ".idata",
-                "VirtualAddress": "0x27000",
-                "SizeOfRawData": "0x1c00",
-                "PointerToRawData": "0x14a00",
-                "Characteristics": "0x40000040",
-                "Entropy": 3.9463
-            },
-            {
-                "Name": ".msvcjmc",
-                "VirtualAddress": "0x29000",
-                "SizeOfRawData": "0x400",
-                "PointerToRawData": "0x16600",
-                "Characteristics": "0xc0000040",
-                "Entropy": 0.8189
-            },
-            {
-                "Name": ".00cfg",
-                "VirtualAddress": "0x2a000",
-                "SizeOfRawData": "0x200",
-                "PointerToRawData": "0x16a00",
-                "Characteristics": "0x40000040",
-                "Entropy": 0.4677
-            },
-            {
-                "Name": ".rsrc",
-                "VirtualAddress": "0x2b000",
-                "SizeOfRawData": "0x600",
-                "PointerToRawData": "0x16c00",
-                "Characteristics": "0x40000040",
-                "Entropy": 2.143
-            },
-            {
-                "Name": ".reloc",
-                "VirtualAddress": "0x2c000",
-                "SizeOfRawData": "0x400",
-                "PointerToRawData": "0x17200",
-                "Characteristics": "0x42000040",
-                "Entropy": 1.4309
-            }
-        ],
-        "isEntryPointInTextSection": true,
-        "heuristics": {
-            "timestamp": null,
-            "unusual_sections": [
-                {
-                    "type": "size_ratio_anomaly",
-                    "Name": ".textbss",
-                    "VirtualSize": 65536,
-                    "SizeOfRawData": 0,
-                    "Reason": "High virtual size to raw size ratio",
-                    "severity": "Critical"
-                },
-                {
-                    "type": "size_ratio_warning",
-                    "Name": ".textbss",
-                    "VirtualSize": 65536,
-                    "SizeOfRawData": 0,
-                    "Reason": "Moderate virtual size to raw size ratio",
-                    "severity": "Medium"
-                },
-                {
-                    "type": "suspicious_section",
-                    "Name": ".textbss",
-                    "Reason": "Suspicious section name",
-                    "severity": "High"
-                }
-            ],
-            "entropy": [
-                {
-                    "type": "low_entropy",
-                    "Section name": ".textbss",
-                    "Reason": "Low entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "high_entropy",
-                    "Section name": ".text",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                },
-                {
-                    "type": "moderate_entropy",
-                    "Section name": ".rdata",
-                    "Reason": "Moderate entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "low_entropy",
-                    "Section name": ".data",
-                    "Reason": "Low entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "moderate_entropy",
-                    "Section name": ".pdata",
-                    "Reason": "Moderate entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "moderate_entropy",
-                    "Section name": ".idata",
-                    "Reason": "Moderate entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "low_entropy",
-                    "Section name": ".msvcjmc",
-                    "Reason": "Low entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "low_entropy",
-                    "Section name": ".00cfg",
-                    "Reason": "Low entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "moderate_entropy",
-                    "Section name": ".rsrc",
-                    "Reason": "Moderate entropy detected",
-                    "Severity": "Info"
-                },
-                {
-                    "type": "moderate_entropy",
-                    "Section name": ".reloc",
-                    "Reason": "Moderate entropy detected",
-                    "Severity": "Info"
-                }
-            ],
-            "suspicious_api_calls": [
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "VirtualAllocEx",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "WriteProcessMemory",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "OpenProcess",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "CreateRemoteThread",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "CreateToolhelp32Snapshot",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "VirtualQuery",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "HeapFree",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "HeapAlloc",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "GetModuleHandleW",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "QueryPerformanceCounter",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "IsDebuggerPresent",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "GetProcAddress",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "OpenProcessToken",
                     "Reason": "Suspicious API call detected",
                     "Severity": "High"
                 }
@@ -5322,270 +5731,645 @@
         "label": 1
     },
     {
-        "Name": "maliciousFiles/uac_bypass.exe",
-        "Timestamp": 0,
-        "EntryPoint": "0x67300",
+        "Name": "maliciousFiles/Endermanch@7ev3n.exe",
+        "Timestamp": 1453253592,
+        "EntryPoint": "0x10b65",
         "Signature": 23117,
         "Subsystem": {
-            "Type": "IMAGE_SUBSYSTEM_WINDOWS_CUI",
-            "Value": 3
+            "Type": "IMAGE_SUBSYSTEM_WINDOWS_GUI",
+            "Value": 2
         },
         "Functions": [
             {
-                "Name": "WriteFile",
-                "Address": "0xa3d040"
+                "Name": "GetCurrentProcess",
+                "Address": "0x42d044"
+            },
+            {
+                "Name": "ExitThread",
+                "Address": "0x42d048"
+            },
+            {
+                "Name": "SetEndOfFile",
+                "Address": "0x42d04c"
+            },
+            {
+                "Name": "CreateFileW",
+                "Address": "0x42d050"
+            },
+            {
+                "Name": "HeapSize",
+                "Address": "0x42d054"
             },
             {
                 "Name": "WriteConsoleW",
-                "Address": "0xa3d048"
+                "Address": "0x42d058"
             },
             {
-                "Name": "WerSetFlags",
-                "Address": "0xa3d050"
+                "Name": "ReadConsoleW",
+                "Address": "0x42d05c"
             },
             {
-                "Name": "WerGetFlags",
-                "Address": "0xa3d058"
+                "Name": "SetStdHandle",
+                "Address": "0x42d060"
             },
             {
-                "Name": "WaitForMultipleObjects",
-                "Address": "0xa3d060"
+                "Name": "FindFirstFileExW",
+                "Address": "0x42d064"
             },
             {
-                "Name": "WaitForSingleObject",
-                "Address": "0xa3d068"
-            },
-            {
-                "Name": "VirtualQuery",
-                "Address": "0xa3d070"
-            },
-            {
-                "Name": "VirtualFree",
-                "Address": "0xa3d078"
-            },
-            {
-                "Name": "VirtualAlloc",
-                "Address": "0xa3d080"
-            },
-            {
-                "Name": "TlsAlloc",
-                "Address": "0xa3d088"
-            },
-            {
-                "Name": "SwitchToThread",
-                "Address": "0xa3d090"
-            },
-            {
-                "Name": "SuspendThread",
-                "Address": "0xa3d098"
-            },
-            {
-                "Name": "SetWaitableTimer",
-                "Address": "0xa3d0a0"
-            },
-            {
-                "Name": "SetUnhandledExceptionFilter",
-                "Address": "0xa3d0a8"
-            },
-            {
-                "Name": "SetProcessPriorityBoost",
-                "Address": "0xa3d0b0"
-            },
-            {
-                "Name": "SetEvent",
-                "Address": "0xa3d0b8"
-            },
-            {
-                "Name": "SetErrorMode",
-                "Address": "0xa3d0c0"
-            },
-            {
-                "Name": "SetConsoleCtrlHandler",
-                "Address": "0xa3d0c8"
-            },
-            {
-                "Name": "ResumeThread",
-                "Address": "0xa3d0d0"
-            },
-            {
-                "Name": "RaiseFailFastException",
-                "Address": "0xa3d0d8"
-            },
-            {
-                "Name": "PostQueuedCompletionStatus",
-                "Address": "0xa3d0e0"
-            },
-            {
-                "Name": "LoadLibraryW",
-                "Address": "0xa3d0e8"
-            },
-            {
-                "Name": "LoadLibraryExW",
-                "Address": "0xa3d0f0"
-            },
-            {
-                "Name": "SetThreadContext",
-                "Address": "0xa3d0f8"
-            },
-            {
-                "Name": "GetThreadContext",
-                "Address": "0xa3d100"
-            },
-            {
-                "Name": "GetSystemInfo",
-                "Address": "0xa3d108"
-            },
-            {
-                "Name": "GetSystemDirectoryA",
-                "Address": "0xa3d110"
-            },
-            {
-                "Name": "GetStdHandle",
-                "Address": "0xa3d118"
-            },
-            {
-                "Name": "GetQueuedCompletionStatusEx",
-                "Address": "0xa3d120"
-            },
-            {
-                "Name": "GetProcessAffinityMask",
-                "Address": "0xa3d128"
+                "Name": "FindClose",
+                "Address": "0x42d068"
             },
             {
                 "Name": "GetProcAddress",
-                "Address": "0xa3d130"
+                "Address": "0x42d06c"
             },
             {
-                "Name": "GetErrorMode",
-                "Address": "0xa3d138"
+                "Name": "GetCommandLineW",
+                "Address": "0x42d070"
             },
             {
-                "Name": "GetEnvironmentStringsW",
-                "Address": "0xa3d140"
+                "Name": "GetCommandLineA",
+                "Address": "0x42d074"
             },
             {
-                "Name": "GetCurrentThreadId",
-                "Address": "0xa3d148"
+                "Name": "GetProcessHeap",
+                "Address": "0x42d078"
             },
             {
-                "Name": "GetConsoleMode",
-                "Address": "0xa3d150"
+                "Name": "SetEnvironmentVariableW",
+                "Address": "0x42d07c"
+            },
+            {
+                "Name": "SetEnvironmentVariableA",
+                "Address": "0x42d080"
             },
             {
                 "Name": "FreeEnvironmentStringsW",
-                "Address": "0xa3d158"
+                "Address": "0x42d084"
             },
             {
-                "Name": "ExitProcess",
-                "Address": "0xa3d160"
+                "Name": "GetEnvironmentStringsW",
+                "Address": "0x42d088"
             },
             {
-                "Name": "DuplicateHandle",
-                "Address": "0xa3d168"
+                "Name": "GetOEMCP",
+                "Address": "0x42d08c"
             },
             {
-                "Name": "CreateWaitableTimerExW",
-                "Address": "0xa3d170"
+                "Name": "IsValidCodePage",
+                "Address": "0x42d090"
+            },
+            {
+                "Name": "SetFilePointerEx",
+                "Address": "0x42d094"
+            },
+            {
+                "Name": "ReadFile",
+                "Address": "0x42d098"
+            },
+            {
+                "Name": "GetConsoleMode",
+                "Address": "0x42d09c"
+            },
+            {
+                "Name": "GetConsoleCP",
+                "Address": "0x42d0a0"
+            },
+            {
+                "Name": "FlushFileBuffers",
+                "Address": "0x42d0a4"
+            },
+            {
+                "Name": "WinExec",
+                "Address": "0x42d0a8"
+            },
+            {
+                "Name": "CreateProcessA",
+                "Address": "0x42d0ac"
+            },
+            {
+                "Name": "GetStartupInfoA",
+                "Address": "0x42d0b0"
+            },
+            {
+                "Name": "GetModuleFileNameW",
+                "Address": "0x42d0b4"
+            },
+            {
+                "Name": "CopyFileA",
+                "Address": "0x42d0b8"
+            },
+            {
+                "Name": "GetFileAttributesA",
+                "Address": "0x42d0bc"
+            },
+            {
+                "Name": "GetModuleFileNameA",
+                "Address": "0x42d0c0"
+            },
+            {
+                "Name": "FindNextFileW",
+                "Address": "0x42d0c4"
+            },
+            {
+                "Name": "GetLocalTime",
+                "Address": "0x42d0c8"
+            },
+            {
+                "Name": "FindFirstFileW",
+                "Address": "0x42d0cc"
             },
             {
                 "Name": "CreateThread",
-                "Address": "0xa3d178"
+                "Address": "0x42d0d0"
             },
             {
-                "Name": "CreateIoCompletionPort",
-                "Address": "0xa3d180"
+                "Name": "GetModuleHandleW",
+                "Address": "0x42d0d4"
             },
             {
-                "Name": "CreateFileA",
-                "Address": "0xa3d188"
+                "Name": "Sleep",
+                "Address": "0x42d0d8"
             },
             {
-                "Name": "CreateEventA",
-                "Address": "0xa3d190"
+                "Name": "GetLogicalDrives",
+                "Address": "0x42d0dc"
+            },
+            {
+                "Name": "VerifyVersionInfoW",
+                "Address": "0x42d0e0"
+            },
+            {
+                "Name": "EnumSystemLocalesW",
+                "Address": "0x42d0e4"
+            },
+            {
+                "Name": "GetUserDefaultLCID",
+                "Address": "0x42d0e8"
+            },
+            {
+                "Name": "IsValidLocale",
+                "Address": "0x42d0ec"
+            },
+            {
+                "Name": "GetFileAttributesExW",
+                "Address": "0x42d0f0"
+            },
+            {
+                "Name": "GetExitCodeProcess",
+                "Address": "0x42d0f4"
+            },
+            {
+                "Name": "WaitForSingleObject",
+                "Address": "0x42d0f8"
+            },
+            {
+                "Name": "GetFileType",
+                "Address": "0x42d0fc"
+            },
+            {
+                "Name": "UnhandledExceptionFilter",
+                "Address": "0x42d100"
+            },
+            {
+                "Name": "SetUnhandledExceptionFilter",
+                "Address": "0x42d104"
+            },
+            {
+                "Name": "TerminateProcess",
+                "Address": "0x42d108"
+            },
+            {
+                "Name": "IsProcessorFeaturePresent",
+                "Address": "0x42d10c"
             },
             {
                 "Name": "CloseHandle",
-                "Address": "0xa3d198"
+                "Address": "0x42d110"
             },
             {
-                "Name": "AddVectoredExceptionHandler",
-                "Address": "0xa3d1a0"
+                "Name": "EnterCriticalSection",
+                "Address": "0x42d114"
+            },
+            {
+                "Name": "LeaveCriticalSection",
+                "Address": "0x42d118"
+            },
+            {
+                "Name": "DeleteCriticalSection",
+                "Address": "0x42d11c"
+            },
+            {
+                "Name": "SetEvent",
+                "Address": "0x42d120"
+            },
+            {
+                "Name": "ResetEvent",
+                "Address": "0x42d124"
+            },
+            {
+                "Name": "WaitForSingleObjectEx",
+                "Address": "0x42d128"
+            },
+            {
+                "Name": "CreateEventW",
+                "Address": "0x42d12c"
+            },
+            {
+                "Name": "IsDebuggerPresent",
+                "Address": "0x42d130"
+            },
+            {
+                "Name": "GetStartupInfoW",
+                "Address": "0x42d134"
+            },
+            {
+                "Name": "QueryPerformanceCounter",
+                "Address": "0x42d138"
+            },
+            {
+                "Name": "GetCurrentProcessId",
+                "Address": "0x42d13c"
+            },
+            {
+                "Name": "GetCurrentThreadId",
+                "Address": "0x42d140"
+            },
+            {
+                "Name": "GetSystemTimeAsFileTime",
+                "Address": "0x42d144"
+            },
+            {
+                "Name": "InitializeSListHead",
+                "Address": "0x42d148"
+            },
+            {
+                "Name": "WideCharToMultiByte",
+                "Address": "0x42d14c"
+            },
+            {
+                "Name": "MultiByteToWideChar",
+                "Address": "0x42d150"
+            },
+            {
+                "Name": "GetStringTypeW",
+                "Address": "0x42d154"
+            },
+            {
+                "Name": "EncodePointer",
+                "Address": "0x42d158"
+            },
+            {
+                "Name": "DecodePointer",
+                "Address": "0x42d15c"
+            },
+            {
+                "Name": "SetLastError",
+                "Address": "0x42d160"
+            },
+            {
+                "Name": "InitializeCriticalSectionAndSpinCount",
+                "Address": "0x42d164"
+            },
+            {
+                "Name": "TlsAlloc",
+                "Address": "0x42d168"
+            },
+            {
+                "Name": "TlsGetValue",
+                "Address": "0x42d16c"
+            },
+            {
+                "Name": "TlsSetValue",
+                "Address": "0x42d170"
+            },
+            {
+                "Name": "TlsFree",
+                "Address": "0x42d174"
+            },
+            {
+                "Name": "CompareStringW",
+                "Address": "0x42d178"
+            },
+            {
+                "Name": "LCMapStringW",
+                "Address": "0x42d17c"
+            },
+            {
+                "Name": "GetLocaleInfoW",
+                "Address": "0x42d180"
+            },
+            {
+                "Name": "GetCPInfo",
+                "Address": "0x42d184"
+            },
+            {
+                "Name": "GetLastError",
+                "Address": "0x42d188"
+            },
+            {
+                "Name": "FreeLibrary",
+                "Address": "0x42d18c"
+            },
+            {
+                "Name": "LoadLibraryExW",
+                "Address": "0x42d190"
+            },
+            {
+                "Name": "RaiseException",
+                "Address": "0x42d194"
+            },
+            {
+                "Name": "RtlUnwind",
+                "Address": "0x42d198"
+            },
+            {
+                "Name": "MoveFileExW",
+                "Address": "0x42d19c"
+            },
+            {
+                "Name": "ExitProcess",
+                "Address": "0x42d1a0"
+            },
+            {
+                "Name": "GetModuleHandleExW",
+                "Address": "0x42d1a4"
+            },
+            {
+                "Name": "GetStdHandle",
+                "Address": "0x42d1a8"
+            },
+            {
+                "Name": "WriteFile",
+                "Address": "0x42d1ac"
+            },
+            {
+                "Name": "GetACP",
+                "Address": "0x42d1b0"
+            },
+            {
+                "Name": "HeapAlloc",
+                "Address": "0x42d1b4"
+            },
+            {
+                "Name": "HeapReAlloc",
+                "Address": "0x42d1b8"
+            },
+            {
+                "Name": "HeapFree",
+                "Address": "0x42d1bc"
+            },
+            {
+                "Name": "VerSetConditionMask",
+                "Address": "0x42d1c0"
+            },
+            {
+                "Name": "ShowWindow",
+                "Address": "0x42d1d8"
+            },
+            {
+                "Name": "SendMessageW",
+                "Address": "0x42d1dc"
+            },
+            {
+                "Name": "FindWindowW",
+                "Address": "0x42d1e0"
+            },
+            {
+                "Name": "DrawTextA",
+                "Address": "0x42d1e4"
+            },
+            {
+                "Name": "CallNextHookEx",
+                "Address": "0x42d1e8"
+            },
+            {
+                "Name": "GetAsyncKeyState",
+                "Address": "0x42d1ec"
+            },
+            {
+                "Name": "DefWindowProcW",
+                "Address": "0x42d1f0"
+            },
+            {
+                "Name": "PostQuitMessage",
+                "Address": "0x42d1f4"
+            },
+            {
+                "Name": "DestroyWindow",
+                "Address": "0x42d1f8"
+            },
+            {
+                "Name": "KillTimer",
+                "Address": "0x42d1fc"
+            },
+            {
+                "Name": "InvalidateRect",
+                "Address": "0x42d200"
+            },
+            {
+                "Name": "SetTimer",
+                "Address": "0x42d204"
+            },
+            {
+                "Name": "EndPaint",
+                "Address": "0x42d208"
+            },
+            {
+                "Name": "SetWindowsHookExW",
+                "Address": "0x42d20c"
+            },
+            {
+                "Name": "DrawTextW",
+                "Address": "0x42d210"
+            },
+            {
+                "Name": "BeginPaint",
+                "Address": "0x42d214"
+            },
+            {
+                "Name": "GetSystemMetrics",
+                "Address": "0x42d218"
+            },
+            {
+                "Name": "ShowCursor",
+                "Address": "0x42d21c"
+            },
+            {
+                "Name": "DispatchMessageW",
+                "Address": "0x42d220"
+            },
+            {
+                "Name": "TranslateMessage",
+                "Address": "0x42d224"
+            },
+            {
+                "Name": "GetMessageW",
+                "Address": "0x42d228"
+            },
+            {
+                "Name": "SetForegroundWindow",
+                "Address": "0x42d22c"
+            },
+            {
+                "Name": "SetWindowLongW",
+                "Address": "0x42d230"
+            },
+            {
+                "Name": "SetWindowPos",
+                "Address": "0x42d234"
+            },
+            {
+                "Name": "CreateWindowExW",
+                "Address": "0x42d238"
+            },
+            {
+                "Name": "RegisterClassExW",
+                "Address": "0x42d23c"
+            },
+            {
+                "Name": "LoadCursorW",
+                "Address": "0x42d240"
+            },
+            {
+                "Name": "MoveToEx",
+                "Address": "0x42d01c"
+            },
+            {
+                "Name": "CreatePen",
+                "Address": "0x42d020"
+            },
+            {
+                "Name": "DeleteObject",
+                "Address": "0x42d024"
+            },
+            {
+                "Name": "SetTextColor",
+                "Address": "0x42d028"
+            },
+            {
+                "Name": "SetBkMode",
+                "Address": "0x42d02c"
+            },
+            {
+                "Name": "SelectObject",
+                "Address": "0x42d030"
+            },
+            {
+                "Name": "CreateFontIndirectW",
+                "Address": "0x42d034"
+            },
+            {
+                "Name": "CreateSolidBrush",
+                "Address": "0x42d038"
+            },
+            {
+                "Name": "LineTo",
+                "Address": "0x42d03c"
+            },
+            {
+                "Name": "SystemFunction036",
+                "Address": "0x42d000"
+            },
+            {
+                "Name": "GetUserNameA",
+                "Address": "0x42d004"
+            },
+            {
+                "Name": "RegCloseKey",
+                "Address": "0x42d008"
+            },
+            {
+                "Name": "RegQueryValueExW",
+                "Address": "0x42d00c"
+            },
+            {
+                "Name": "RegOpenKeyExW",
+                "Address": "0x42d010"
+            },
+            {
+                "Name": "GetUserNameW",
+                "Address": "0x42d014"
+            },
+            {
+                "Name": "N/A",
+                "Address": "0x42d1d0"
+            },
+            {
+                "Name": "InternetOpenW",
+                "Address": "0x42d248"
+            },
+            {
+                "Name": "InternetOpenUrlW",
+                "Address": "0x42d24c"
+            },
+            {
+                "Name": "InternetReadFile",
+                "Address": "0x42d250"
+            },
+            {
+                "Name": "InternetCloseHandle",
+                "Address": "0x42d254"
+            },
+            {
+                "Name": "NetUserGetInfo",
+                "Address": "0x42d1c8"
             }
         ],
         "Sections": [
             {
                 "Name": ".text",
                 "VirtualAddress": "0x1000",
-                "SizeOfRawData": "0x381200",
-                "PointerToRawData": "0x600",
+                "SizeOfRawData": "0x2ba00",
+                "PointerToRawData": "0x400",
                 "Characteristics": "0x60000020",
-                "Entropy": 6.3103
+                "Entropy": 6.5855
             },
             {
                 "Name": ".rdata",
-                "VirtualAddress": "0x383000",
-                "SizeOfRawData": "0x2b9200",
-                "PointerToRawData": "0x381800",
+                "VirtualAddress": "0x2d000",
+                "SizeOfRawData": "0x1e800",
+                "PointerToRawData": "0x2be00",
                 "Characteristics": "0x40000040",
-                "Entropy": 5.6894
+                "Entropy": 4.7717
             },
             {
                 "Name": ".data",
-                "VirtualAddress": "0x63d000",
-                "SizeOfRawData": "0x2ee00",
-                "PointerToRawData": "0x63aa00",
+                "VirtualAddress": "0x4c000",
+                "SizeOfRawData": "0x1400",
+                "PointerToRawData": "0x4a600",
                 "Characteristics": "0xc0000040",
-                "Entropy": 4.845
+                "Entropy": 3.3704
             },
             {
-                "Name": ".pdata",
-                "VirtualAddress": "0x6ce000",
-                "SizeOfRawData": "0x10e00",
-                "PointerToRawData": "0x669800",
-                "Characteristics": "0x40000040",
-                "Entropy": 5.5645
-            },
-            {
-                "Name": ".xdata",
-                "VirtualAddress": "0x6df000",
+                "Name": ".tls",
+                "VirtualAddress": "0x4f000",
                 "SizeOfRawData": "0x200",
-                "PointerToRawData": "0x67a600",
-                "Characteristics": "0x40000040",
-                "Entropy": 1.6345
+                "PointerToRawData": "0x4ba00",
+                "Characteristics": "0xc0000040",
+                "Entropy": 0.0204
             },
             {
-                "Name": ".idata",
-                "VirtualAddress": "0x6e0000",
-                "SizeOfRawData": "0x600",
-                "PointerToRawData": "0x67a800",
-                "Characteristics": "0xc0000040",
-                "Entropy": 3.8018
+                "Name": ".rsrc",
+                "VirtualAddress": "0x50000",
+                "SizeOfRawData": "0x400",
+                "PointerToRawData": "0x4bc00",
+                "Characteristics": "0x40000040",
+                "Entropy": 2.6776
             },
             {
                 "Name": ".reloc",
-                "VirtualAddress": "0x6e1000",
-                "SizeOfRawData": "0xd000",
-                "PointerToRawData": "0x67ae00",
+                "VirtualAddress": "0x51000",
+                "SizeOfRawData": "0x2c00",
+                "PointerToRawData": "0x4c000",
                 "Characteristics": "0x42000040",
-                "Entropy": 5.4461
-            },
-            {
-                "Name": ".symtab",
-                "VirtualAddress": "0x6ee000",
-                "SizeOfRawData": "0x200",
-                "PointerToRawData": "0x687e00",
-                "Characteristics": "0x42000000",
-                "Entropy": 0.0204
+                "Entropy": 6.6254
             }
         ],
         "isEntryPointInTextSection": true,
         "heuristics": {
-            "timestamp": {
-                "type": "old_timestamp",
-                "Timestamp": 0,
-                "Reason": "File timestamp is older than 10 years",
-                "Severity": "Low"
-            },
+            "timestamp": null,
             "unusual_sections": [],
             "entropy": [
                 {
@@ -5601,26 +6385,20 @@
                     "Severity": "Medium"
                 },
                 {
-                    "type": "high_entropy",
-                    "Section name": ".data",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                },
-                {
-                    "type": "high_entropy",
-                    "Section name": ".pdata",
-                    "Reason": "High entropy detected",
-                    "Severity": "Medium"
-                },
-                {
                     "type": "moderate_entropy",
-                    "Section name": ".xdata",
+                    "Section name": ".data",
                     "Reason": "Moderate entropy detected",
                     "Severity": "Info"
                 },
                 {
+                    "type": "low_entropy",
+                    "Section name": ".tls",
+                    "Reason": "Low entropy detected",
+                    "Severity": "Info"
+                },
+                {
                     "type": "moderate_entropy",
-                    "Section name": ".idata",
+                    "Section name": ".rsrc",
                     "Reason": "Moderate entropy detected",
                     "Severity": "Info"
                 },
@@ -5629,54 +6407,12 @@
                     "Section name": ".reloc",
                     "Reason": "High entropy detected",
                     "Severity": "Medium"
-                },
-                {
-                    "type": "low_entropy",
-                    "Section name": ".symtab",
-                    "Reason": "Low entropy detected",
-                    "Severity": "Info"
                 }
             ],
             "suspicious_api_calls": [
                 {
                     "type": "suspicious_api_call",
-                    "Function name": "WriteFile",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "VirtualQuery",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "VirtualAlloc",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "SuspendThread",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "ResumeThread",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "SetThreadContext",
-                    "Reason": "Suspicious API call detected",
-                    "Severity": "High"
-                },
-                {
-                    "type": "suspicious_api_call",
-                    "Function name": "GetThreadContext",
+                    "Function name": "CreateFileW",
                     "Reason": "Suspicious API call detected",
                     "Severity": "High"
                 },
@@ -5688,13 +6424,146 @@
                 },
                 {
                     "type": "suspicious_api_call",
-                    "Function name": "CreateFileA",
+                    "Function name": "WinExec",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "CreateProcessA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetModuleHandleW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "IsDebuggerPresent",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "QueryPerformanceCounter",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "WriteFile",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "HeapAlloc",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "HeapFree",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "InternetOpenW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "InternetReadFile",
                     "Reason": "Suspicious API call detected",
                     "Severity": "High"
                 }
             ],
             "native_subsystem": null,
-            "suspicious_strings": []
+            "suspicious_strings": [
+                {
+                    "type": "suspicious_string",
+                    "String": "cmd.exe",
+                    "Reason": "Suspicious string detected",
+                    "Severity": "Low"
+                },
+                {
+                    "type": "suspicious_string",
+                    "String": "REG ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\" /v \"crypted\" /t REG_SZ /d 1 /f ",
+                    "Reason": "Suspicious string detected",
+                    "Severity": "Low"
+                },
+                {
+                    "type": "suspicious_string",
+                    "String": "cmd.exe /c ",
+                    "Reason": "Suspicious string detected",
+                    "Severity": "Low"
+                },
+                {
+                    "type": "suspicious_string",
+                    "String": "\\Windows\\System32\\SCHTASKS.exe /create /SC ONLOGON /TN uac /TR \"",
+                    "Reason": "Suspicious string detected",
+                    "Severity": "Low"
+                },
+                {
+                    "type": "suspicious_string",
+                    "String": "REG ADD \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout\" /v \"Scancode Map\" /t REG_BINARY /d \"00000000000000001700000000003800000038e000005be000005ce00000360000001d0000001de000000f000000010000001c0000003e0000003b00000044000000450000003d0000005de000000000\" /f /reg:64",
+                    "Reason": "Suspicious string detected",
+                    "Severity": "Low"
+                },
+                {
+                    "type": "suspicious_string",
+                    "String": "REG ADD \"HKEY_CURRENT_USER\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d 506 /f /reg:64",
+                    "Reason": "Suspicious string detected",
+                    "Severity": "Low"
+                },
+                {
+                    "type": "suspicious_string",
+                    "String": "REG ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\" /v \"Shell\" /t REG_SZ /d \"",
+                    "Reason": "Suspicious string detected",
+                    "Severity": "Low"
+                },
+                {
+                    "type": "suspicious_string",
+                    "String": "REG ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\" /v \"System\" /t REG_SZ /d \"",
+                    "Reason": "Suspicious string detected",
+                    "Severity": "Low"
+                },
+                {
+                    "type": "suspicious_string",
+                    "String": "REG ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\" /v \"rgd_bcd_condition\" /t REG_SZ /d 1 /f /reg:64",
+                    "Reason": "Suspicious string detected",
+                    "Severity": "Low"
+                },
+                {
+                    "type": "suspicious_string",
+                    "String": "REG ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\" /v \"EnableLUA\" /t REG_DWORD /d 0 /f /reg:64",
+                    "Reason": "Suspicious string detected",
+                    "Severity": "Low"
+                },
+                {
+                    "type": "suspicious_string",
+                    "String": "REG ADD \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\" /v \"Shell\" /t REG_SZ /d \"explorer.exe\" /f /reg:64",
+                    "Reason": "Suspicious string detected",
+                    "Severity": "Low"
+                },
+                {
+                    "type": "suspicious_string",
+                    "String": "schtasks.exe /delete /TN uac /F",
+                    "Reason": "Suspicious string detected",
+                    "Severity": "Low"
+                },
+                {
+                    "type": "suspicious_string",
+                    "String": "C:\\windows\\system32\\cmd.exe /c ",
+                    "Reason": "Suspicious string detected",
+                    "Severity": "Low"
+                }
+            ]
         },
         "label": 1
     },

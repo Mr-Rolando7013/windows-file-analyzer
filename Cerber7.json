@@ -1,0 +1,1459 @@
+[
+    {
+        "Name": "maliciousFiles/Endermanch@Cerber5.exe",
+        "Timestamp": 1500714185,
+        "EntryPoint": "0x497a0",
+        "Signature": 23117,
+        "Subsystem": {
+            "Type": "IMAGE_SUBSYSTEM_WINDOWS_GUI",
+            "Value": 2
+        },
+        "Functions": [
+            {
+                "Name": "CreateFileW",
+                "Address": "0x44b15c"
+            },
+            {
+                "Name": "LoadLibraryA",
+                "Address": "0x44b160"
+            },
+            {
+                "Name": "lstrlenA",
+                "Address": "0x44b164"
+            },
+            {
+                "Name": "lstrcpyA",
+                "Address": "0x44b168"
+            },
+            {
+                "Name": "lstrcmpW",
+                "Address": "0x44b16c"
+            },
+            {
+                "Name": "WriteFile",
+                "Address": "0x44b170"
+            },
+            {
+                "Name": "WriteConsoleInputW",
+                "Address": "0x44b174"
+            },
+            {
+                "Name": "WideCharToMultiByte",
+                "Address": "0x44b178"
+            },
+            {
+                "Name": "WaitForSingleObject",
+                "Address": "0x44b17c"
+            },
+            {
+                "Name": "WaitForMultipleObjects",
+                "Address": "0x44b180"
+            },
+            {
+                "Name": "UnhandledExceptionFilter",
+                "Address": "0x44b184"
+            },
+            {
+                "Name": "TerminateProcess",
+                "Address": "0x44b188"
+            },
+            {
+                "Name": "TerminateJobObject",
+                "Address": "0x44b18c"
+            },
+            {
+                "Name": "Sleep",
+                "Address": "0x44b190"
+            },
+            {
+                "Name": "SetUnhandledExceptionFilter",
+                "Address": "0x44b194"
+            },
+            {
+                "Name": "SetThreadPriority",
+                "Address": "0x44b198"
+            },
+            {
+                "Name": "SetThreadLocale",
+                "Address": "0x44b19c"
+            },
+            {
+                "Name": "SetThreadExecutionState",
+                "Address": "0x44b1a0"
+            },
+            {
+                "Name": "SetPriorityClass",
+                "Address": "0x44b1a4"
+            },
+            {
+                "Name": "SetLastError",
+                "Address": "0x44b1a8"
+            },
+            {
+                "Name": "SetFilePointer",
+                "Address": "0x44b1ac"
+            },
+            {
+                "Name": "SetFileAttributesA",
+                "Address": "0x44b1b0"
+            },
+            {
+                "Name": "SetEvent",
+                "Address": "0x44b1b4"
+            },
+            {
+                "Name": "SetErrorMode",
+                "Address": "0x44b1b8"
+            },
+            {
+                "Name": "SetConsoleCtrlHandler",
+                "Address": "0x44b1bc"
+            },
+            {
+                "Name": "ReleaseMutex",
+                "Address": "0x44b1c0"
+            },
+            {
+                "Name": "ReadConsoleOutputCharacterA",
+                "Address": "0x44b1c4"
+            },
+            {
+                "Name": "RaiseException",
+                "Address": "0x44b1c8"
+            },
+            {
+                "Name": "QueryPerformanceCounter",
+                "Address": "0x44b1cc"
+            },
+            {
+                "Name": "OutputDebugStringW",
+                "Address": "0x44b1d0"
+            },
+            {
+                "Name": "OutputDebugStringA",
+                "Address": "0x44b1d4"
+            },
+            {
+                "Name": "OpenEventW",
+                "Address": "0x44b1d8"
+            },
+            {
+                "Name": "MultiByteToWideChar",
+                "Address": "0x44b1dc"
+            },
+            {
+                "Name": "MoveFileExW",
+                "Address": "0x44b1e0"
+            },
+            {
+                "Name": "LocalFree",
+                "Address": "0x44b1e4"
+            },
+            {
+                "Name": "LocalAlloc",
+                "Address": "0x44b1e8"
+            },
+            {
+                "Name": "LoadLibraryW",
+                "Address": "0x44b1ec"
+            },
+            {
+                "Name": "LeaveCriticalSection",
+                "Address": "0x44b1f0"
+            },
+            {
+                "Name": "IsDebuggerPresent",
+                "Address": "0x44b1f4"
+            },
+            {
+                "Name": "InterlockedIncrement",
+                "Address": "0x44b1f8"
+            },
+            {
+                "Name": "InterlockedCompareExchange",
+                "Address": "0x44b1fc"
+            },
+            {
+                "Name": "InitializeCriticalSection",
+                "Address": "0x44b200"
+            },
+            {
+                "Name": "HeapReAlloc",
+                "Address": "0x44b204"
+            },
+            {
+                "Name": "HeapFree",
+                "Address": "0x44b208"
+            },
+            {
+                "Name": "HeapAlloc",
+                "Address": "0x44b20c"
+            },
+            {
+                "Name": "GetWindowsDirectoryW",
+                "Address": "0x44b210"
+            },
+            {
+                "Name": "GetWindowsDirectoryA",
+                "Address": "0x44b214"
+            },
+            {
+                "Name": "GetVersionExW",
+                "Address": "0x44b218"
+            },
+            {
+                "Name": "GetVersionExA",
+                "Address": "0x44b21c"
+            },
+            {
+                "Name": "GetTickCount",
+                "Address": "0x44b220"
+            },
+            {
+                "Name": "GetThreadLocale",
+                "Address": "0x44b224"
+            },
+            {
+                "Name": "GetSystemTimeAsFileTime",
+                "Address": "0x44b228"
+            },
+            {
+                "Name": "GetSystemTime",
+                "Address": "0x44b22c"
+            },
+            {
+                "Name": "GetStartupInfoA",
+                "Address": "0x44b230"
+            },
+            {
+                "Name": "GetProcessPriorityBoost",
+                "Address": "0x44b234"
+            },
+            {
+                "Name": "GetProcessHeap",
+                "Address": "0x44b238"
+            },
+            {
+                "Name": "GetProcAddress",
+                "Address": "0x44b23c"
+            },
+            {
+                "Name": "GetModuleHandleW",
+                "Address": "0x44b240"
+            },
+            {
+                "Name": "GetModuleHandleA",
+                "Address": "0x44b244"
+            },
+            {
+                "Name": "GetModuleFileNameW",
+                "Address": "0x44b248"
+            },
+            {
+                "Name": "GetLastError",
+                "Address": "0x44b24c"
+            },
+            {
+                "Name": "GetCurrentThreadId",
+                "Address": "0x44b250"
+            },
+            {
+                "Name": "GetCurrentThread",
+                "Address": "0x44b254"
+            },
+            {
+                "Name": "GetCurrentProcessId",
+                "Address": "0x44b258"
+            },
+            {
+                "Name": "GetCurrentProcess",
+                "Address": "0x44b25c"
+            },
+            {
+                "Name": "GetConsoleAliasExesLengthA",
+                "Address": "0x44b260"
+            },
+            {
+                "Name": "GetComputerNameW",
+                "Address": "0x44b264"
+            },
+            {
+                "Name": "FreeLibrary",
+                "Address": "0x44b268"
+            },
+            {
+                "Name": "FormatMessageW",
+                "Address": "0x44b26c"
+            },
+            {
+                "Name": "FormatMessageA",
+                "Address": "0x44b270"
+            },
+            {
+                "Name": "ExitProcess",
+                "Address": "0x44b274"
+            },
+            {
+                "Name": "EnterCriticalSection",
+                "Address": "0x44b278"
+            },
+            {
+                "Name": "DeleteFileA",
+                "Address": "0x44b27c"
+            },
+            {
+                "Name": "DeleteCriticalSection",
+                "Address": "0x44b280"
+            },
+            {
+                "Name": "CreateProcessW",
+                "Address": "0x44b284"
+            },
+            {
+                "Name": "CreateMutexA",
+                "Address": "0x44b288"
+            },
+            {
+                "Name": "CreateJobObjectA",
+                "Address": "0x44b28c"
+            },
+            {
+                "Name": "CreateFileA",
+                "Address": "0x44b290"
+            },
+            {
+                "Name": "CloseHandle",
+                "Address": "0x44b294"
+            },
+            {
+                "Name": "CreateEventW",
+                "Address": "0x44b298"
+            },
+            {
+                "Name": "CreateEventA",
+                "Address": "0x44b29c"
+            },
+            {
+                "Name": "InterlockedExchange",
+                "Address": "0x44b2a0"
+            },
+            {
+                "Name": "SetKeyboardState",
+                "Address": "0x44b340"
+            },
+            {
+                "Name": "SetForegroundWindow",
+                "Address": "0x44b344"
+            },
+            {
+                "Name": "SetFocus",
+                "Address": "0x44b348"
+            },
+            {
+                "Name": "SetCursor",
+                "Address": "0x44b34c"
+            },
+            {
+                "Name": "SendMessageW",
+                "Address": "0x44b350"
+            },
+            {
+                "Name": "SendIMEMessageExW",
+                "Address": "0x44b354"
+            },
+            {
+                "Name": "RegisterDeviceNotificationW",
+                "Address": "0x44b358"
+            },
+            {
+                "Name": "RegisterClassW",
+                "Address": "0x44b35c"
+            },
+            {
+                "Name": "PostMessageW",
+                "Address": "0x44b360"
+            },
+            {
+                "Name": "PeekMessageW",
+                "Address": "0x44b364"
+            },
+            {
+                "Name": "OpenWindowStationW",
+                "Address": "0x44b368"
+            },
+            {
+                "Name": "MessageBoxW",
+                "Address": "0x44b36c"
+            },
+            {
+                "Name": "MessageBoxA",
+                "Address": "0x44b370"
+            },
+            {
+                "Name": "MessageBeep",
+                "Address": "0x44b374"
+            },
+            {
+                "Name": "MapDialogRect",
+                "Address": "0x44b378"
+            },
+            {
+                "Name": "LoadMenuA",
+                "Address": "0x44b37c"
+            },
+            {
+                "Name": "LoadCursorW",
+                "Address": "0x44b380"
+            },
+            {
+                "Name": "KillTimer",
+                "Address": "0x44b384"
+            },
+            {
+                "Name": "IMPGetIMEW",
+                "Address": "0x44b388"
+            },
+            {
+                "Name": "GetWindowTextW",
+                "Address": "0x44b38c"
+            },
+            {
+                "Name": "GetWindowRect",
+                "Address": "0x44b390"
+            },
+            {
+                "Name": "SetTimer",
+                "Address": "0x44b394"
+            },
+            {
+                "Name": "GetMenuItemID",
+                "Address": "0x44b398"
+            },
+            {
+                "Name": "GetKeyboardLayout",
+                "Address": "0x44b39c"
+            },
+            {
+                "Name": "GetForegroundWindow",
+                "Address": "0x44b3a0"
+            },
+            {
+                "Name": "GetDlgItemTextW",
+                "Address": "0x44b3a4"
+            },
+            {
+                "Name": "GetDlgItem",
+                "Address": "0x44b3a8"
+            },
+            {
+                "Name": "GetDesktopWindow",
+                "Address": "0x44b3ac"
+            },
+            {
+                "Name": "EnumDesktopWindows",
+                "Address": "0x44b3b0"
+            },
+            {
+                "Name": "EndDialog",
+                "Address": "0x44b3b4"
+            },
+            {
+                "Name": "EnableMenuItem",
+                "Address": "0x44b3b8"
+            },
+            {
+                "Name": "DrawStateA",
+                "Address": "0x44b3bc"
+            },
+            {
+                "Name": "DispatchMessageW",
+                "Address": "0x44b3c0"
+            },
+            {
+                "Name": "DispatchMessageA",
+                "Address": "0x44b3c4"
+            },
+            {
+                "Name": "DialogBoxParamW",
+                "Address": "0x44b3c8"
+            },
+            {
+                "Name": "DestroyWindow",
+                "Address": "0x44b3cc"
+            },
+            {
+                "Name": "DestroyAcceleratorTable",
+                "Address": "0x44b3d0"
+            },
+            {
+                "Name": "DefWindowProcW",
+                "Address": "0x44b3d4"
+            },
+            {
+                "Name": "DdeQueryStringW",
+                "Address": "0x44b3d8"
+            },
+            {
+                "Name": "DdeGetLastError",
+                "Address": "0x44b3dc"
+            },
+            {
+                "Name": "CreateWindowExW",
+                "Address": "0x44b3e0"
+            },
+            {
+                "Name": "CreateDialogIndirectParamA",
+                "Address": "0x44b3e4"
+            },
+            {
+                "Name": "CreateAcceleratorTableW",
+                "Address": "0x44b3e8"
+            },
+            {
+                "Name": "SetWindowLongW",
+                "Address": "0x44b3ec"
+            },
+            {
+                "Name": "SetWindowTextW",
+                "Address": "0x44b3f0"
+            },
+            {
+                "Name": "ShowWindowAsync",
+                "Address": "0x44b3f4"
+            },
+            {
+                "Name": "TranslateMessage",
+                "Address": "0x44b3f8"
+            },
+            {
+                "Name": "UnregisterClassW",
+                "Address": "0x44b3fc"
+            },
+            {
+                "Name": "UnregisterDeviceNotification",
+                "Address": "0x44b400"
+            },
+            {
+                "Name": "wvsprintfW",
+                "Address": "0x44b404"
+            },
+            {
+                "Name": "IsWindowEnabled",
+                "Address": "0x44b408"
+            },
+            {
+                "Name": "LoadIconA",
+                "Address": "0x44b40c"
+            },
+            {
+                "Name": "GetClipboardData",
+                "Address": "0x44b410"
+            },
+            {
+                "Name": "GetDlgCtrlID",
+                "Address": "0x44b414"
+            },
+            {
+                "Name": "GetOpenClipboardWindow",
+                "Address": "0x44b418"
+            },
+            {
+                "Name": "IsMenu",
+                "Address": "0x44b41c"
+            },
+            {
+                "Name": "CreatePopupMenu",
+                "Address": "0x44b420"
+            },
+            {
+                "Name": "GetMenuItemCount",
+                "Address": "0x44b424"
+            },
+            {
+                "Name": "GetKBCodePage",
+                "Address": "0x44b428"
+            },
+            {
+                "Name": "GetMenuContextHelpId",
+                "Address": "0x44b42c"
+            },
+            {
+                "Name": "GetFocus",
+                "Address": "0x44b430"
+            },
+            {
+                "Name": "GetInputState",
+                "Address": "0x44b434"
+            },
+            {
+                "Name": "GetShellWindow",
+                "Address": "0x44b438"
+            },
+            {
+                "Name": "GetAsyncKeyState",
+                "Address": "0x44b43c"
+            },
+            {
+                "Name": "GetCapture",
+                "Address": "0x44b440"
+            },
+            {
+                "Name": "GetClipboardSequenceNumber",
+                "Address": "0x44b444"
+            },
+            {
+                "Name": "OemKeyScan",
+                "Address": "0x44b448"
+            },
+            {
+                "Name": "GetActiveWindow",
+                "Address": "0x44b44c"
+            },
+            {
+                "Name": "CharUpperA",
+                "Address": "0x44b450"
+            },
+            {
+                "Name": "GetWindowDC",
+                "Address": "0x44b454"
+            },
+            {
+                "Name": "IsWindowUnicode",
+                "Address": "0x44b458"
+            },
+            {
+                "Name": "GetKeyboardType",
+                "Address": "0x44b45c"
+            },
+            {
+                "Name": "EnumClipboardFormats",
+                "Address": "0x44b460"
+            },
+            {
+                "Name": "CopyIcon",
+                "Address": "0x44b464"
+            },
+            {
+                "Name": "GetMenuCheckMarkDimensions",
+                "Address": "0x44b468"
+            },
+            {
+                "Name": "EndMenu",
+                "Address": "0x44b46c"
+            },
+            {
+                "Name": "GetListBoxInfo",
+                "Address": "0x44b470"
+            },
+            {
+                "Name": "ReleaseCapture",
+                "Address": "0x44b474"
+            },
+            {
+                "Name": "GetMessageExtraInfo",
+                "Address": "0x44b478"
+            },
+            {
+                "Name": "GetWindowLongW",
+                "Address": "0x44b47c"
+            },
+            {
+                "Name": "CharToOemW",
+                "Address": "0x44b480"
+            },
+            {
+                "Name": "CharLowerW",
+                "Address": "0x44b484"
+            },
+            {
+                "Name": "BroadcastSystemMessageA",
+                "Address": "0x44b488"
+            },
+            {
+                "Name": "GetWindowContextHelpId",
+                "Address": "0x44b48c"
+            },
+            {
+                "Name": "SelectObject",
+                "Address": "0x44b078"
+            },
+            {
+                "Name": "SetBrushOrgEx",
+                "Address": "0x44b07c"
+            },
+            {
+                "Name": "SetDCBrushColor",
+                "Address": "0x44b080"
+            },
+            {
+                "Name": "SetICMMode",
+                "Address": "0x44b084"
+            },
+            {
+                "Name": "SetPixelV",
+                "Address": "0x44b088"
+            },
+            {
+                "Name": "CancelDC",
+                "Address": "0x44b08c"
+            },
+            {
+                "Name": "PathToRegion",
+                "Address": "0x44b090"
+            },
+            {
+                "Name": "CloseFigure",
+                "Address": "0x44b094"
+            },
+            {
+                "Name": "GetBkColor",
+                "Address": "0x44b098"
+            },
+            {
+                "Name": "AbortDoc",
+                "Address": "0x44b09c"
+            },
+            {
+                "Name": "FlattenPath",
+                "Address": "0x44b0a0"
+            },
+            {
+                "Name": "GetObjectType",
+                "Address": "0x44b0a4"
+            },
+            {
+                "Name": "PlayMetaFileRecord",
+                "Address": "0x44b0a8"
+            },
+            {
+                "Name": "RealizePalette",
+                "Address": "0x44b0ac"
+            },
+            {
+                "Name": "WidenPath",
+                "Address": "0x44b0b0"
+            },
+            {
+                "Name": "SaveDC",
+                "Address": "0x44b0b4"
+            },
+            {
+                "Name": "BeginPath",
+                "Address": "0x44b0b8"
+            },
+            {
+                "Name": "SetMetaRgn",
+                "Address": "0x44b0bc"
+            },
+            {
+                "Name": "UnrealizeObject",
+                "Address": "0x44b0c0"
+            },
+            {
+                "Name": "AbortPath",
+                "Address": "0x44b0c4"
+            },
+            {
+                "Name": "EndPage",
+                "Address": "0x44b0c8"
+            },
+            {
+                "Name": "CreateMetaFileA",
+                "Address": "0x44b0cc"
+            },
+            {
+                "Name": "AddFontResourceA",
+                "Address": "0x44b0d0"
+            },
+            {
+                "Name": "SwapBuffers",
+                "Address": "0x44b0d4"
+            },
+            {
+                "Name": "OffsetWindowOrgEx",
+                "Address": "0x44b0d8"
+            },
+            {
+                "Name": "GetTextMetricsW",
+                "Address": "0x44b0dc"
+            },
+            {
+                "Name": "GetTextExtentPointW",
+                "Address": "0x44b0e0"
+            },
+            {
+                "Name": "GetTextCharset",
+                "Address": "0x44b0e4"
+            },
+            {
+                "Name": "GetMetaRgn",
+                "Address": "0x44b0e8"
+            },
+            {
+                "Name": "GetKerningPairsW",
+                "Address": "0x44b0ec"
+            },
+            {
+                "Name": "GetCurrentObject",
+                "Address": "0x44b0f0"
+            },
+            {
+                "Name": "GetCharWidth32A",
+                "Address": "0x44b0f4"
+            },
+            {
+                "Name": "GdiSwapBuffers",
+                "Address": "0x44b0f8"
+            },
+            {
+                "Name": "GdiStartPageEMF",
+                "Address": "0x44b0fc"
+            },
+            {
+                "Name": "GdiQueryTable",
+                "Address": "0x44b100"
+            },
+            {
+                "Name": "GdiGradientFill",
+                "Address": "0x44b104"
+            },
+            {
+                "Name": "GdiComment",
+                "Address": "0x44b108"
+            },
+            {
+                "Name": "GdiCleanCacheDC",
+                "Address": "0x44b10c"
+            },
+            {
+                "Name": "FixBrushOrgEx",
+                "Address": "0x44b110"
+            },
+            {
+                "Name": "EngGradientFill",
+                "Address": "0x44b114"
+            },
+            {
+                "Name": "EngDeletePath",
+                "Address": "0x44b118"
+            },
+            {
+                "Name": "DescribePixelFormat",
+                "Address": "0x44b11c"
+            },
+            {
+                "Name": "DeleteObject",
+                "Address": "0x44b120"
+            },
+            {
+                "Name": "DeleteDC",
+                "Address": "0x44b124"
+            },
+            {
+                "Name": "CreatePolygonRgn",
+                "Address": "0x44b128"
+            },
+            {
+                "Name": "CreateICA",
+                "Address": "0x44b12c"
+            },
+            {
+                "Name": "CreateHatchBrush",
+                "Address": "0x44b130"
+            },
+            {
+                "Name": "CreateEllipticRgn",
+                "Address": "0x44b134"
+            },
+            {
+                "Name": "CreateDIBSection",
+                "Address": "0x44b138"
+            },
+            {
+                "Name": "CreateDCW",
+                "Address": "0x44b13c"
+            },
+            {
+                "Name": "ChoosePixelFormat",
+                "Address": "0x44b140"
+            },
+            {
+                "Name": "AngleArc",
+                "Address": "0x44b144"
+            },
+            {
+                "Name": "BRUSHOBJ_pvAllocRbrush",
+                "Address": "0x44b148"
+            },
+            {
+                "Name": "GetTextColor",
+                "Address": "0x44b14c"
+            },
+            {
+                "Name": "RegEnumValueW",
+                "Address": "0x44b000"
+            },
+            {
+                "Name": "RegOpenKeyW",
+                "Address": "0x44b004"
+            },
+            {
+                "Name": "StartServiceCtrlDispatcherW",
+                "Address": "0x44b008"
+            },
+            {
+                "Name": "SetServiceStatus",
+                "Address": "0x44b00c"
+            },
+            {
+                "Name": "SetSecurityDescriptorOwner",
+                "Address": "0x44b010"
+            },
+            {
+                "Name": "SetSecurityDescriptorDacl",
+                "Address": "0x44b014"
+            },
+            {
+                "Name": "SetEntriesInAclW",
+                "Address": "0x44b018"
+            },
+            {
+                "Name": "ReportEventW",
+                "Address": "0x44b01c"
+            },
+            {
+                "Name": "RegisterServiceCtrlHandlerExW",
+                "Address": "0x44b020"
+            },
+            {
+                "Name": "RegisterEventSourceW",
+                "Address": "0x44b024"
+            },
+            {
+                "Name": "RegSetValueExW",
+                "Address": "0x44b028"
+            },
+            {
+                "Name": "RegQueryValueExW",
+                "Address": "0x44b02c"
+            },
+            {
+                "Name": "RegOpenKeyExW",
+                "Address": "0x44b030"
+            },
+            {
+                "Name": "AllocateAndInitializeSid",
+                "Address": "0x44b034"
+            },
+            {
+                "Name": "RegDeleteValueW",
+                "Address": "0x44b038"
+            },
+            {
+                "Name": "RegDeleteKeyW",
+                "Address": "0x44b03c"
+            },
+            {
+                "Name": "RegCreateKeyW",
+                "Address": "0x44b040"
+            },
+            {
+                "Name": "RegCloseKey",
+                "Address": "0x44b044"
+            },
+            {
+                "Name": "OpenServiceW",
+                "Address": "0x44b048"
+            },
+            {
+                "Name": "OpenSCManagerW",
+                "Address": "0x44b04c"
+            },
+            {
+                "Name": "InitializeSecurityDescriptor",
+                "Address": "0x44b050"
+            },
+            {
+                "Name": "GetUserNameW",
+                "Address": "0x44b054"
+            },
+            {
+                "Name": "FreeSid",
+                "Address": "0x44b058"
+            },
+            {
+                "Name": "DeregisterEventSource",
+                "Address": "0x44b05c"
+            },
+            {
+                "Name": "DeleteService",
+                "Address": "0x44b060"
+            },
+            {
+                "Name": "CreateServiceW",
+                "Address": "0x44b064"
+            },
+            {
+                "Name": "CloseServiceHandle",
+                "Address": "0x44b068"
+            },
+            {
+                "Name": "Shell_NotifyIconW",
+                "Address": "0x44b2a8"
+            },
+            {
+                "Name": "ShellExecuteExA",
+                "Address": "0x44b2ac"
+            },
+            {
+                "Name": "SHPathPrepareForWriteW",
+                "Address": "0x44b2b0"
+            },
+            {
+                "Name": "SHLoadNonloadedIconOverlayIdentifiers",
+                "Address": "0x44b2b4"
+            },
+            {
+                "Name": "SHInvokePrinterCommandW",
+                "Address": "0x44b2b8"
+            },
+            {
+                "Name": "SHGetSpecialFolderPathA",
+                "Address": "0x44b2bc"
+            },
+            {
+                "Name": "SHGetSpecialFolderLocation",
+                "Address": "0x44b2c0"
+            },
+            {
+                "Name": "SHGetSettings",
+                "Address": "0x44b2c4"
+            },
+            {
+                "Name": "SHGetPathFromIDListW",
+                "Address": "0x44b2c8"
+            },
+            {
+                "Name": "SHGetMalloc",
+                "Address": "0x44b2cc"
+            },
+            {
+                "Name": "CommandLineToArgvW",
+                "Address": "0x44b2d0"
+            },
+            {
+                "Name": "DoEnvironmentSubstA",
+                "Address": "0x44b2d4"
+            },
+            {
+                "Name": "DoEnvironmentSubstW",
+                "Address": "0x44b2d8"
+            },
+            {
+                "Name": "DragQueryFileA",
+                "Address": "0x44b2dc"
+            },
+            {
+                "Name": "DragQueryFileAorW",
+                "Address": "0x44b2e0"
+            },
+            {
+                "Name": "DragQueryFileW",
+                "Address": "0x44b2e4"
+            },
+            {
+                "Name": "ExtractAssociatedIconW",
+                "Address": "0x44b2e8"
+            },
+            {
+                "Name": "ExtractIconA",
+                "Address": "0x44b2ec"
+            },
+            {
+                "Name": "ExtractIconEx",
+                "Address": "0x44b2f0"
+            },
+            {
+                "Name": "SHAddToRecentDocs",
+                "Address": "0x44b2f4"
+            },
+            {
+                "Name": "SHBindToParent",
+                "Address": "0x44b2f8"
+            },
+            {
+                "Name": "SHBrowseForFolderW",
+                "Address": "0x44b2fc"
+            },
+            {
+                "Name": "SHCreateProcessAsUserW",
+                "Address": "0x44b300"
+            },
+            {
+                "Name": "SHEmptyRecycleBinW",
+                "Address": "0x44b304"
+            },
+            {
+                "Name": "SHGetFolderPathA",
+                "Address": "0x44b308"
+            },
+            {
+                "Name": "SHGetFolderPathW",
+                "Address": "0x44b30c"
+            },
+            {
+                "Name": "ShellExecuteExW",
+                "Address": "0x44b310"
+            },
+            {
+                "Name": "StrChrW",
+                "Address": "0x44b318"
+            },
+            {
+                "Name": "StrCmpNIA",
+                "Address": "0x44b31c"
+            },
+            {
+                "Name": "StrCmpNIW",
+                "Address": "0x44b320"
+            },
+            {
+                "Name": "StrCmpNW",
+                "Address": "0x44b324"
+            },
+            {
+                "Name": "StrRChrA",
+                "Address": "0x44b328"
+            },
+            {
+                "Name": "StrRChrIA",
+                "Address": "0x44b32c"
+            },
+            {
+                "Name": "StrRStrIW",
+                "Address": "0x44b330"
+            },
+            {
+                "Name": "StrStrIA",
+                "Address": "0x44b334"
+            },
+            {
+                "Name": "StrChrA",
+                "Address": "0x44b338"
+            },
+            {
+                "Name": "InitCommonControlsEx",
+                "Address": "0x44b070"
+            },
+            {
+                "Name": "__p__commode",
+                "Address": "0x44b494"
+            },
+            {
+                "Name": "__p__fmode",
+                "Address": "0x44b498"
+            },
+            {
+                "Name": "__set_app_type",
+                "Address": "0x44b49c"
+            },
+            {
+                "Name": "__setusermatherr",
+                "Address": "0x44b4a0"
+            },
+            {
+                "Name": "_abnormal_termination",
+                "Address": "0x44b4a4"
+            },
+            {
+                "Name": "_acmdln",
+                "Address": "0x44b4a8"
+            },
+            {
+                "Name": "_adjust_fdiv",
+                "Address": "0x44b4ac"
+            },
+            {
+                "Name": "_c_exit",
+                "Address": "0x44b4b0"
+            },
+            {
+                "Name": "_cexit",
+                "Address": "0x44b4b4"
+            },
+            {
+                "Name": "_controlfp",
+                "Address": "0x44b4b8"
+            },
+            {
+                "Name": "_except_handler3",
+                "Address": "0x44b4bc"
+            },
+            {
+                "Name": "_exit",
+                "Address": "0x44b4c0"
+            },
+            {
+                "Name": "_initterm",
+                "Address": "0x44b4c4"
+            },
+            {
+                "Name": "_iob",
+                "Address": "0x44b4c8"
+            },
+            {
+                "Name": "_mbscmp",
+                "Address": "0x44b4cc"
+            },
+            {
+                "Name": "_mbscpy",
+                "Address": "0x44b4d0"
+            },
+            {
+                "Name": "_mbsicmp",
+                "Address": "0x44b4d4"
+            },
+            {
+                "Name": "_mbsinc",
+                "Address": "0x44b4d8"
+            },
+            {
+                "Name": "_mbslwr",
+                "Address": "0x44b4dc"
+            },
+            {
+                "Name": "_mbsnbcmp",
+                "Address": "0x44b4e0"
+            },
+            {
+                "Name": "_mbsnbicmp",
+                "Address": "0x44b4e4"
+            },
+            {
+                "Name": "_snwprintf",
+                "Address": "0x44b4e8"
+            },
+            {
+                "Name": "_vsnwprintf",
+                "Address": "0x44b4ec"
+            },
+            {
+                "Name": "_wcsicmp",
+                "Address": "0x44b4f0"
+            },
+            {
+                "Name": "_wcsnicmp",
+                "Address": "0x44b4f4"
+            },
+            {
+                "Name": "exit",
+                "Address": "0x44b4f8"
+            },
+            {
+                "Name": "fwprintf",
+                "Address": "0x44b4fc"
+            },
+            {
+                "Name": "iswctype",
+                "Address": "0x44b500"
+            },
+            {
+                "Name": "memmove",
+                "Address": "0x44b504"
+            },
+            {
+                "Name": "setlocale",
+                "Address": "0x44b508"
+            },
+            {
+                "Name": "wcschr",
+                "Address": "0x44b50c"
+            },
+            {
+                "Name": "wcscmp",
+                "Address": "0x44b510"
+            },
+            {
+                "Name": "wcscpy",
+                "Address": "0x44b514"
+            },
+            {
+                "Name": "wcslen",
+                "Address": "0x44b518"
+            },
+            {
+                "Name": "wcsncmp",
+                "Address": "0x44b51c"
+            },
+            {
+                "Name": "wcsrchr",
+                "Address": "0x44b520"
+            },
+            {
+                "Name": "_XcptFilter",
+                "Address": "0x44b524"
+            },
+            {
+                "Name": "__getmainargs",
+                "Address": "0x44b528"
+            },
+            {
+                "Name": "ImmDisableIME",
+                "Address": "0x44b154"
+            }
+        ],
+        "Sections": [
+            {
+                "Name": ".text",
+                "VirtualAddress": "0x1000",
+                "SizeOfRawData": "0x49400",
+                "PointerToRawData": "0x400",
+                "Characteristics": "0x60000020",
+                "Entropy": 6.2904
+            },
+            {
+                "Name": ".rdata",
+                "VirtualAddress": "0x4b000",
+                "SizeOfRawData": "0x2a00",
+                "PointerToRawData": "0x49800",
+                "Characteristics": "0x40000040",
+                "Entropy": 5.6835
+            },
+            {
+                "Name": ".data",
+                "VirtualAddress": "0x4e000",
+                "SizeOfRawData": "0x200",
+                "PointerToRawData": "0x4c200",
+                "Characteristics": "0xc0000040",
+                "Entropy": 2.7046
+            },
+            {
+                "Name": ".rsrc",
+                "VirtualAddress": "0x4f000",
+                "SizeOfRawData": "0xc00",
+                "PointerToRawData": "0x4c400",
+                "Characteristics": "0x40000040",
+                "Entropy": 3.6284
+            }
+        ],
+        "isEntryPointInTextSection": true,
+        "heuristics": {
+            "timestamp": null,
+            "unusual_sections": [],
+            "entropy": [
+                {
+                    "type": "high_entropy",
+                    "Section name": ".text",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "high_entropy",
+                    "Section name": ".rdata",
+                    "Reason": "High entropy detected",
+                    "Severity": "Medium"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".data",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                },
+                {
+                    "type": "moderate_entropy",
+                    "Section name": ".rsrc",
+                    "Reason": "Moderate entropy detected",
+                    "Severity": "Info"
+                }
+            ],
+            "suspicious_api_calls": [
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "CreateFileW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "LoadLibraryA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "WriteFile",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "QueryPerformanceCounter",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "IsDebuggerPresent",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "HeapFree",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "HeapAlloc",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetTickCount",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetProcAddress",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetModuleHandleW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "GetModuleHandleA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "CreateProcessW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "CreateFileA",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                },
+                {
+                    "type": "suspicious_api_call",
+                    "Function name": "CreateServiceW",
+                    "Reason": "Suspicious API call detected",
+                    "Severity": "High"
+                }
+            ],
+            "native_subsystem": null,
+            "suspicious_strings": []
+        }
+    }
+]

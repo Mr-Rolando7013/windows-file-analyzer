@@ -8,6 +8,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 import numpy as np
+from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import GridSearchCV
 
 memory_manipulation_functions = {'VirtualAlloc', 'VirtualAllocEx', 'VirtualProtect', 'WriteProcessMemory',
     'CreateRemoteThread', 'LoadLibrary', 'GetProcAddress', 'HeapAlloc',
@@ -149,9 +152,8 @@ def testingFiles(file, model):
 
     y_pred = model.predict(X_new)
 
-    pred_labels = ["Malicious" if p >= 0.5 else "Benign" for p in y_pred]
-    print("File: ", file, "Predicted class:", "Malicious" if pred_labels == 1 else "Benign")
-
+    pred_labels = "Malicious" if y_pred[0] == 1 else "Benign"
+    print(f"File: {file}, Predicted class: {pred_labels}")
 
 def main():
 
@@ -257,8 +259,20 @@ def main():
     testingFiles("birele.json", logisticModel)
     testingFiles("deriaLock.json", logisticModel)
 
+    param_grid = {
+    'n_estimators': [100, 200],
+    'max_depth': [10, 20, None],
+    'min_samples_split': [2, 5],
+    'min_samples_leaf': [1, 2]
+}
+
+    grid_search = GridSearchCV(estimator=RandomForestClassifier(random_state=42), param_grid=param_grid, cv=5)
+    grid_search.fit(X_train, y_train)
+
+    print("Best hyperparameters:", grid_search.best_params_)
+
     
-    rfModel = RandomForestClassifier(n_estimators=200, random_state=42)
+    rfModel = RandomForestClassifier(class_weight='balanced', random_state=42)
     rfModel.fit(X_train, y_train)
     y_pred = rfModel.predict(X_test)
 
@@ -268,12 +282,29 @@ def main():
     print("Predictions for first 10 samples:", y_pred[:10])
     print("Actual labels for first 10 samples:", y_test[:10].values)
 
+    cv_scores = cross_val_score(rfModel, X, y, cv=10, scoring='accuracy')
+
+    print("Cross-validation scores:", cv_scores)
+    print("Mean accuracy:", cv_scores.mean())
+
+    print("Confusion Matrix:")
+    print(confusion_matrix(y_test, y_pred))
+
+    # Accuracy
+    print("Accuracy:", accuracy_score(y_test, y_pred))
+
+    # Precision, Recall, and F1-Score
+    print("Precision:", precision_score(y_test, y_pred))
+    print("Recall:", recall_score(y_test, y_pred))
+    print("F1-Score:", f1_score(y_test, y_pred))
+
     testingFiles("Tinder_Data.json", rfModel)
     testingFiles("todo_list.json" ,rfModel)
     testingFiles("temperatureConverter.json", rfModel)
     testingFiles("badRabbit.json", rfModel)
     testingFiles("birele.json", rfModel)
     testingFiles("deriaLock.json", rfModel)
+    testingFiles("Cerber7.json", rfModel)
 
     
 if __name__ == "__main__":
