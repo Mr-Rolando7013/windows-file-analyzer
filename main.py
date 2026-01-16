@@ -132,9 +132,15 @@ def main():
     output_data['EntryPoint'] = hex(entry_point)
 
     # File Signature
-    signature = pe.DOS_HEADER.e_magic
-    print(f"File Signature: {hex(signature)}")
-    output_data['Signature'] = signature
+    #signature = pe.DOS_HEADER.e_magic
+    #print(f"File Signature: {hex(signature)}")
+    #output_data['Signature'] = signature
+
+    # Signature verification
+    #verification_result = signtool_verify(path)
+    #print(f"Signature Verification: {verification_result}")
+    #output_data['SignatureVerification'] = verification_result
+
 
     # Subsystem type
     subsystem = pe.OPTIONAL_HEADER.Subsystem
@@ -144,15 +150,8 @@ def main():
     if subsystem == 1:
         heuristic_subsytem_is_native = {'type':'native_subsystem', 'Reason':'File uses NATIVE subsystem which is uncommon for regular applications', 'Severity':'Medium'}
 
-    # Signature verification
-    verification_result = signtool_verify(path)
-    print(f"Signature Verification: {verification_result}")
-    output_data['SignatureVerification'] = verification_result
-
     # Get strings
     strings = external_strings(path)
-    # print(f"Extracted {strings} strings from the file.")
-    #output_data['Strings'] = [s.decode(errors='ignore') for s in strings]
     new_strings = [s.decode(errors='ignore') for s in strings]
     # Suspicious strings heuristic
     heuristic_suspicious_strings = []
@@ -282,7 +281,7 @@ def main():
             try:
                 existing_data = json.load(f)
             except json.JSONDecodeError:    
-                existing_data = []   # File existed but was empty/broken
+                existing_data = []
     else:
         existing_data = []
     existing_data.append(output_data)
@@ -291,3 +290,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+ 

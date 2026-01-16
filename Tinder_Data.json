@@ -942,7 +942,6 @@
             ],
             "native_subsystem": null,
             "suspicious_strings": []
-        },
-        "label": 0
+        }
     }
 ]
