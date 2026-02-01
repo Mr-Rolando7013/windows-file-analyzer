@@ -223,13 +223,6 @@ def main():
             "Entropy": round(entropy, 4)
         }
         heuristic_entropy.append(entropy_alert(entropy, section.Name.decode().rstrip(chr(0))))
-        # Characteristics permissions
-        # 0x20000000 - Execute
-        # 0x40000000 - Read
-        # 0x80000000 - Write
-        # 0x00000020 - Code
-        # 0x00000040 - Initialized Data
-        # 0x00000080 - Uninitialized Data
 
         sections_info.append(tempSection)
 
